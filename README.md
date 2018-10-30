@@ -46,10 +46,10 @@ Create a merge request to apply your changes on the master (do it via github)
 ### Install Unity
 https://store.unity.com/download?ref=personal
 
-We use Visual Studio. It's available on macOS and windows:
+Visual Studio is the standard Unity IDE and has the best supported workflow with the unity editor. 
+It's available on macOS and windows:
 https://visualstudio.microsoft.com/de/thank-you-downloading-visual-studio/?sku=Community&rel=15
 
-We may want to switch to MonoDevelop.
 You're free to also use what ever IDE you like, just be sure to add local files
 to the gitignore file if neccesary.
 
