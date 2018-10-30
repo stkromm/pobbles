@@ -28,7 +28,7 @@ git checkout -b dev-yourname
 Commit and publish (do this for every change please, you only need to push if you want it on the master though)
 ```
 git add --all
-git commit -m "yourname: What have you changed?"
+git commit -m "prefix: What have you changed?" # prefix should be feat, fix or refac depending on the change
 git push
 ```
 
