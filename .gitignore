@@ -67,23 +67,19 @@ ProjectSettings/GvhProjectSettings.xml
 
 # Credential files:
 Assets/google-services.json*
-/Assets/Hamster/GoogleService-Info.plist
-/Assets/Hamster/GoogleService-Info.plist.meta
-/Assets/Hamster/google-services.json
-/Assets/Hamster/google-services.json.meta
+/Assets/**/GoogleService-Info.plist
+/Assets/**/GoogleService-Info.plist.meta
+/Assets/**/google-services.json
+/Assets/**/google-services.json.meta
 
 # Keystore
-mechahamster.keystore
+*.keystore
 
 # Daydream state files:
 GvrIgnoreManifestMergeCheck.txt
 GvrIgnoreManifestMergeCheck.txt.meta
 GvrIgnoreCompatibilityCheck.txt
 GvrIgnoreCompatibilityCheck.txt.meta
-
-# Daydream Demos:
-Assets/GoogleVR/Demos
-Assets/GoogleVR/Demos.meta
 
 # Google Play Games
 Assets/GooglePlayGames
