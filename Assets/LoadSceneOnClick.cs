@@ -1,13 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour {
-    public int sceneIndex;
+    private AsyncOperation asyncOperation;
+    public string sceneName;
 
-    public void LoadByIndex()
+    public void LoadByName()
     {
-        SceneManager.LoadScene(sceneIndex);
+        if(asyncOperation == null || !asyncOperation.isDone)
+        {
+            asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+        }
     }
 }
