@@ -31,6 +31,67 @@ ExportedObj/
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+# Firebase stuff
+/Assets/Firebase/
+/Assets/PlayServicesResolver/
+/Assets/Editor\ Default\ Resources/
+/Assets/Firebase.meta
+/Assets/PlayServicesResolver.meta
+/Assets/Editor\ Default\ Resources.meta
+/Assets/Plugins/Android/firebase*
+/Assets/Plugins/Android/Firebase.meta
+/Assets/Plugins/Android/libmessaging_unity_player_activity.jar
+/Assets/Plugins/Android/libmessaging_unity_player_activity.jar.meta
+/Assets/Plugins/Android/play-services-appinvite-*
+/Assets/Plugins/Android/play-services-base-*
+/Assets/Plugins/Android/play-services-basement-*
+/Assets/Plugins/Android/play-services-tasks-*
+/Assets/Plugins/Android/support-annotations-*
+/Assets/Plugins/Android/support-*
+/Assets/Plugins/Android/Firebase/
+/Assets/Plugins/Android/firebase*
+/Assets/Plugins/iOS/Firebase/
+/Assets/Plugins/iOS/firebase*
+/Assets/Plugins/x86_64/Firebase/
+/Assets/Plugins/x86_64/firebase*
+/Assets/Parse/
+/Assets/Parse.meta
+
+# Android SDK
+Assets/Plugins/Android/com.google.firebase.*
+Assets/Plugins/Android/com.google.android.gms.*
+Assets/Plugins/Android/com.android.support.*
+Assets/Plugins/Android/com.google.games.*
+ProjectSettings/AndroidResolverDependencies.xml
+ProjectSettings/GvhProjectSettings.xml
+
+# Credential files:
+Assets/google-services.json*
+/Assets/Hamster/GoogleService-Info.plist
+/Assets/Hamster/GoogleService-Info.plist.meta
+/Assets/Hamster/google-services.json
+/Assets/Hamster/google-services.json.meta
+
+# Keystore
+mechahamster.keystore
+
+# Daydream state files:
+GvrIgnoreManifestMergeCheck.txt
+GvrIgnoreManifestMergeCheck.txt.meta
+GvrIgnoreCompatibilityCheck.txt
+GvrIgnoreCompatibilityCheck.txt.meta
+
+# Daydream Demos:
+Assets/GoogleVR/Demos
+Assets/GoogleVR/Demos.meta
+
+# Google Play Games
+Assets/GooglePlayGames
+Assets/GooglePlayGames.meta
+
+# iOS system files
+.DS_Store
+
 # Builds
 *.apk
 *.unitypackage
