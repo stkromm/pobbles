@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "630766454092",
+    "firebase_url": "https://pobbles-dev.firebaseio.com",
+    "project_id": "pobbles-dev",
+    "storage_bucket": "pobbles-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630766454092:android:1ac8a112a0d5b641",
+        "android_client_info": {
+          "package_name": "com.suddendev.pobbles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630766454092-tapns62uttikjhv8odbme5c70ri0nic6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-dBw1BSrCt39tQ1WnubxcaH6-3RtHwVo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
