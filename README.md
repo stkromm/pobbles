@@ -53,6 +53,17 @@ https://visualstudio.microsoft.com/de/thank-you-downloading-visual-studio/?sku=C
 You're free to also use what ever IDE you like, just be sure to add local files
 to the gitignore file if neccesary.
 
+### Setting up local Firebase
+Save *googe-service.json* for Android and/or *GoogleService-Info.plist* for iOS under Assets. You get them from the Apps in the Firebase Console
+https://console.firebase.google.com/u/0/project/pobbles-dev/overview
+
+You have to download the Firebase Unity SDK from 
+https://firebase.google.com/download/unity
+
+Go in the Unity Editor and import the Firebase SDK packages under dotnet4 in the Firebase SDK folder you downloaded.
+You import a package through 
+Assets > Import Package > Custom Package and select a package file (must be repeated for each Firebase SDK package)
+
 ### Selecting a Build
 Open the project in Unity. The Unity Editor should be open.
 Select File > Build Settings...
