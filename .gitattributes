@@ -2,3 +2,4 @@
 * text eol=lf
 *.png	-text
 *.ttf	-text
+*.wav -text
