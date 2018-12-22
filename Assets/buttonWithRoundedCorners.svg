@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Circle.svg">
+   sodipodi:docname="buttonWithRoundedCorners.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="-397.74123"
-     inkscape:cy="-80.308438"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-100.75139"
+     inkscape:cy="3.3613449"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,13 +57,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-240,-118.07649)">
-    <circle
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path4136"
-       cx="340"
-       cy="218.07649"
-       r="100"
-       inkscape:export-xdpi="76"
-       inkscape:export-ydpi="76" />
+    <rect
+       style="opacity:1;fill:#ffff09;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4134"
+       width="199.99998"
+       height="59.999996"
+       x="240"
+       y="198.47748"
+       ry="17.172592" />
   </g>
 </svg>
