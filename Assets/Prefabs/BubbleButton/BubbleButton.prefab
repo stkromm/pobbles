@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222908960506132710}
   - component: {fileID: 114175412595516690}
   m_Layer: 5
-  m_Name: AboutButtonText
+  m_Name: HighscoreButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222036197710219980}
   - component: {fileID: 114967792905426338}
   - component: {fileID: 114682573690772824}
+  - component: {fileID: 114796627469530504}
   m_Layer: 5
   m_Name: BubbleButton
   m_TagString: Untagged
@@ -67,18 +68,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 180afc6c2a7539a44a578331c253b7aa, type: 3}
-    m_FontSize: 24
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 122
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ABOUT
+  m_Text: HIGHSCORE
 --- !u!114 &114682573690772824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +121,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114796627469530504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619886714695456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8fe4ed71ad5ab242bd2a51850d620e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScaleSize: 0.03
+  pulseSpeed: 3
 --- !u!114 &114967792905426338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +181,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619886714695456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -177,8 +191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89, y: -84}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 50, y: 6}
+  m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224861347519955828
 RectTransform:
