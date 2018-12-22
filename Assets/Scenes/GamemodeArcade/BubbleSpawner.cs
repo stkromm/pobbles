@@ -19,9 +19,9 @@ public class BubbleSpawner : MonoBehaviour
     {
 
         float spawnY = Random.Range
-(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
+(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y+0.25f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y-0.25f-0.5f);
         float spawnX = Random.Range
-            (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+            (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x+0.25f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x-0.25f);
 
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);
         Instantiate(bubble, spawnPosition, Quaternion.identity);
