@@ -5,6 +5,7 @@ using UnityEngine;
 public class BubbleBehaviour : MonoBehaviour {
     SphereCollider sphereCollider;
     SpriteRenderer spriteRenderer;
+    AudioSource audioSource;
     ScoreScript gameScore;
 
     float lifetime;
@@ -15,6 +16,7 @@ public class BubbleBehaviour : MonoBehaviour {
 	void Start () {
         sphereCollider = gameObject.GetComponent<SphereCollider>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         ScoreScript[] scores = FindObjectsOfType(typeof(ScoreScript)) as ScoreScript[];
         if(scores.Length == 1)
         {
@@ -35,6 +37,7 @@ public class BubbleBehaviour : MonoBehaviour {
     public void onPop()
     {
         Debug.Log("Bubble popped after " + lifetime);
+        audioSource.Play();
         Destroy(gameObject);
     }
 
