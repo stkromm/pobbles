@@ -48,6 +48,8 @@ public class ScoreScript : MonoBehaviour
                 Destroy(c.gameObject);
             }
             Destroy(FindObjectOfType(typeof(BubbleSpawner)) as Component);
+
+            /*
             scoreText.enabled = false;
             bubbleText.enabled = false;
             resultMenu.enabled = true;
@@ -58,6 +60,8 @@ public class ScoreScript : MonoBehaviour
             stats.saveScore(score);
 
             finalScoreText.text = (oldScore != stats.getHighScore() ? "New Highscore" : "Score ") + score;
+            */
+            SceneManager.LoadScene("ResultScreen");
 
         }
     }
