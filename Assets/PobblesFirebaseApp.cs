@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Firebase;
 using Firebase.Database;
+using Firebase.Auth;
 using Firebase.Unity.Editor;
 
 public class PobblesFirebaseApp : MonoBehaviour {
@@ -17,8 +18,26 @@ public class PobblesFirebaseApp : MonoBehaviour {
         app.SetEditorDatabaseUrl("https://pobbles-dev.firebaseio.com");
         if (app.Options.DatabaseUrl != null)
             app.SetEditorDatabaseUrl(app.Options.DatabaseUrl);
-        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-        reference.Child("Test").SetValueAsync("Hello World!");
+        Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        auth.SignInAnonymouslyAsync().ContinueWith(task => {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("SignInAnonymouslyAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            Firebase.Auth.FirebaseUser newUser = task.Result;
+            Debug.LogFormat("User signed in successfully: {0} ({1})",
+                newUser.DisplayName, newUser.UserId);
+
+            DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+            reference.Child(newUser.UserId).SetValueAsync("Hello World!");
+        });
     }
 	
 	// Update is called once per frame
