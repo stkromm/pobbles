@@ -6,44 +6,37 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public int maxBubbles = 30;
+    public float timeLeft = 60.0f;
     int score;
-    int bubbles;
     public Text finalScoreText;
     public Text scoreText;
-    public Text bubbleText;
+    public Text timerText;
     public Canvas resultMenu;
 
     // Use this for initialization
     void Start()
     {
         scoreText.text = "" + score;
-        bubbleText.text = "Bubbles:" + (30 - bubbles);
+        timerText.text = "1:00";
     }
 
-    public void processBubblePop(float lifetime, float maxLifetime)
+    void Update()
     {
-        if (bubbles >= maxBubbles)
+        timeLeft -= Time.deltaTime;
+        if (Mathf.Round(timeLeft) >= 60)
         {
-            return;
-        }
-        if (lifetime >= maxLifetime)
-        {
-            score -= 50;
-            Debug.Log("New score:" + score);
+            int minutes = Mathf.FloorToInt(timeLeft / 60.0f);
+            timerText.text = "" + minutes + ":" + Mathf.Floor(timeLeft-minutes*60).ToString("00");
         }
         else
         {
-            score += 50 + (int)(100f * (lifetime / maxLifetime));
-            Debug.Log("New score:" + score);
+            timerText.text = "" + Mathf.Floor(timeLeft).ToString("0:00");
         }
-        bubbles++;
-        scoreText.text = "" + score;
-        bubbleText.text = "Bubbles:" + (30 - bubbles);
-        if (bubbles >= maxBubbles)
+        
+        if (timeLeft < 0)
         {
             Component[] bubbles = FindObjectsOfType(typeof(BubbleBehaviour)) as Component[];
-            foreach(Component c in bubbles)
+            foreach (Component c in bubbles)
             {
                 Destroy(c.gameObject);
             }
@@ -62,7 +55,26 @@ public class ScoreScript : MonoBehaviour
             finalScoreText.text = (oldScore != stats.getHighScore() ? "New Highscore" : "Score ") + score;
             */
             SceneManager.LoadScene("ResultScreen");
-
         }
+    }
+
+    public void processBubblePop(float lifetime, float maxLifetime)
+    {
+        if (timeLeft < 0)
+        {
+            return;
+        }
+        if (lifetime >= maxLifetime)
+        {
+            score -= 100;
+            Debug.Log("New score:" + score);
+        }
+        else
+        {
+            score += 150 - (int)(100f * (lifetime / maxLifetime));
+            Debug.Log("New score:" + score);
+        }
+        scoreText.text = "" + score;
+       
     }
 }

@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ad8e8c8bd64674d852d4bfa7b2aff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBubbles: 30
+  timeLeft: 60
   finalScoreText: {fileID: 0}
   scoreText: {fileID: 885897379}
-  bubbleText: {fileID: 256233730}
+  timerText: {fileID: 256233730}
   resultMenu: {fileID: 0}
 --- !u!222 &66669288
 CanvasRenderer:
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 256233731}
   - component: {fileID: 256233730}
   m_Layer: 5
-  m_Name: BubbleCount
+  m_Name: TimeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
