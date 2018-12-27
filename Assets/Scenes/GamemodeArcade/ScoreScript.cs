@@ -30,7 +30,15 @@ public class ScoreScript : MonoBehaviour
         }
         else
         {
-            timerText.text = "" + Mathf.Floor(timeLeft).ToString("0:00");
+            if(timeLeft < 1)
+            {
+                timerText.text = "0:00";
+            }
+            else
+            {
+                timerText.text = "" + Mathf.Floor(timeLeft).ToString("0:00");
+            }
+            
         }
         
         if (timeLeft < 0)
@@ -54,6 +62,11 @@ public class ScoreScript : MonoBehaviour
 
             finalScoreText.text = (oldScore != stats.getHighScore() ? "New Highscore" : "Score ") + score;
             */
+
+            //set gamescore in gamemanager (preload scene)
+            Score scoreObject = Object.FindObjectOfType<Score>();
+            scoreObject.setGamescore(score);
+            //Load ResultScreen
             SceneManager.LoadScene("ResultScreen");
         }
     }
