@@ -39,16 +39,30 @@ public class BubbleSpawner : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("MouseDown");
-            // Reset ray with new mouse position
-            RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition));
-            foreach (RaycastHit hit in hits)
+
+            //2D solution
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
+            if (hit != null && hit.collider != null)
             {
+                Debug.Log("Hitting:" + hit.collider.name);
                 BubbleBehaviour bubble = hit.collider.gameObject.GetComponent(typeof(BubbleBehaviour)) as BubbleBehaviour;
                 if (bubble != null)
                 {
                     bubble.onPop();
                 }
             }
+            //3D solution
+            // Reset ray with new mouse position
+            //RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition));
+            //foreach (RaycastHit hit in hits)
+            //{
+            //BubbleBehaviour bubble = hit.collider.gameObject.GetComponent(typeof(BubbleBehaviour)) as BubbleBehaviour;
+            //if (bubble != null)
+            //{
+            //    bubble.onPop();
+            //}
+            //}
         }
     }
 }
