@@ -351,7 +351,6 @@ GameObject:
   - component: {fileID: 498650819}
   - component: {fileID: 498650818}
   - component: {fileID: 498650817}
-  - component: {fileID: 498650820}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -416,18 +415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 498650818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 498650820}
-        m_MethodName: LoadByName
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &498650818
@@ -464,18 +452,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 498650815}
   m_CullTransparentMesh: 0
---- !u!114 &498650820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 498650815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec654a3dcd31d73478c11df2adf145a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: GamemodeArcade
 --- !u!1 &501603614
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +463,6 @@ GameObject:
   - component: {fileID: 501603618}
   - component: {fileID: 501603617}
   - component: {fileID: 501603616}
-  - component: {fileID: 501603619}
   m_Layer: 5
   m_Name: BackToMenuButton
   m_TagString: Untagged
@@ -552,18 +527,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 501603617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 501603619}
-        m_MethodName: LoadByName
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &501603617
@@ -600,18 +564,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501603614}
   m_CullTransparentMesh: 0
---- !u!114 &501603619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 501603614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec654a3dcd31d73478c11df2adf145a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: MainMenu
 --- !u!1 &592974688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,10 +1155,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 400, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1449,7 +1401,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 12
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -1592,6 +1544,9 @@ MonoBehaviour:
   timingScoreText: {fileID: 1575995009}
   specialsScoreText: {fileID: 233532389}
   overallScoreText: {fileID: 1723076964}
+  playerNameInput: {fileID: 1713898084}
+  backToMenuButton: {fileID: 501603616}
+  restartButton: {fileID: 498650817}
 --- !u!1 &1832601350
 GameObject:
   m_ObjectHideFlags: 0

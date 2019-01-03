@@ -9,15 +9,22 @@ public class ScoreScript : MonoBehaviour
     public float timeLeft = 60.0f;
     int score;
     public Text finalScoreText;
+    public Text gameStartText;
     public Text scoreText;
     public Text timerText;
+    public Text gameEndText;
     public Canvas resultMenu;
+    private Sound soundObject;
 
     // Use this for initialization
     void Start()
     {
-        scoreText.text = "" + score;
+        scoreText.text = "0";
         timerText.text = "1:00";
+
+        //start the arcade game music
+        soundObject = Object.FindObjectOfType<Sound>();
+        soundObject.PlayArcadeGameMusic();
     }
 
     void Update()
@@ -37,6 +44,12 @@ public class ScoreScript : MonoBehaviour
             else
             {
                 timerText.text = "" + Mathf.Floor(timeLeft).ToString("0:00");
+            }
+
+            //color timer text before game end
+            if(timeLeft < 4)
+            {
+                timerText.color = Color.red;
             }
             
         }
@@ -65,10 +78,20 @@ public class ScoreScript : MonoBehaviour
 
             //set gamescore in gamemanager (preload scene)
             Score scoreObject = Object.FindObjectOfType<Score>();
-            scoreObject.setGamescore(score);
+            scoreObject.SetGamescore(score);
+            
+            //announce the game end
+            gameEndText.text = "Good Job!";
+            
+        }
+        if (timeLeft < -2)
+        {
+            //switch back to the menu music
+            soundObject.PlayMenuGameMusic();
             //Load ResultScreen
             SceneManager.LoadScene("ResultScreen");
         }
+
     }
 
     public void processBubblePop(float lifetime, float maxLifetime)

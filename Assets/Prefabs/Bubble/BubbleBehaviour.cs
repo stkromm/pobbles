@@ -7,6 +7,7 @@ public class BubbleBehaviour : MonoBehaviour {
     SpriteRenderer spriteRenderer;
     AudioSource audioSource;
     ScoreScript gameScore;
+    Sound soundObject;
 
     float lifetime;
     float growthRate = 20;
@@ -14,6 +15,7 @@ public class BubbleBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        soundObject = Object.FindObjectOfType<Sound>();
         sphereCollider = gameObject.GetComponent<SphereCollider>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -36,8 +38,8 @@ public class BubbleBehaviour : MonoBehaviour {
 
     public void onPop()
     {
-        Debug.Log("Bubble popped after " + lifetime);
-        audioSource.Play();
+        //pop sound not played from audioSource of Gameobject itself, because gameobject is destroywed before sound is played
+        soundObject.PlayPopSound();
         Destroy(gameObject);
     }
 
@@ -47,11 +49,12 @@ public class BubbleBehaviour : MonoBehaviour {
         transform.localScale = new Vector3(scale,scale,scale);
         if (lifetime > maxLifetime)
         {
+            soundObject.PlayPopSound();
             Destroy(gameObject);
         }
         else
         {
-            Debug.Log("Lifetime updated to " + lifetime);
+            //Debug.Log("Lifetime updated to " + lifetime);
         }
     }
 
