@@ -5,31 +5,38 @@ using UnityEngine;
 public class BubbleSpawner : MonoBehaviour
 {
     public GameObject bubble;
+    public float countdown = 3.0f;
 
     // Use this for initialization
     void Start()
     {
-        for (int i = 0; i < 5; ++i)
-        {
-            Spawn();
-        }
+       
     }
 
     void Spawn()
     {
+        
+        if (countdown < 0)
+        {
 
-        float spawnY = Random.Range
-(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y+0.25f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y-0.25f-0.5f);
-        float spawnX = Random.Range
-            (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x+0.25f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x-0.25f);
 
-        Vector2 spawnPosition = new Vector2(spawnX, spawnY);
-        Instantiate(bubble, spawnPosition, Quaternion.identity);
+            float spawnY = Random.Range
+    (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.25f - 0.5f);
+            float spawnX = Random.Range
+                (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.25f);
+
+            Vector2 spawnPosition = new Vector2(spawnX, spawnY);
+            Instantiate(bubble, spawnPosition, Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        //increment countdown
+        countdown -= Time.deltaTime;
+
+        //spawn bubbles if not enough bubbles on screen
         Object[] bubbles = FindObjectsOfType(typeof(BubbleBehaviour));
         if (bubbles.Length < 5)
         {

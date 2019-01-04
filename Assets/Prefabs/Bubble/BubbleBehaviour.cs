@@ -38,8 +38,7 @@ public class BubbleBehaviour : MonoBehaviour {
 
     public void onPop()
     {
-        //pop sound not played from audioSource of Gameobject itself, because gameobject is destroywed before sound is played
-        soundObject.PlayPopSound();
+        //pop sound not played from audioSource of Gameobject itself, because gameobject is destroyed before sound is played
         Destroy(gameObject);
     }
 
@@ -49,7 +48,6 @@ public class BubbleBehaviour : MonoBehaviour {
         transform.localScale = new Vector3(scale,scale,scale);
         if (lifetime > maxLifetime)
         {
-            soundObject.PlayPopSound();
             Destroy(gameObject);
         }
         else
@@ -60,6 +58,7 @@ public class BubbleBehaviour : MonoBehaviour {
 
     void OnDestroy()
     {
-        gameScore.processBubblePop(lifetime, maxLifetime);
+        soundObject.PlayPopSound();
+        gameScore.processBubblePop(lifetime, maxLifetime, gameObject.transform.position);
     }
 }

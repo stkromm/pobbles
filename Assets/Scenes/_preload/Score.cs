@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Score : MonoBehaviour {
     private int gamescore = 0;
+    private int perfectTiming=0;
+    private int goodTiming=0;
+    private int normalTiming=0;
+    private int poppedItself = 0;
     private string scoreDefaultKey = "score";
     private string playerDefaultKey = "player";
     IList<int> scoreList;
@@ -14,6 +18,10 @@ public class Score : MonoBehaviour {
         BuildScoreList();
         BuildPlayerList();
     }
+
+    /**********************************************************
+    *********************Result Screen****************************
+    ***********************************************************/
     //keep track of the gamescore
     public void SetGamescore(int score)
     {
@@ -25,18 +33,60 @@ public class Score : MonoBehaviour {
         return gamescore;
     }
 
-    public void RegisterNewScoreInLeaderboard(string player, int score)
+    //keep track of the bubble pop timing
+    public void setTiming(int normalTiming, int goodTiming, int perfectTiming, int poppedItself)
+    {
+        this.normalTiming = normalTiming;
+        this.goodTiming = goodTiming;
+        this.perfectTiming = perfectTiming;
+        this.poppedItself = poppedItself;
+
+        Debug.Log("poppedItself: " + poppedItself);
+        Debug.Log("normalTiming: " + normalTiming);
+        Debug.Log("goodTiming: " + goodTiming);
+        Debug.Log("perfectTiming: " + perfectTiming);
+    }
+
+    public int GetPerfectTiming()
+    {
+        return perfectTiming;
+    }
+    public int GetGoodTiming()
+    {
+        return goodTiming;
+    }
+
+    public int GetNormalTiming()
+    {
+        return normalTiming;
+    }
+    public int GetPoppedItself()
+    {
+        return poppedItself;
+    }
+
+    /**********************************************************
+    *********************High Score****************************
+    ***********************************************************/
+    public int checkForNewHighscore(int score)
     {
         int index = -1;
         //check if new score is inside the top 5
-        for(int i = scoreList.Count-1; i>-1; i--)
+        for (int i = scoreList.Count - 1; i > -1; i--)
         {
-            if(score > scoreList[i])
+            if (score > scoreList[i])
             {
                 //set the index to the highest score that is lower than the new score
                 index = i;
             }
         }
+
+        return index;
+    }
+
+    public int RegisterNewScoreInLeaderboard(string player, int score)
+    {
+        int index = checkForNewHighscore(score);
 
         //if the score is inside, register the new score with the corresponding player
         if (index != -1)
@@ -62,6 +112,7 @@ public class Score : MonoBehaviour {
                 PlayerPrefs.SetString(playerDefaultKey + i, playerList[i]);
             }
         }
+        return index;
     }
 
     private void BuildScoreList()

@@ -394,6 +394,16 @@ Prefab:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 2}
   m_IsPrefabAsset: 0
@@ -562,7 +572,7 @@ Prefab:
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 2}
