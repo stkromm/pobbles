@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BubbleButtonMovement : MonoBehaviour {
+public class BubbleButtonBehaviour : MonoBehaviour {
     public float maxScaleSize;
     public int pulseSpeed;
     public int delay;
@@ -11,11 +11,15 @@ public class BubbleButtonMovement : MonoBehaviour {
     private Sound soundObject;
     // Use this for initialization
     void Start () {
+        Debug.Log("Start function called.");
         initScale = this.gameObject.transform.localScale;
 
         //play pop sound if button is pressed
+        soundObject = soundObject = Object.FindObjectOfType<Sound>();
         gameObject.GetComponent<Button>().onClick.AddListener(delegate
         {
+           
+            Debug.Log("Listener triggered");
             soundObject.PlayPopSound();
         });
 	}
