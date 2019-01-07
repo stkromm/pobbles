@@ -155,7 +155,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -275,7 +275,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 326587192b67f4720b6e4cdc4b13a5a8, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -553,5 +553,9 @@ MonoBehaviour:
   BubblePop2: {fileID: 8300000, guid: bc08e5605327e4305b5195c26c4af6ca, type: 3}
   BubblePop3: {fileID: 8300000, guid: c55a9f7cf4bd04aa6b1ad69d83178df2, type: 3}
   globalMusicObject: {fileID: 891017821}
-  arcadeGameMusic: {fileID: 8300000, guid: 3c41eec485e06fe4e89deb6f6d767da8, type: 3}
-  menuMusic: {fileID: 8300000, guid: b72d811b8d224794e9cb1c5190fb117f, type: 3}
+  arcadeGameMusic: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
+  arcadeGameMusic1: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
+  arcadeGameMusic2: {fileID: 8300000, guid: 14d0fcbf57c39aa4e83443f2002c55f8, type: 3}
+  arcadeGameMusic3: {fileID: 8300000, guid: 9ea81edfd4caa9348b67e5947ee277ea, type: 3}
+  arcadeGameMusic4: {fileID: 8300000, guid: 9ea81edfd4caa9348b67e5947ee277ea, type: 3}
+  menuMusic: {fileID: 8300000, guid: 8f4d4d1940b5de74c9aeac5a1b466040, type: 3}

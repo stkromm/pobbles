@@ -19,6 +19,10 @@ public class Sound : MonoBehaviour {
     //Music object and a clip
     public AudioSource globalMusicObject;
     public AudioClip arcadeGameMusic;
+    public AudioClip arcadeGameMusic1;
+    public AudioClip arcadeGameMusic2;
+    public AudioClip arcadeGameMusic3;
+    public AudioClip arcadeGameMusic4;
     public AudioClip menuMusic;
 
     //string to check which song was played before stopping
@@ -63,7 +67,7 @@ public class Sound : MonoBehaviour {
         }
         else
         {
-            this.musicValue = 100;
+            this.musicValue = 5;
         }
         
     }
@@ -167,20 +171,48 @@ public class Sound : MonoBehaviour {
     //play arcade game music
     public void PlayArcadeGameMusic()
     {
+        
         //start playing, if music enabled
         if (GetMusicBool())
         {
             if (globalMusicObject.isPlaying && !(musicState=="arcade"))
             {
                 globalMusicObject.Stop();
-                globalMusicObject.PlayOneShot(arcadeGameMusic);
+                chooseTitle();
+
+
             }
             else if (!globalMusicObject.isPlaying)
             {
-                globalMusicObject.PlayOneShot(arcadeGameMusic);
+                chooseTitle();
             }
         }
         musicState = "arcade";
+    }
+
+    private void chooseTitle()
+    {
+        float rnd = Random.Range(0.0f, 1.0f);
+        Debug.Log("Random Number to chose the game music: " + rnd);
+        if (rnd < 0.2f)
+        {
+            globalMusicObject.PlayOneShot(arcadeGameMusic);
+        } else if(rnd >= 0.2f && rnd < 0.4f)
+        {
+            globalMusicObject.PlayOneShot(arcadeGameMusic1);
+        }
+        else if (rnd >= 0.4f && rnd < 0.6f)
+        {
+            globalMusicObject.PlayOneShot(arcadeGameMusic2);
+        }
+        else if (rnd >= 0.6f && rnd < 0.8f)
+        {
+            globalMusicObject.PlayOneShot(arcadeGameMusic3);
+        }
+        else
+        {
+            globalMusicObject.PlayOneShot(arcadeGameMusic4);
+        }
     }
 
     //play menu music
