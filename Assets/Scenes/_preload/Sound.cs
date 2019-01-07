@@ -63,13 +63,17 @@ public class Sound : MonoBehaviour {
 
         if (PlayerPrefs.HasKey("musicValue"))
         {
+            
             this.musicValue = PlayerPrefs.GetInt("musicValue");
+            Debug.Log("preset music value set to: " +this.musicValue);
         }
         else
         {
             this.musicValue = 5;
         }
-        
+
+        //Update Sound Settings after loading the inital value
+        UpdateSoundSettings();
     }
 
     //play the menu soundtrack
