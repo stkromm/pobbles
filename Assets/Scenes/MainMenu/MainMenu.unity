@@ -264,6 +264,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: HighscoreScreen
+--- !u!114 &287267587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287267585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.09803922}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &699679386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,14 +767,14 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
-      propertyPath: m_Name
-      value: FeedbackButtonText
-      objectReference: {fileID: 0}
     - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: delay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
+      propertyPath: m_Name
+      value: FeedbackButtonText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
@@ -1270,6 +1285,11 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: pulseSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
       value: PlayGameButtonText
@@ -1283,11 +1303,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: pulseSpeed
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
