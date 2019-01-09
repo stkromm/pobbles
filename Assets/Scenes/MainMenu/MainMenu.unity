@@ -245,6 +245,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Feedback
+--- !u!114 &270218464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270218462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.09803922}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &287267585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1619886714695456, guid: 58c83a7daaeb59d479616ef9d0ea5868,
@@ -445,7 +460,8 @@ PrefabInstance:
       propertyPath: delay
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
 --- !u!1 &823156792
 GameObject:
@@ -776,7 +792,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FeedbackButtonText
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
 --- !u!224 &1034180403 stripped
 RectTransform:
@@ -1304,7 +1321,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
 --- !u!1 &1865285015 stripped
 GameObject:
@@ -1331,6 +1349,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: GamemodeArcade
+--- !u!114 &1865285018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865285015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.09803922}
+  m_EffectDistance: {x: 3, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1902663913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1491,7 +1524,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsButtonText
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
 --- !u!1 &1902663914 stripped
 GameObject:
@@ -1512,3 +1546,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Options
+--- !u!114 &1902663916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902663914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.09803922}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
