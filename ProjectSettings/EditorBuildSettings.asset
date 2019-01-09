@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ResultScreen/ResultScreen.unity
     guid: 97a0140ca3e1cf54c86c68b5da5c38ae
+  - enabled: 1
+    path: Assets/Scenes/Feedback/Feedback.unity
+    guid: a00d98e0dd130431a8cfde11586c86e9
   m_configObjects: {}
