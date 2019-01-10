@@ -97,8 +97,7 @@ public class ScoreScript : MonoBehaviour
                 finalScoreText.text = (oldScore != stats.getHighScore() ? "New Highscore" : "Score ") + score;
                 */
 
-                //set gamescore in gamemanager (preload scene)
-                scoreObject.SetGamescore(score);
+                
 
                 //announce the game end
                 gameEndText.text = "Good Job!";
@@ -106,8 +105,7 @@ public class ScoreScript : MonoBehaviour
             }
             if (timeLeft < -2)
             {
-                //switch back to the menu music
-                soundObject.PlayMenuGameMusic();
+                
                 //Load ResultScreen
                 SceneManager.LoadScene("ResultScreen");
             }
@@ -184,6 +182,12 @@ public class ScoreScript : MonoBehaviour
 
     private void OnDestroy()
     {
+        //set gamescore in gamemanager (preload scene)
+        scoreObject.SetGamescore(score);
+
+        //switch back to the menu music
+        soundObject.PlayMenuGameMusic();
+
         //set the number of bubbles with their corresponding timing
         scoreObject.setTiming(normalTiming, goodTiming, perfectTiming, poppedItself);
     }
