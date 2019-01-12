@@ -34,7 +34,7 @@ public class Score : MonoBehaviour {
     }
 
     //keep track of the bubble pop timing
-    public void setTiming(int normalTiming, int goodTiming, int perfectTiming, int poppedItself)
+    public void SetTiming(int normalTiming, int goodTiming, int perfectTiming, int poppedItself)
     {
         this.normalTiming = normalTiming;
         this.goodTiming = goodTiming;
@@ -65,6 +65,11 @@ public class Score : MonoBehaviour {
         return poppedItself;
     }
 
+    public void ResetGameStats()
+    {
+        SetGamescore(0);
+        SetTiming(0, 0, 0, 0);
+    }
     /**********************************************************
     *********************High Score****************************
     ***********************************************************/

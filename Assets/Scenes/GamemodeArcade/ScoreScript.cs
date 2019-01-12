@@ -38,6 +38,9 @@ public class ScoreScript : MonoBehaviour
 
         //reference score object
         scoreObject = Object.FindObjectOfType<Score>();
+
+        //set globally stored stats to 0 to prevent exit with points bug
+        scoreObject.ResetGameStats();
         }
 
     void Update()
@@ -189,6 +192,6 @@ public class ScoreScript : MonoBehaviour
         soundObject.PlayMenuGameMusic();
 
         //set the number of bubbles with their corresponding timing
-        scoreObject.setTiming(normalTiming, goodTiming, perfectTiming, poppedItself);
+        scoreObject.SetTiming(normalTiming, goodTiming, perfectTiming, poppedItself);
     }
 }

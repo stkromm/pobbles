@@ -45,7 +45,8 @@ public class BubbleBehaviour : MonoBehaviour {
         //only pop, if game is not paused
         if (!gameSpeedControllerObject.GetPaused())
         {
-            Debug.Log("der paused bool ist "+!gameSpeedControllerObject.GetPaused());
+            soundObject.PlayPopSound();
+            gameScore.processBubblePop(lifetime, maxLifetime, gameObject.transform.position);
             Destroy(gameObject);
         }
         
@@ -67,7 +68,6 @@ public class BubbleBehaviour : MonoBehaviour {
 
     void OnDestroy()
     {
-        soundObject.PlayPopSound();
-        gameScore.processBubblePop(lifetime, maxLifetime, gameObject.transform.position);
+        
     }
 }
