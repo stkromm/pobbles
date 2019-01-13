@@ -41,7 +41,6 @@ public class BubbleBehaviour : MonoBehaviour {
 
     public void onPop()
     {
-        //pop sound not played from audioSource of Gameobject itself, because gameobject is destroyed before sound is played
         //only pop, if game is not paused
         if (!gameSpeedControllerObject.GetPaused())
         {
@@ -68,6 +67,10 @@ public class BubbleBehaviour : MonoBehaviour {
 
     void OnDestroy()
     {
-        
+        //if bubbles are too old, they pop automatically and points need to be calculated
+        if (lifetime > maxLifetime) { 
+            soundObject.PlayPopSound();
+            gameScore.processBubblePop(lifetime, maxLifetime, gameObject.transform.position);
+        }
     }
 }
