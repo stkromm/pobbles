@@ -57,15 +57,15 @@ public class BubbleSpawner : MonoBehaviour
         {
             Spawn();
         }
-
-        if (Input.GetMouseButtonDown(0))
+        Touch[] myTouches = Input.touches;
+        for (int i = 0; i < Input.touchCount; i++)
         {
-            Debug.Log("MouseDown");
-
+            Debug.Log("Input position: "+ i + " " + Input.GetTouch(i).position);
             //2D solution
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
             RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
-            if (hit != null && hit.collider != null)
+
+            if (hit.collider != null)
             {
                 Debug.Log("Hitting:" + hit.collider.name);
                 BubbleBehaviour bubble = hit.collider.gameObject.GetComponent(typeof(BubbleBehaviour)) as BubbleBehaviour;
@@ -73,6 +73,7 @@ public class BubbleSpawner : MonoBehaviour
                 {
                     bubble.onPop();
                 }
+
                 NegativeBubbleBehaviour negativeBubble = hit.collider.gameObject.GetComponent(typeof(NegativeBubbleBehaviour)) as NegativeBubbleBehaviour;
                 if (negativeBubble != null)
                 {
@@ -80,17 +81,32 @@ public class BubbleSpawner : MonoBehaviour
                 }
 
             }
-            //3D solution
-            // Reset ray with new mouse position
-            //RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition));
-            //foreach (RaycastHit hit in hits)
-            //{
-            //BubbleBehaviour bubble = hit.collider.gameObject.GetComponent(typeof(BubbleBehaviour)) as BubbleBehaviour;
-            //if (bubble != null)
-            //{
-            //    bubble.onPop();
-            //}
-            //}
+        }
+
+        //fallback for testing on the PC
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Mouse down");
+
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Hitting:" + hit.collider.name);
+                BubbleBehaviour bubble = hit.collider.gameObject.GetComponent(typeof(BubbleBehaviour)) as BubbleBehaviour;
+                if (bubble != null)
+                {
+                    bubble.onPop();
+                }
+
+                NegativeBubbleBehaviour negativeBubble = hit.collider.gameObject.GetComponent(typeof(NegativeBubbleBehaviour)) as NegativeBubbleBehaviour;
+                if (negativeBubble != null)
+                {
+                    negativeBubble.onPop();
+                }
+
+            }
         }
     }
 }

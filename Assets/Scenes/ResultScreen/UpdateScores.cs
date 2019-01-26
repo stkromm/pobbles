@@ -22,7 +22,9 @@ public class UpdateScores : MonoBehaviour {
     private Score scoreObject;
     public InputField playerNameInput;
     public Button backToMenuButton;
+    public Button saveScoreButton;
     public Button restartButton;
+    bool scoreSaved = false;
 
     public float durationGameScore = 30.0f;
     public float durationTimingScore = 10.0f;
@@ -40,18 +42,35 @@ public class UpdateScores : MonoBehaviour {
 
         backToMenuButton.onClick.AddListener(delegate
         {
-            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
+            //prevent multile score saving
+            
+            SaveScore(playerNameInput.text, overallScore);
             SceneManager.LoadScene("MainMenu");
         });
         restartButton.onClick.AddListener(delegate
         {
-            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
+            SaveScore(playerNameInput.text, overallScore);
             SceneManager.LoadScene("GamemodeArcade");
         });
+        saveScoreButton.onClick.AddListener(delegate
+        {
+            SaveScore(playerNameInput.text, overallScore);
+        });
 
+
+    }
+	private void SaveScore(string name, int score)
+    {
+        //prevent multiple saving and disable button
+        if (!scoreSaved)
+        {
+            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
+            scoreSaved = true;
+            saveScoreButton.interactable = false;
+            saveScoreButton.image.color = Color.grey;
+        }
         
     }
-	
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
