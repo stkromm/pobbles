@@ -88,6 +88,12 @@ public class ScoreScript : MonoBehaviour
                 }
                 Destroy(FindObjectOfType(typeof(BubbleSpawner)) as Component);
 
+                Component[] negativeBubbles = FindObjectsOfType(typeof(NegativeBubbleBehaviour)) as Component[];
+                foreach (Component c in negativeBubbles)
+                {
+                    Destroy(c.gameObject);
+                }
+
                 /*
                 scoreText.enabled = false;
                 bubbleText.enabled = false;
@@ -101,7 +107,7 @@ public class ScoreScript : MonoBehaviour
                 finalScoreText.text = (oldScore != stats.getHighScore() ? "New Highscore" : "Score ") + score;
                 */
 
-                
+
 
                 //announce the game end
                 gameEndText.text = "Good Job!";

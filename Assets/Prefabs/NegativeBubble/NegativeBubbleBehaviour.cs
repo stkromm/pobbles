@@ -43,7 +43,7 @@ public class NegativeBubbleBehaviour : MonoBehaviour {
         //only pop, if game is not paused
         if (!gameSpeedControllerObject.GetPaused())
         {
-            soundObject.PlayPopSound();
+            soundObject.PlayNegativePopSound();
             gameScore.ProcessNegativeBubblePop(lifetime, maxLifetime, gameObject.transform.position);
             Destroy(gameObject);
         }
@@ -68,7 +68,7 @@ public class NegativeBubbleBehaviour : MonoBehaviour {
     {
         //if bubbles are too old, they pop automatically and points need to be calculated
         if (lifetime > maxLifetime) { 
-            soundObject.PlayPopSound();
+            soundObject.PlayNegativePopSound();
             gameScore.ProcessNegativeBubblePop(lifetime, maxLifetime, gameObject.transform.position);
         }
     }
