@@ -294,6 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubble: {fileID: 1320311679558542, guid: 486b46124c0807f489ec23273a527a53, type: 3}
+  negativeBubble: {fileID: 1320311679558542, guid: 7b0d9e53c67fa084dae6612d4be6a1e0,
+    type: 3}
   countdown: 3
 --- !u!224 &66669290
 RectTransform:
@@ -1887,7 +1889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85, y: 0.1}
   m_AnchorMax: {x: 1, y: 0.6}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756452462

@@ -22,6 +22,7 @@ public class ScoreScript : MonoBehaviour
     private int goodTiming=0;
     private int normalTiming = 0;
     private int poppedItself = 0;
+    private int negativeBubbles = 0;
 
     public GameObject bubbleScoreObject;
 
@@ -137,6 +138,28 @@ public class ScoreScript : MonoBehaviour
         bubbleScoreObjectClone.GetComponent<BubbleScoreBehaviour>().UpdateComponents(popScore, position, timing);
     }
 
+    public void ProcessNegativeBubblePop(float lifetime, float maxLifetime, Vector3 position)
+    {
+        // do nothing is bubble is popped after game end (used for the last bubbles that are on the screen upon game end)
+        if (timeLeft < 0)
+        {
+            return;
+        }
+        //adjust the score text
+        int popScore = CalculateNegativeBubbleScore(lifetime, maxLifetime);
+
+        score += popScore;
+        scoreText.text = "" + score;
+
+        //get timing for the bubble pop
+        string timing = CalculateNegativeTiming(lifetime, maxLifetime);
+
+        //make the pop score floating over a bubble after pop
+        GameObject bubbleScoreObjectClone = Instantiate(bubbleScoreObject, transform.position, transform.rotation, uiCanvas.transform);
+        bubbleScoreObjectClone.GetComponent<BubbleScoreBehaviour>().UpdateComponents(popScore, position, timing);
+
+    }
+
     
     private int CalculateBubbleScore(float lifetime, float maxLifetime)
     {
@@ -149,6 +172,21 @@ public class ScoreScript : MonoBehaviour
         else
         {
             score = 150 - (int)(100f * (lifetime / maxLifetime));
+            Debug.Log("New score:" + score);
+        }
+        return score;
+    }
+
+    private int CalculateNegativeBubbleScore(float lifetime, float maxLifetime)
+    {
+        int score;
+        if (lifetime >= maxLifetime)
+        {
+            score = +100;
+        }
+        else
+        {
+            score = -50 - (int)(100f * (lifetime / maxLifetime));
             Debug.Log("New score:" + score);
         }
         return score;
@@ -180,6 +218,21 @@ public class ScoreScript : MonoBehaviour
                 normalTiming += 1;
                 return "";
             }
+        }
+    }
+
+    private string CalculateNegativeTiming(float lifetime, float maxLifetime)
+    {
+        if (lifetime >= maxLifetime)
+        {
+            return "Great!";
+        }
+        else
+        {
+            
+            negativeBubbles += 1;
+            return "Ouch!";
+            
         }
     }
 
