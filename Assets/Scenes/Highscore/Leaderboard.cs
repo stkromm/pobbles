@@ -7,6 +7,7 @@ using Firebase.Database;
 using Firebase.Unity.Editor;
 
 public class Leaderboard : MonoBehaviour {
+
     private IList<string> playerList;
     public Text player0;
     public Text player1;
@@ -20,10 +21,14 @@ public class Leaderboard : MonoBehaviour {
     public Text score2;
     public Text score3;
     public Text score4;
-
+    // ONLINE 
+    private IList<string> onlinePlayerList;
+    private IList<int> onlineScoreList;
     public Button personalButton;
     public Button globalButton;
     DatabaseReference reference;
+    private bool updateToGlobal = false;
+    private bool updateToLocal = false;
 
     private Score scoreObject;
     // Use this for initialization
@@ -49,6 +54,10 @@ public class Leaderboard : MonoBehaviour {
         score3.text = scoreList[3].ToString();
         score4.text = scoreList[4].ToString();
 
+        onlinePlayerList = new List<string>();
+        onlineScoreList = new List<int>();
+        LoadHighscores();
+
         globalButton.onClick.AddListener(delegate
         {
             ClickedGlobal();
@@ -59,21 +68,108 @@ public class Leaderboard : MonoBehaviour {
             ClickedPersonal();
         });
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (updateToGlobal)
+        {
+            player0.text = onlinePlayerList[0];
+            player1.text = onlinePlayerList[1];
+            player2.text = onlinePlayerList[2];
+            player3.text = onlinePlayerList[3];
+            player4.text = onlinePlayerList[4];
+            score0.text = onlineScoreList[0].ToString();
+            score1.text = onlineScoreList[1].ToString();
+            score2.text = onlineScoreList[2].ToString();
+            score3.text = onlineScoreList[3].ToString();
+            score4.text = onlineScoreList[4].ToString();
+            updateToGlobal = false;
+        }
+        else if (updateToLocal)
+        {
+            player1.text = playerList[1];
+            player2.text = playerList[2];
+            player3.text = playerList[3];
+            player4.text = playerList[4];
+            score0.text = scoreList[0].ToString();
+            score1.text = scoreList[1].ToString();
+            score2.text = scoreList[2].ToString();
+            score3.text = scoreList[3].ToString();
+            score4.text = scoreList[4].ToString();
+            updateToLocal = false;
+        }
+    }
     private void ClickedPersonal(){
         // Switch to personal highscore list
         Debug.Log("Clicked Personal");
+        updateToLocal = true;
     }
 
     private void ClickedGlobal(){
         // Switch to global highscore list
         Debug.Log("clicked global");
-        Highscoreboard board = new Highscoreboard(reference);
-        Debug.Log("boardcount: " + board.GetBoard().Count);
+        updateToGlobal = true;
+    }
+
+    public void LoadHighscores()
+    {
+        Highscoreboard highscoreboard = new Highscoreboard();
+
+        reference.Child("highscoreList").GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                // Handle the error...
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                // Do something with snapshot...
+                int counter = 0;
+                foreach (var child in snapshot.Children)
+                {
+                    foreach (var listpair in child.Children)
+                    {
+                        string username = listpair.Key;
+                        string scoreString = listpair.Value.ToString();
+                        int score = int.Parse(scoreString);
+                        string uid = child.Key;
+
+                        LeaderboardEntry newLBEntry = new LeaderboardEntry(uid, username, score);
+                        highscoreboard.GetBoard().Add(newLBEntry);
+                        counter += 1;
+
+                        if (counter == snapshot.ChildrenCount){
+                            // Sort Descending
+                            highscoreboard.SortBoard();
+                            // Cut list if more than maxSize has been added
+                            highscoreboard.DropLowestScores();
+                            SetupOnlineLists(highscoreboard);
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    private void SetupOnlineLists(Highscoreboard highscoreboard){
+        List<LeaderboardEntry> board = highscoreboard.GetBoard();
+        onlinePlayerList.Clear();
+        onlineScoreList.Clear();
+        for (int i = 0; i < 5; i++) {
+            if (board.Count > i)
+            {
+                onlinePlayerList.Insert(i, board[i].GetName());
+                onlineScoreList.Insert(i, board[i].GetScore());
+            }
+            else
+            {
+                onlinePlayerList.Add("-");
+                onlineScoreList.Add(0);
+            }
+
+        }
+
     }
 }
