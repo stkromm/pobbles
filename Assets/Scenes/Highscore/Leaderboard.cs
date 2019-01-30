@@ -88,6 +88,7 @@ public class Leaderboard : MonoBehaviour {
         }
         else if (updateToLocal)
         {
+            player0.text = playerList[0];
             player1.text = playerList[1];
             player2.text = playerList[2];
             player3.text = playerList[3];
