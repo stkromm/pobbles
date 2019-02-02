@@ -69,7 +69,7 @@ public class Sound : MonoBehaviour {
         }
         else
         {
-            this.musicValue = 5;
+            this.musicValue = 15;
         }
 
         //Update Sound Settings after loading the inital value

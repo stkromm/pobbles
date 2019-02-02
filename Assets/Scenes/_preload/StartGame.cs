@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour {
+    private Settings settingsObject;
 
 	// Use this for initialization
 	void Start () {
+        this.settingsObject = Object.FindObjectOfType<Settings>();
         SceneManager.LoadScene("MainMenu");
 	}
 	
@@ -14,4 +16,17 @@ public class StartGame : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void PlayGame()
+    {
+        Debug.Log("play Game called");
+        if (settingsObject.GetIntroBool())
+        {
+            SceneManager.LoadScene("Introduction");
+        }
+        else
+        {
+            SceneManager.LoadScene("GamemodeArcade");
+        }
+    }
 }

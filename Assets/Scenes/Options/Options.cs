@@ -6,16 +6,20 @@ using UnityEngine.UI;
 public class Options : MonoBehaviour {
     public Toggle effectsToggle;
     public Toggle musicToggle;
+    public Toggle introToggle;
     public Slider effectsSlider;
     public Slider musicSlider;
     private Sound soundObject;
+    private Settings settingsObject;
 
 	// Use this for initialization
 	void Start () {
         //load saved sound settings
         this.soundObject = Object.FindObjectOfType<Sound>();
+        this.settingsObject = Object.FindObjectOfType<Settings>();
         effectsToggle.isOn = soundObject.GetEffectsBool();
         musicToggle.isOn = soundObject.GetMusicBool();
+        introToggle.isOn = settingsObject.GetIntroBool();
         effectsSlider.value = soundObject.GetEffectsValue();
         musicSlider.value = soundObject.GetMusicValue();
 
@@ -27,6 +31,10 @@ public class Options : MonoBehaviour {
         musicToggle.onValueChanged.AddListener(delegate
         {
             MusicToggleValueChanged(musicToggle.isOn);
+        });
+        introToggle.onValueChanged.AddListener(delegate
+        {
+            settingsObject.SetIntroBool(introToggle.isOn);
         });
 
         //listener for slider state changes

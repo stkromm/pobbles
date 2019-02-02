@@ -30,9 +30,12 @@ public class UpdateScores : MonoBehaviour {
     public float durationTimingScore = 10.0f;
     private float timer = 0.0f;
 
+    private StartGame startGameObject;
+
     // Use this for initialization
     void Start () {
         scoreObject = Object.FindObjectOfType<Score>();
+        startGameObject = Object.FindObjectOfType<StartGame>();
         gameScore = scoreObject.GetGamescore();
         timingScore = scoreObject.GetPerfectTiming() * 100 + scoreObject.GetGoodTiming() * 50;
         specialsScore = 0;
@@ -50,7 +53,7 @@ public class UpdateScores : MonoBehaviour {
         restartButton.onClick.AddListener(delegate
         {
             SaveScore(playerNameInput.text, overallScore);
-            SceneManager.LoadScene("GamemodeArcade");
+            startGameObject.PlayGame();
         });
         saveScoreButton.onClick.AddListener(delegate
         {
