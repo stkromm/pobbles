@@ -14,6 +14,7 @@ public class Leaderboard : MonoBehaviour {
     public Text player2;
     public Text player3;
     public Text player4;
+    public Text comparisonPlayer;
 
     private IList<int> scoreList;
     public Text score0;
@@ -21,6 +22,10 @@ public class Leaderboard : MonoBehaviour {
     public Text score2;
     public Text score3;
     public Text score4;
+    public Text comparisonScore;
+
+    public Text comparisonHeading;
+
     // ONLINE 
     private IList<string> onlinePlayerList;
     private IList<int> onlineScoreList;
@@ -54,6 +59,11 @@ public class Leaderboard : MonoBehaviour {
         score3.text = scoreList[3].ToString();
         score4.text = scoreList[4].ToString();
 
+        //show the last game's Score as comparison
+        comparisonHeading.text = "Last Game's Score";
+        comparisonPlayer.text = scoreObject.GetPlayerPrefsString("lastGamesPlayer");
+        comparisonScore.text = "" + scoreObject.GetPlayerPrefsInt("lastGamesScore");
+
         onlinePlayerList = new List<string>();
         onlineScoreList = new List<int>();
         LoadHighscores();
@@ -85,6 +95,11 @@ public class Leaderboard : MonoBehaviour {
             score3.text = onlineScoreList[3].ToString();
             score4.text = onlineScoreList[4].ToString();
             updateToGlobal = false;
+
+            //show best offline Score as comparison
+            comparisonHeading.text = "Best Personal Score";
+            comparisonPlayer.text = playerList[0];
+            comparisonScore.text = scoreList[0].ToString();
         }
         else if (updateToLocal)
         {
@@ -99,6 +114,11 @@ public class Leaderboard : MonoBehaviour {
             score3.text = scoreList[3].ToString();
             score4.text = scoreList[4].ToString();
             updateToLocal = false;
+
+            //show the last game's Score as comparison
+            comparisonHeading.text = "Last Game's Score";
+            comparisonPlayer.text = scoreObject.GetPlayerPrefsString("lastGamesPlayer");
+            comparisonScore.text = "" + scoreObject.GetPlayerPrefsInt("lastGamesScore");
         }
     }
     private void ClickedPersonal(){
