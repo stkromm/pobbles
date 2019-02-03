@@ -11,8 +11,6 @@ using System.Threading.Tasks;
 public class HighscoreHandler : MonoBehaviour
 {
     Highscoreboard board;
-    public Text username;
-    public Text score;
     private DatabaseReference reference;
     // Start is called before the first frame update
     void Start()
@@ -25,15 +23,26 @@ public class HighscoreHandler : MonoBehaviour
         LoadHighscores();
     }
 
-    public void WriteLeaderboard(){
+    public HighscoreHandler(){
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://pobbles-dev.firebaseio.com/");
+
+        // Get the root reference location of the database.
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        LoadHighscores();
+    }
+
+
+    public void WriteLeaderboard(string username, int score){
         if (board == null)
         {
             board = new Highscoreboard();
         }
 
-        if (System.Int32.TryParse(score.text, out int scoreInt))
-        {
-            LeaderboardEntry newEntry = new LeaderboardEntry(username.text, scoreInt);
+        if (username == ""){
+            username = "Random User";
+        }
+
+            LeaderboardEntry newEntry = new LeaderboardEntry(username, score);
             if (board.InsertEntry(newEntry))
             {
                 // Successfully inserted - Update Firebase Data
@@ -46,7 +55,7 @@ public class HighscoreHandler : MonoBehaviour
                     reference.Child("highscoreList").Child(lowestID).SetValueAsync(null);
                 }
             }
-        }
+
 
     }
 

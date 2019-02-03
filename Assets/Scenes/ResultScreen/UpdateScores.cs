@@ -71,6 +71,9 @@ public class UpdateScores : MonoBehaviour {
             scoreSaved = true;
             saveScoreButton.interactable = false;
             saveScoreButton.image.color = Color.grey;
+
+            HighscoreHandler handler = new HighscoreHandler();
+            handler.WriteLeaderboard(playerNameInput.text, overallScore);
         }
         
     }
