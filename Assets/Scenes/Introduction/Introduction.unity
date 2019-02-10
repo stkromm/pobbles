@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 51217366}
   - component: {fileID: 51217367}
   m_Layer: 5
-  m_Name: PageText
+  m_Name: IntroControlsPageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 291250024}
   - component: {fileID: 291250023}
   m_Layer: 5
-  m_Name: Row1Text
+  m_Name: Intro1Row2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 581352823}
   - component: {fileID: 581352822}
   m_Layer: 5
-  m_Name: Row1Text
+  m_Name: Intro3Row1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 636997619}
   - component: {fileID: 636997618}
   m_Layer: 5
-  m_Name: Row1Text
+  m_Name: Intro1Row1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1711,7 +1711,7 @@ GameObject:
   - component: {fileID: 642586200}
   - component: {fileID: 642586199}
   m_Layer: 5
-  m_Name: PlayGameButton
+  m_Name: IntroductionPlayGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2078,6 +2078,7 @@ GameObject:
   - component: {fileID: 838550381}
   - component: {fileID: 838550386}
   - component: {fileID: 838550385}
+  - component: {fileID: 838550387}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2196,6 +2197,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de16c3d127c1d436cb4255d0c8d6cb82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &838550387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838550380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efc594eb230494b8d40e309101bc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &863571016
@@ -2636,7 +2649,7 @@ GameObject:
   - component: {fileID: 936751484}
   - component: {fileID: 936751483}
   m_Layer: 5
-  m_Name: Text
+  m_Name: IntroductionPlayGameButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3835,7 +3848,7 @@ GameObject:
   - component: {fileID: 1538548531}
   - component: {fileID: 1538548530}
   m_Layer: 5
-  m_Name: Label
+  m_Name: IntroBoolToggleLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4086,7 +4099,7 @@ GameObject:
   - component: {fileID: 1605097261}
   - component: {fileID: 1605097260}
   m_Layer: 5
-  m_Name: Row2Text
+  m_Name: Intro2Row2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4750,7 +4763,7 @@ GameObject:
   - component: {fileID: 1808334603}
   - component: {fileID: 1808334602}
   m_Layer: 5
-  m_Name: Row1Text
+  m_Name: Intro3Row2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

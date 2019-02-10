@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 1596449}
   - component: {fileID: 1596448}
   m_Layer: 5
-  m_Name: HeadingText
+  m_Name: AboutHeadingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 85427779}
   - component: {fileID: 85427778}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AboutDetailsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,7 +349,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1619886714695456, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
-      value: BackToMenuButton
+      value: AboutBackToMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -475,6 +475,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
+      propertyPath: m_Name
+      value: AboutBackToMenuButtonText
       objectReference: {fileID: 0}
     - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -958,6 +962,7 @@ GameObject:
   - component: {fileID: 1666608127}
   - component: {fileID: 1666608126}
   - component: {fileID: 1666608125}
+  - component: {fileID: 1666608129}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1050,6 +1055,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1666608129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666608124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efc594eb230494b8d40e309101bc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1876870118
 GameObject:
   m_ObjectHideFlags: 0

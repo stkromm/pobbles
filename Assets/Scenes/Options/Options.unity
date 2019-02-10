@@ -248,6 +248,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
+      propertyPath: m_Name
+      value: AboutButtonText
+      objectReference: {fileID: 0}
     - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_Text
@@ -1883,7 +1887,7 @@ GameObject:
   - component: {fileID: 1297568209}
   - component: {fileID: 1297568208}
   m_Layer: 5
-  m_Name: EffectsText
+  m_Name: OptionsEffectsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,6 +2005,7 @@ GameObject:
   - component: {fileID: 1529594341}
   - component: {fileID: 1529594340}
   - component: {fileID: 1529594344}
+  - component: {fileID: 1529594345}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2112,6 +2117,18 @@ MonoBehaviour:
   introToggle: {fileID: 657451863}
   effectsSlider: {fileID: 1988817401}
   musicSlider: {fileID: 429651569}
+--- !u!114 &1529594345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529594339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efc594eb230494b8d40e309101bc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621792401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2141,7 @@ GameObject:
   - component: {fileID: 1621792404}
   - component: {fileID: 1621792403}
   m_Layer: 5
-  m_Name: IntroText
+  m_Name: OptionsIntroText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2203,7 +2220,7 @@ GameObject:
   - component: {fileID: 1699836522}
   - component: {fileID: 1699836521}
   m_Layer: 5
-  m_Name: MusicText
+  m_Name: OptionsMusicText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2282,7 +2299,7 @@ GameObject:
   - component: {fileID: 1723076965}
   - component: {fileID: 1723076964}
   m_Layer: 5
-  m_Name: HeadingText
+  m_Name: OptionsHeadingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 164261959}
   - component: {fileID: 164261958}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ResultRestartButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 592974691}
   - component: {fileID: 592974690}
   m_Layer: 5
-  m_Name: GameCategory
+  m_Name: ResultGameCategoryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 603433205}
   - component: {fileID: 603433204}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ResultSaveScoreButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 1018830308}
   - component: {fileID: 1018830307}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: ResultPlayerNamePlaceholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 1027532081}
   - component: {fileID: 1027532080}
   m_Layer: 5
-  m_Name: PlayerNameText
+  m_Name: ResultPlayerNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 1505164432}
   - component: {fileID: 1505164431}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ResultBackToMenuButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 1529594342}
   - component: {fileID: 1529594341}
   - component: {fileID: 1529594340}
+  - component: {fileID: 1529594344}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1556,6 +1557,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1529594344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529594339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efc594eb230494b8d40e309101bc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1575995007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2291,7 @@ GameObject:
   - component: {fileID: 2075038606}
   - component: {fileID: 2075038605}
   m_Layer: 5
-  m_Name: TimingCategory
+  m_Name: ResultTimingCategoryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

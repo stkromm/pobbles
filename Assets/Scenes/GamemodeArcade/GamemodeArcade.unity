@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 330902940}
   - component: {fileID: 330902939}
   m_Layer: 5
-  m_Name: PauseHeading
+  m_Name: GamemodeArcadePauseHeading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 370173933}
   - component: {fileID: 370173932}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GamemodeArcadeExitButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 511018659}
   - component: {fileID: 511018658}
   m_Layer: 5
-  m_Name: GameStart
+  m_Name: GamemodeArcadeGameStartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1052,6 +1052,7 @@ GameObject:
   - component: {fileID: 838550381}
   - component: {fileID: 838550385}
   - component: {fileID: 838550386}
+  - component: {fileID: 838550387}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1168,6 +1169,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de16c3d127c1d436cb4255d0c8d6cb82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &838550387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838550380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efc594eb230494b8d40e309101bc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &885897377
@@ -1550,7 +1563,7 @@ GameObject:
   - component: {fileID: 1511383620}
   - component: {fileID: 1511383619}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GamemodeArcadeRestartButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1629,7 +1642,7 @@ GameObject:
   - component: {fileID: 1620436405}
   - component: {fileID: 1620436404}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GamemodeArcadeResumeButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1721,7 @@ GameObject:
   - component: {fileID: 1702447193}
   - component: {fileID: 1702447192}
   m_Layer: 5
-  m_Name: GameEnd
+  m_Name: GamemodeArcadeGameEndText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
