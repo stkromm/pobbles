@@ -69,9 +69,18 @@ public class Settings : MonoBehaviour {
         langObject = new Lang(System.IO.Path.Combine(Application.dataPath, "Lang.xml"), this.language, false);
     }
 
+    private void UpdateLanguage(string language)
+    {
+        langObject.setLanguage(System.IO.Path.Combine(Application.dataPath, "Lang.xml"), language);
+        this.language = language;
+    }
+
     public void SetLanguage(string language)
     {
         PlayerPrefs.SetString("language", language);
+        Debug.Log("Language PlayerPrefs set to: " + language);
+        //update the loaded hashtable
+        UpdateLanguage(language);
     }
 
     public string GetLanguage()

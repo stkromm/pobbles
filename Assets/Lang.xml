@@ -5,6 +5,7 @@
           <string name="PlayGameButtonText">Play Game</string>
           <string name="OptionsButtonText">Options</string>
           <string name="FeedbackButtonText">Feedback</string>
+          <string name="CreditsText"></string>
           
           <string name="AboutHeadingText">About</string>
           <string name="AboutBackToMenuButtonText">Back To Menu</string>
@@ -19,7 +20,7 @@
 
             Address:
             Hasenbergstraße 39b
-            70176 Stuttgart
+            70176 Stuttgart, Germany
 
             Contact:
             philipp.mittmann@web.de
@@ -38,13 +39,22 @@
           <string name="GamemodeArcadeResumeButtonText">Resume</string>
           <string name="GamemodeArcadeRestartButtonText">Restart</string>
           <string name="GamemodeArcadeExitButtonText">Exit</string>
-          <string name="FeedbackSendButtonText">Send</string>
-          
+          <string name="GamemodeArcadeGameStartText">Pop the Bubbles!</string>
+          <string name="GamemodeArcadeGameEndText">Good Job!</string>
+          <string name="GamemodeArcadePauseHeading">Paused</string>
+          <string name="RedBubbleDied">Upsi!</string>
+          <string name="PerfectTiming">Perfect!</string>
+          <string name="GoodTiming">Good!</string>
+          <string name="NegativeBubbleDied">Great!</string>
+          <string name="NegativeBubbleClicked">Ouch!</string>
+
           <string name="HighscoreHeadingText">Highscore</string>
           <string name="HighscoreScoreHeadingText">Score</string>
           <string name="HighscoreNameHeadingText">Name</string>
           <string name="HighscorePersonalButtonText">Personal</string>
           <string name="HighscoreGlobalButtonText">World</string>
+          <string name="HighscoreLocalComparisonHeadingText">Last Game's Score</string>
+          <string name="HighscoreGlobalComparisonHeadingText">Best Personal Score</string>
           
           <string name="Intro1Row1Text">Pop The Bubbles. The Smaller, The Better.</string>
           <string name="Intro1Row2Text">Don't Let The Red Bubbles Die.</string>
@@ -68,6 +78,7 @@
           <string name="ResultSaveScoreButtonText">Save Score</string>
           <string name="ResultRestartButtonText">Restart</string>
           <string name="ResultBackToMenuButtonText">Back To Menu</string>
+          <string name="NewHighScoreText">New Highscore!</string>
         </English>
         
         <French>
@@ -82,6 +93,7 @@
           <string name="PlayGameButtonText">Jetzt Spielen</string>
           <string name="OptionsButtonText">Einstellungen</string>
           <string name="FeedbackButtonText">Feedback</string>
+          <string name="CreditsText"></string>
           
           <string name="AboutHeadingText">Über</string>
           <string name="AboutBackToMenuButtonText">Zurück zum Menü</string>
@@ -96,7 +108,7 @@
 
             Adresse:
             Hasenbergstraße 39b
-            70176 Stuttgart
+            70176 Stuttgart, Deutschland
 
             Kontakt:
             philipp.mittmann@web.de
@@ -115,12 +127,22 @@
           <string name="GamemodeArcadeResumeButtonText">Weiterspielen</string>
           <string name="GamemodeArcadeRestartButtonText">Neustart</string>
           <string name="GamemodeArcadeExitButtonText">Verlassen</string>
+          <string name="GamemodeArcadeGameStartText">Pop the Bubbles!</string>
+          <string name="GamemodeArcadeGameEndText">Gut gemacht!</string>
+          <string name="GamemodeArcadePauseHeading">Pausiert</string>
+          <string name="RedBubbleDied">Upsi!</string>
+          <string name="PerfectTiming">Perfekt!</string>
+          <string name="GoodTiming">Gut!</string>
+          <string name="NegativeBubbleDied">Super!</string>
+          <string name="NegativeBubbleClicked">Ouch!</string>
           
           <string name="HighscoreHeadingText">Highscore</string>
           <string name="HighscoreScoreHeadingText">Punkte</string>
           <string name="HighscoreNameHeadingText">Name</string>
           <string name="HighscorePersonalButtonText">Lokal</string>
           <string name="HighscoreGlobalButtonText">Global</string>
+          <string name="HighscoreLocalComparisonHeadingText">Punkte des letzten Spiels</string>
+          <string name="HighscoreGlobalComparisonHeadingText">Persönlicher Highscore</string>
           
           <string name="Intro1Row1Text">Pop The Bubbles. Je kleiner, desto besser.</string>
           <string name="Intro1Row2Text">Lasse die roten Bubbles nicht sterben.</string>
@@ -144,5 +166,6 @@
           <string name="ResultSaveScoreButtonText">Punkte speichern</string>
           <string name="ResultRestartButtonText">Erneut spielen</string>
           <string name="ResultBackToMenuButtonText">Zurück zum Menü</string>
+          <string name="NewHighScoreText">Neuer Highscore!</string>
         </German>
 </languages>

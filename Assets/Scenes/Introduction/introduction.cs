@@ -29,9 +29,7 @@ public class introduction : MonoBehaviour
         {
             SceneManager.LoadScene("GamemodeArcade");
         }
-
-        //set the pageCountText
-        UpdatePage();
+        
 
         playGameButton.onClick.AddListener(delegate
         {
@@ -49,7 +47,6 @@ public class introduction : MonoBehaviour
             {
                 introPageCount = 1;
             }
-            UpdatePage();
         });
 
         //handle backward button
@@ -60,13 +57,12 @@ public class introduction : MonoBehaviour
             {
                 introPageCount = maxPageCount;
             }
-            UpdatePage();
         });
     }
 
     private void Update()
     {
-        
+        UpdatePage();
     }
 
     void UpdatePage()
@@ -83,7 +79,7 @@ public class introduction : MonoBehaviour
 
     void UpdatePageCountText()
     {
-        pageText.text = introPageCount + " of " + maxPageCount;
+        pageText.text = introPageCount + " " + settingsObject.GetStringFromHashtable(pageText.name) + " " + maxPageCount;
     }
 
     void DisableAllIntroCanvas()

@@ -20,11 +20,9 @@ public class Translator : MonoBehaviour
     {
         currentLang = language;
         Debug.Log("the langauge is : " + language);
-        texts = gameObject.GetComponentsInChildren<Text>();
+        //get all text components inside the canvas. includeinactive = true
+        texts = gameObject.GetComponentsInChildren<Text>(true);
         foreach (Text text in texts){
-            //only change the text, if there is a value stored in the hashtable
-            Debug.Log("current key: " + text.name);
-            Debug.Log("passed value: " + settingsObject.GetStringFromHashtable(text.name));
             if (settingsObject.GetStringFromHashtable(text.name)!="")
             {
                 text.text = settingsObject.GetStringFromHashtable(text.name);

@@ -9,6 +9,7 @@ public class Options : MonoBehaviour {
     public Toggle introToggle;
     public Slider effectsSlider;
     public Slider musicSlider;
+    public Dropdown languageDropdown;
     private Sound soundObject;
     private Settings settingsObject;
 
@@ -22,6 +23,16 @@ public class Options : MonoBehaviour {
         introToggle.isOn = settingsObject.GetIntroBool();
         effectsSlider.value = soundObject.GetEffectsValue();
         musicSlider.value = soundObject.GetMusicValue();
+
+        int counter = 0;
+        foreach (Dropdown.OptionData option in languageDropdown.options)
+        {
+            if (option.text == settingsObject.GetLanguage())
+            {
+                languageDropdown.value = counter;
+            }
+            counter = +1;
+        }
 
         //listener for toggle state changes
         effectsToggle.onValueChanged.AddListener(delegate
@@ -48,6 +59,12 @@ public class Options : MonoBehaviour {
         {
             //Round as Typecast since slider only allows whole number based on unity settings
             MusicSliderValueChanged(Mathf.RoundToInt(musicSlider.value));
+        });
+
+        //listener for dropdown change
+        languageDropdown.onValueChanged.AddListener(delegate
+        {
+            settingsObject.SetLanguage(languageDropdown.options[languageDropdown.value].text);
         });
     }
 

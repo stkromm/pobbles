@@ -24,7 +24,8 @@ public class Leaderboard : MonoBehaviour {
     public Text score4;
     public Text comparisonScore;
 
-    public Text comparisonHeading;
+    public Text localComparisonHeading;
+    public Text globalComparisonHeading;
 
     // ONLINE 
     private IList<string> onlinePlayerList;
@@ -36,6 +37,8 @@ public class Leaderboard : MonoBehaviour {
     private bool updateToLocal = false;
 
     private Score scoreObject;
+    private Settings settingsObject;
+
     // Use this for initialization
     void Start () {
 
@@ -60,7 +63,9 @@ public class Leaderboard : MonoBehaviour {
         score4.text = scoreList[4].ToString();
 
         //show the last game's Score as comparison
-        comparisonHeading.text = "Last Game's Score";
+        settingsObject = GameObject.FindObjectOfType<Settings>();
+        globalComparisonHeading.gameObject.SetActive(false);
+        localComparisonHeading.gameObject.SetActive(true);
         comparisonPlayer.text = scoreObject.GetPlayerPrefsString("lastGamesPlayer");
         comparisonScore.text = "" + scoreObject.GetPlayerPrefsInt("lastGamesScore");
 
@@ -97,7 +102,8 @@ public class Leaderboard : MonoBehaviour {
             updateToGlobal = false;
 
             //show best offline Score as comparison
-            comparisonHeading.text = "Best Personal Score";
+            localComparisonHeading.gameObject.SetActive(false);
+            globalComparisonHeading.gameObject.SetActive(true);
             comparisonPlayer.text = playerList[0];
             comparisonScore.text = scoreList[0].ToString();
         }
@@ -116,7 +122,8 @@ public class Leaderboard : MonoBehaviour {
             updateToLocal = false;
 
             //show the last game's Score as comparison
-            comparisonHeading.text = "Last Game's Score";
+            globalComparisonHeading.gameObject.SetActive(false);
+            localComparisonHeading.gameObject.SetActive(true);
             comparisonPlayer.text = scoreObject.GetPlayerPrefsString("lastGamesPlayer");
             comparisonScore.text = "" + scoreObject.GetPlayerPrefsInt("lastGamesScore");
         }

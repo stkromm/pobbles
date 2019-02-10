@@ -31,9 +31,11 @@ public class UpdateScores : MonoBehaviour {
     private float timer = 0.0f;
 
     private StartGame startGameObject;
+    private Settings settingsObject;
 
     // Use this for initialization
     void Start () {
+        settingsObject = Object.FindObjectOfType<Settings>();
         scoreObject = Object.FindObjectOfType<Score>();
         startGameObject = Object.FindObjectOfType<StartGame>();
         gameScore = scoreObject.GetGamescore();
@@ -107,7 +109,7 @@ public class UpdateScores : MonoBehaviour {
             //check if it is a new highscore
             if(scoreObject.checkForNewHighscore(overallScore) == 0)
             {
-                newHighScoreText.text = "New Highscore!";
+                newHighScoreText.gameObject.SetActive(true);
             }
 
         }
