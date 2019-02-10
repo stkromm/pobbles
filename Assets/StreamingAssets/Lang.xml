@@ -53,7 +53,7 @@
           <string name="HighscoreNameHeadingText">Name</string>
           <string name="HighscorePersonalButtonText">Personal</string>
           <string name="HighscoreGlobalButtonText">World</string>
-          <string name="HighscoreLocalComparisonHeadingText">Last Game's Score</string>
+          <string name="HighscoreLocalComparisonHeadingText">Your Last Game</string>
           <string name="HighscoreGlobalComparisonHeadingText">Best Personal Score</string>
           
           <string name="Intro1Row1Text">Pop The Bubbles. The Smaller, The Better.</string>
@@ -141,7 +141,7 @@
           <string name="HighscoreNameHeadingText">Name</string>
           <string name="HighscorePersonalButtonText">Lokal</string>
           <string name="HighscoreGlobalButtonText">Global</string>
-          <string name="HighscoreLocalComparisonHeadingText">Punkte des letzten Spiels</string>
+          <string name="HighscoreLocalComparisonHeadingText">Dein Letztes Spiels</string>
           <string name="HighscoreGlobalComparisonHeadingText">Persönlicher Highscore</string>
           
           <string name="Intro1Row1Text">Pop The Bubbles. Je kleiner, desto besser.</string>

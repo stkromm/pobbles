@@ -59,7 +59,7 @@ public class Lang
     */
     public void setLanguage(string path, string language)
     {
-        var xml = new XmlDocument();
+        XmlDocument xml = new XmlDocument();
         xml.Load(path);
 
         Strings = new Hashtable();

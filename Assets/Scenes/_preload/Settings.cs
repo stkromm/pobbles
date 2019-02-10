@@ -66,12 +66,12 @@ public class Settings : MonoBehaviour {
             this.language = Application.systemLanguage.ToString();
         }
         //language object initialized with current language as Hashtable
-        langObject = new Lang(System.IO.Path.Combine(Application.dataPath, "Lang.xml"), this.language, false);
+        langObject = new Lang(System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml"), this.language, false);
     }
 
     private void UpdateLanguage(string language)
     {
-        langObject.setLanguage(System.IO.Path.Combine(Application.dataPath, "Lang.xml"), language);
+        langObject.setLanguage(System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml"), language);
         this.language = language;
     }
 
