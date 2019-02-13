@@ -13,8 +13,11 @@ public class GameSpeedController : MonoBehaviour {
     public Canvas pauseCanvas;
     private bool paused=false;
 
+    private StartGame startGameObject;
+
     private void Awake()
     {
+        startGameObject = Object.FindObjectOfType<StartGame>();
         resumeButton.onClick.AddListener(delegate
         {
             Resume();
@@ -32,7 +35,7 @@ public class GameSpeedController : MonoBehaviour {
 
         restartButton.onClick.AddListener(delegate
         {
-            SceneManager.LoadScene("GamemodeArcade");
+            startGameObject.PlayGame();
         });
     }
 

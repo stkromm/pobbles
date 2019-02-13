@@ -22,15 +22,22 @@ public class UpdateScores : MonoBehaviour {
     private Score scoreObject;
     public InputField playerNameInput;
     public Button backToMenuButton;
+    public Button saveScoreButton;
     public Button restartButton;
+    bool scoreSaved = false;
 
     public float durationGameScore = 30.0f;
     public float durationTimingScore = 10.0f;
     private float timer = 0.0f;
 
+    private StartGame startGameObject;
+    private Settings settingsObject;
+
     // Use this for initialization
     void Start () {
+        settingsObject = Object.FindObjectOfType<Settings>();
         scoreObject = Object.FindObjectOfType<Score>();
+        startGameObject = Object.FindObjectOfType<StartGame>();
         gameScore = scoreObject.GetGamescore();
         timingScore = scoreObject.GetPerfectTiming() * 100 + scoreObject.GetGoodTiming() * 50;
         specialsScore = 0;
@@ -40,18 +47,38 @@ public class UpdateScores : MonoBehaviour {
 
         backToMenuButton.onClick.AddListener(delegate
         {
-            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
+            //prevent multile score saving
+            
+            SaveScore(playerNameInput.text, overallScore);
             SceneManager.LoadScene("MainMenu");
         });
         restartButton.onClick.AddListener(delegate
         {
-            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
-            SceneManager.LoadScene("GamemodeArcade");
+            SaveScore(playerNameInput.text, overallScore);
+            startGameObject.PlayGame();
+        });
+        saveScoreButton.onClick.AddListener(delegate
+        {
+            SaveScore(playerNameInput.text, overallScore);
         });
 
+
+    }
+	private void SaveScore(string name, int score)
+    {
+        //prevent multiple saving and disable button
+        if (!scoreSaved)
+        {
+            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
+            scoreSaved = true;
+            saveScoreButton.interactable = false;
+            saveScoreButton.image.color = Color.grey;
+
+            HighscoreHandler handler = new HighscoreHandler();
+            handler.WriteLeaderboard(playerNameInput.text, overallScore);
+        }
         
     }
-	
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
@@ -82,7 +109,7 @@ public class UpdateScores : MonoBehaviour {
             //check if it is a new highscore
             if(scoreObject.checkForNewHighscore(overallScore) == 0)
             {
-                newHighScoreText.text = "New Highscore!";
+                newHighScoreText.gameObject.SetActive(true);
             }
 
         }

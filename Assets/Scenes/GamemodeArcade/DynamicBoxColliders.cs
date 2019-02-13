@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DynamicBoxColliders : MonoBehaviour {
-    public float topBottomMarginPercentage = 0.1f;
+    public float topBottomMarginPercentage = 0.15f;
 
     public float colDepth = 4f;
     public float zPosition = 0f;

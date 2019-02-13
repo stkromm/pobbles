@@ -69,7 +69,7 @@ public class Sound : MonoBehaviour {
         }
         else
         {
-            this.musicValue = 5;
+            this.musicValue = 15;
         }
 
         //Update Sound Settings after loading the inital value
@@ -157,18 +157,20 @@ public class Sound : MonoBehaviour {
         //check if effects are enabled
         if (GetEffectsBool())
         {
-            //play sound
-            float rnd = Random.Range(0.0f, 1.0f);
-            if (rnd <= 0.33f)
-            {
-                globalEffectObject.PlayOneShot(BubblePop1);
-            } else if (rnd >= 0.66f)
-            {
-                globalEffectObject.PlayOneShot(BubblePop3);
-            } else
-            {
-                globalEffectObject.PlayOneShot(BubblePop2);
-            }
+            globalEffectObject.PlayOneShot(BubblePop1);
+            
+        }
+    }
+
+    public void PlayNegativePopSound()
+    {
+
+        //check if effects are enabled
+        if (GetEffectsBool())
+        {
+            
+            globalEffectObject.PlayOneShot(BubblePop3);
+            
         }
     }
 

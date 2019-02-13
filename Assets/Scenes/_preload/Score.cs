@@ -93,14 +93,20 @@ public class Score : MonoBehaviour {
     {
         int index = checkForNewHighscore(score);
 
+        //if no player name is given
+        if (player == "")
+        {
+            player = "Random User";
+        }
+
+        //register score as last game's score
+        PlayerPrefs.SetString("lastGamesPlayer", player);
+        PlayerPrefs.SetInt("lastGamesScore", score);
+
         //if the score is inside, register the new score with the corresponding player
         if (index != -1)
         {
-            //if no player name is given
-            if(player == "")
-            {
-                player = "Random User";
-            }
+            
             //insert the score at the correct position
             scoreList.Insert(index, score);
             playerList.Insert(index, player);
@@ -148,7 +154,7 @@ public class Score : MonoBehaviour {
         return playerList;
     }
 
-    string GetPlayerPrefsString(string key)
+    public string GetPlayerPrefsString(string key)
     {
         
         if (PlayerPrefs.HasKey(key))
@@ -161,7 +167,7 @@ public class Score : MonoBehaviour {
         }
     }
 
-    int GetPlayerPrefsInt(string key)
+    public int GetPlayerPrefsInt(string key)
     {
 
         if (PlayerPrefs.HasKey(key))

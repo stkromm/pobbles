@@ -1,0 +1,171 @@
+<languages>
+        <English>
+          <string name="MainMenuHeadingText">PUBBLES</string>
+          <string name="HighscoreButtonText">Highscore</string>
+          <string name="PlayGameButtonText">Play Game</string>
+          <string name="OptionsButtonText">Options</string>
+          <string name="FeedbackButtonText">Feedback</string>
+          <string name="CreditsText"></string>
+          
+          <string name="AboutHeadingText">About</string>
+          <string name="AboutBackToMenuButtonText">Back To Menu</string>
+          <string name="AboutDetailsText">
+            PUBBLES
+
+            Published by:
+            Sudden Development GbR aka. SuddenDev
+
+            Creators:
+            Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+
+            Address:
+            Hasenbergstraße 39b
+            70176 Stuttgart, Germany
+
+            Contact:
+            philipp.mittmann@web.de
+
+            Music (both atm in preview version for testing):
+            CueMasters - "Sunshine and Sand"
+            Holyhammer - "Pizzi and Glock Loop"
+
+          </string>
+          
+          <string name="FeedbackHeadingText">Feedback</string>
+          <string name="FeedbackTextFieldPlaceholder">Enter your feedback...</string>
+          <string name="FeedbackSendButtonText">Send</string>
+          <string name="FeedbackDescriptionText">We are always trying to improve the user experience of our app. That's why we are looking forward to get some feedback to it, so feel free to tell us what you like and what we could improve in order to make it more fun!</string>
+          
+          <string name="GamemodeArcadeResumeButtonText">Resume</string>
+          <string name="GamemodeArcadeRestartButtonText">Restart</string>
+          <string name="GamemodeArcadeExitButtonText">Exit</string>
+          <string name="GamemodeArcadeGameStartText">Pop the Bubbles!</string>
+          <string name="GamemodeArcadeGameEndText">Good Job!</string>
+          <string name="GamemodeArcadePauseHeading">Paused</string>
+          <string name="RedBubbleDied">Upsi!</string>
+          <string name="PerfectTiming">Perfect!</string>
+          <string name="GoodTiming">Good!</string>
+          <string name="NegativeBubbleDied">Great!</string>
+          <string name="NegativeBubbleClicked">Ouch!</string>
+
+          <string name="HighscoreHeadingText">Highscore</string>
+          <string name="HighscoreScoreHeadingText">Score</string>
+          <string name="HighscoreNameHeadingText">Name</string>
+          <string name="HighscorePersonalButtonText">Personal</string>
+          <string name="HighscoreGlobalButtonText">World</string>
+          <string name="HighscoreLocalComparisonHeadingText">Your Last Game</string>
+          <string name="HighscoreGlobalComparisonHeadingText">Best Personal Score</string>
+          
+          <string name="Intro1Row1Text">Pop The Bubbles. The Smaller, The Better.</string>
+          <string name="Intro1Row2Text">Don't Let The Red Bubbles Die.</string>
+          <string name="Intro2Row2Text">Good Reactions For a Timing Bonus.</string>
+          <string name="Intro3Row1Text">Don't Pop The Black Bubbles.</string>
+          <string name="Intro3Row2Text">Let The Black Bubbles Die.</string>
+          <string name="IntroductionPlayGameButtonText">Play Game</string>
+          <string name="IntroBoolToggleLabel">Show This Introduction Again</string>
+          <string name="IntroControlsPageText">of</string>
+          
+          <string name="OptionsHeadingText">Options</string>
+          <string name="AboutButtonText">About</string>
+          <string name="OptionsIntroText">Introduction</string>
+          <string name="OptionsEffectsText">Soundeffects</string>
+          <string name="OptionsMusicText">Music</string>
+          
+          <string name="ResultGameCategoryText">Game</string>
+          <string name="ResultTimingCategoryText">Timing</string>
+          <string name="ResultPlayerNameText">Enter Name</string>
+          <string name="ResultPlayerNamePlaceholder">Player name...</string>
+          <string name="ResultSaveScoreButtonText">Save Score</string>
+          <string name="ResultRestartButtonText">Restart</string>
+          <string name="ResultBackToMenuButtonText">Back To Menu</string>
+          <string name="NewHighScoreText">New Highscore!</string>
+        </English>
+        
+        <French>
+            <string name="app_name">Unité Langue Soutien Multiple</string>
+            <string name="description">Ce script fournit un soutien multilingue pratique.</string>
+        </French>
+        
+        <German>
+          
+          <string name="MainMenuHeadingText">PUBBLES</string>
+          <string name="HighscoreButtonText">Highscore</string>
+          <string name="PlayGameButtonText">Jetzt Spielen</string>
+          <string name="OptionsButtonText">Einstellungen</string>
+          <string name="FeedbackButtonText">Feedback</string>
+          <string name="CreditsText"></string>
+          
+          <string name="AboutHeadingText">Über</string>
+          <string name="AboutBackToMenuButtonText">Zurück zum Menü</string>
+          <string name="AboutDetailsText">
+            PUBBLES
+
+            Veröffentlicht durch:
+            Sudden Development GbR aka. SuddenDev
+
+            Entwickler:
+            Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+
+            Adresse:
+            Hasenbergstraße 39b
+            70176 Stuttgart, Deutschland
+
+            Kontakt:
+            philipp.mittmann@web.de
+
+            Musik (aktuell in Preview-Modus für Testzwecke):
+            CueMasters - "Sunshine and Sand"
+            Holyhammer - "Pizzi and Glock Loop"
+
+          </string>
+          
+          <string name="FeedbackHeadingText">Feedback</string>
+          <string name="FeedbackTextFieldPlaceholder">Gebe dein Feedback ein...</string>
+          <string name="FeedbackSendButtonText">Senden</string>
+          <string name="FeedbackDescriptionText">Wir versuchen stets das Erlebnis unserer Nutzer zu verbessern. Darum brauchen wir dein Feedback! Erzähle uns, wie du die App weiterentwickeln würdest und bestimme dadruch maßgeblich die Entwicklung mit!</string>
+          
+          <string name="GamemodeArcadeResumeButtonText">Weiterspielen</string>
+          <string name="GamemodeArcadeRestartButtonText">Neustart</string>
+          <string name="GamemodeArcadeExitButtonText">Verlassen</string>
+          <string name="GamemodeArcadeGameStartText">Pop the Bubbles!</string>
+          <string name="GamemodeArcadeGameEndText">Gut gemacht!</string>
+          <string name="GamemodeArcadePauseHeading">Pausiert</string>
+          <string name="RedBubbleDied">Upsi!</string>
+          <string name="PerfectTiming">Perfekt!</string>
+          <string name="GoodTiming">Gut!</string>
+          <string name="NegativeBubbleDied">Super!</string>
+          <string name="NegativeBubbleClicked">Ouch!</string>
+          
+          <string name="HighscoreHeadingText">Highscore</string>
+          <string name="HighscoreScoreHeadingText">Punkte</string>
+          <string name="HighscoreNameHeadingText">Name</string>
+          <string name="HighscorePersonalButtonText">Lokal</string>
+          <string name="HighscoreGlobalButtonText">Global</string>
+          <string name="HighscoreLocalComparisonHeadingText">Dein Letztes Spiels</string>
+          <string name="HighscoreGlobalComparisonHeadingText">Persönlicher Highscore</string>
+          
+          <string name="Intro1Row1Text">Pop The Bubbles. Je kleiner, desto besser.</string>
+          <string name="Intro1Row2Text">Lasse die roten Bubbles nicht sterben.</string>
+          <string name="Intro2Row2Text">Für gute Reaktionen bekommst du einen Timing Bonus.</string>
+          <string name="Intro3Row1Text">Drücke nicht auf die schwarzen Bubbles.</string>
+          <string name="Intro3Row2Text">Lass die schwarzen Bubbles sterben.</string>
+          <string name="IntroductionPlayGameButtonText">Jetzt spielen</string>
+          <string name="IntroBoolToggleLabel">Diese Einführung erneut zeigen</string>
+          <string name="IntroControlsPageText">von</string>
+          
+          <string name="OptionsHeadingText">Optionen</string>
+          <string name="AboutButtonText">Über</string>
+          <string name="OptionsIntroText">Einführung</string>
+          <string name="OptionsEffectsText">Soundeffekte</string>
+          <string name="OptionsMusicText">Musik</string>
+          
+          <string name="ResultGameCategoryText">Spiel</string>
+          <string name="ResultTimingCategoryText">Timing</string>
+          <string name="ResultPlayerNameText">Namen eingeben</string>
+          <string name="ResultPlayerNamePlaceholder">Dein Name...</string>
+          <string name="ResultSaveScoreButtonText">Punkte speichern</string>
+          <string name="ResultRestartButtonText">Erneut spielen</string>
+          <string name="ResultBackToMenuButtonText">Zurück zum Menü</string>
+          <string name="NewHighScoreText">Neuer Highscore!</string>
+        </German>
+</languages>

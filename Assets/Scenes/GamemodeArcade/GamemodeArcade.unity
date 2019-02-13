@@ -294,6 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubble: {fileID: 1320311679558542, guid: 486b46124c0807f489ec23273a527a53, type: 3}
+  negativeBubble: {fileID: 1320311679558542, guid: 7b0d9e53c67fa084dae6612d4be6a1e0,
+    type: 3}
   countdown: 3
 --- !u!224 &66669290
 RectTransform:
@@ -595,7 +597,7 @@ GameObject:
   - component: {fileID: 330902940}
   - component: {fileID: 330902939}
   m_Layer: 5
-  m_Name: PauseHeading
+  m_Name: GamemodeArcadePauseHeading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,7 +676,7 @@ GameObject:
   - component: {fileID: 370173933}
   - component: {fileID: 370173932}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GamemodeArcadeExitButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,7 +755,7 @@ GameObject:
   - component: {fileID: 511018659}
   - component: {fileID: 511018658}
   m_Layer: 5
-  m_Name: GameStart
+  m_Name: GamemodeArcadeGameStartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1050,6 +1052,7 @@ GameObject:
   - component: {fileID: 838550381}
   - component: {fileID: 838550385}
   - component: {fileID: 838550386}
+  - component: {fileID: 838550387}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1166,6 +1169,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de16c3d127c1d436cb4255d0c8d6cb82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &838550387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838550380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efc594eb230494b8d40e309101bc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &885897377
@@ -1548,7 +1563,7 @@ GameObject:
   - component: {fileID: 1511383620}
   - component: {fileID: 1511383619}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GamemodeArcadeRestartButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1627,7 +1642,7 @@ GameObject:
   - component: {fileID: 1620436405}
   - component: {fileID: 1620436404}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GamemodeArcadeResumeButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1706,12 +1721,12 @@ GameObject:
   - component: {fileID: 1702447193}
   - component: {fileID: 1702447192}
   m_Layer: 5
-  m_Name: GameEnd
+  m_Name: GamemodeArcadeGameEndText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1702447192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,7 +1902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85, y: 0.1}
   m_AnchorMax: {x: 1, y: 0.6}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756452462
