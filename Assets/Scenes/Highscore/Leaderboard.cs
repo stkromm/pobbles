@@ -35,6 +35,7 @@ public class Leaderboard : MonoBehaviour {
     DatabaseReference reference;
     private bool updateToGlobal = false;
     private bool updateToLocal = false;
+    private bool isLocal = true;
 
     private Score scoreObject;
     private Settings settingsObject;
@@ -82,6 +83,8 @@ public class Leaderboard : MonoBehaviour {
         {
             ClickedPersonal();
         });
+
+        personalButton.image.color = Color.grey;
     }
 
     // Update is called once per frame
@@ -131,12 +134,18 @@ public class Leaderboard : MonoBehaviour {
     private void ClickedPersonal(){
         // Switch to personal highscore list
         Debug.Log("Clicked Personal");
+
+        //get the orange on the global button and then color the personal button in grey
+        globalButton.image.color = personalButton.image.color;
+        personalButton.image.color = Color.grey;
         updateToLocal = true;
     }
 
     private void ClickedGlobal(){
         // Switch to global highscore list
         Debug.Log("clicked global");
+        personalButton.image.color = globalButton.image.color;
+        globalButton.image.color = Color.grey;
         updateToGlobal = true;
     }
 
