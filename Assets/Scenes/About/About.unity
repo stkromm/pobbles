@@ -404,7 +404,7 @@ PrefabInstance:
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -419,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -441,6 +441,22 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_Text
+      value: Back To Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
+        type: 3}
     - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_PreserveAspect
@@ -480,21 +496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AboutBackToMenuButtonText
       objectReference: {fileID: 0}
-    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+    - target: {fileID: 6235681012336048725, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
-      propertyPath: m_Text
-      value: Back To Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_FontData.m_Font
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
+      objectReference: {fileID: 21300000, guid: da8f1a51432bd4586aa58fa809b9e610,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
@@ -504,25 +510,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 200706758}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &200706760 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-    type: 3}
-  m_PrefabInstance: {fileID: 200706758}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &200706761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200706760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec654a3dcd31d73478c11df2adf145a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: MainMenu
 --- !u!1 &200706762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1619886714695456, guid: 58c83a7daaeb59d479616ef9d0ea5868,
