@@ -213,6 +213,10 @@ public class ScoreScript : MonoBehaviour
             if (lifetime < 0.1f * maxLifetime)
             {
                 perfectTiming += 1;
+
+                //vibrate the phone
+                Handheld.Vibrate();
+
                 return settingsObject.GetStringFromHashtable("PerfectTiming");
             }//good = 20% of max lifetime
             else if (lifetime < 0.2f * maxLifetime)
