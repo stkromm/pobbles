@@ -9,6 +9,7 @@ public class SelectLevel : MonoBehaviour
     public Text usernameText;
     public Text userScoreText;
     public Text levelText;
+    private StartGame startGameObject;
     // Holds information about which level is being displayed at the moment
     private int currentLevel = 1;
     // Buttons
@@ -27,6 +28,11 @@ public class SelectLevel : MonoBehaviour
         // Get current level, set levelText/currentLevel to current level
         nextLevelButton.onClick.AddListener(ShowNextLevel);
         previousLevelButton.onClick.AddListener(ShowPreviousLevel);
+        startGameObject = Object.FindObjectOfType<StartGame>();
+        playGameButton.onClick.AddListener(delegate
+        {
+            startGameObject.PlayGame();
+        });
     }
 
     // Update is called once per frame
@@ -34,7 +40,7 @@ public class SelectLevel : MonoBehaviour
     {
         
     }
-
+    
     void HidePrevLevelButton()
     {
         previousLevelButton.gameObject.SetActive(false);

@@ -471,7 +471,7 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.01}
-  m_AnchorMax: {x: 1, y: 0.1}
+  m_AnchorMax: {x: 1, y: 0.04}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -644,6 +644,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
         type: 3}
+    - target: {fileID: 6235681012336048725, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c15579e481f3f4895b8db7ea6e495075,
+        type: 3}
     - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_PreserveAspect
@@ -728,12 +734,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 6235681012336048725, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c15579e481f3f4895b8db7ea6e495075,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
     - {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
@@ -1483,6 +1483,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
         type: 3}
+    - target: {fileID: 6235681012336048725, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f70159500e364b9b901a40cab193303,
+        type: 3}
     - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_PreserveAspect
@@ -1522,12 +1528,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsButtonText
       objectReference: {fileID: 0}
-    - target: {fileID: 6235681012336048725, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9f70159500e364b9b901a40cab193303,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
     - {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}

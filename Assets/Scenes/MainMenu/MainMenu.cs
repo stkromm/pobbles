@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     public Button playGameButton;
-    private StartGame startGameObject;
+    //private StartGame startGameObject;
     // Start is called before the first frame update
     void Start()
     {
-        startGameObject = Object.FindObjectOfType<StartGame>();
+        //startGameObject = Object.FindObjectOfType<StartGame>();
         playGameButton.onClick.AddListener(delegate
         {
-            startGameObject.PlayGame();
+            SceneManager.LoadScene("SelectLevel");
+            //startGameObject.PlayGame();
         });
     }
 
