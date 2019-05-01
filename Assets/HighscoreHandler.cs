@@ -23,7 +23,8 @@ public class HighscoreHandler : MonoBehaviour
         LoadHighscores();
     }
 
-    public HighscoreHandler(){
+    public HighscoreHandler()
+    {
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://pobbles-dev.firebaseio.com/");
 
         // Get the root reference location of the database.
@@ -32,29 +33,28 @@ public class HighscoreHandler : MonoBehaviour
     }
 
 
-    public void WriteLeaderboard(string username, int score){
+    public void WriteLeaderboard(string username, int score)
+    {
         if (board == null)
         {
             board = new Highscoreboard();
         }
 
-        if (username == ""){
+        if (username == "")
+        {
             username = "Random User";
         }
 
-            LeaderboardEntry newEntry = new LeaderboardEntry(username, score);
-            if (board.InsertEntry(newEntry))
-            {
-                // Successfully inserted - Update Firebase Data
-                string eUid = newEntry.GetUID();
-                string eName = newEntry.GetName();
-                int eScore = newEntry.GetScore();
-                reference.Child("highscoreList").Child(eUid).Child(eName).SetValueAsync(eScore);
-                string lowestID = board.GetLowestScoreUIDToDelete();
-                if (lowestID != null){
-                    reference.Child("highscoreList").Child(lowestID).SetValueAsync(null);
-                }
-            }
+        LeaderboardEntry newEntry = new LeaderboardEntry(username, score);
+        if (board.InsertEntry(newEntry))
+        {
+            // Successfully inserted - Update Firebase Data
+            string eName = newEntry.GetName();
+            int eScore = newEntry.GetScore();
+            object timestamp = Firebase.Database.ServerValue.Timestamp;
+            reference.Child("highscoreList").Child(eName).Child("score").SetValueAsync(eScore);
+            reference.Child("highscoreList").Child(eName).Child("timestamp").SetValueAsync(timestamp);
+        }
 
 
     }
@@ -139,7 +139,8 @@ public class LeaderboardEntry : System.IComparable<LeaderboardEntry>
         return score;
     }
 
-    public string GetUID(){
+    public string GetUID()
+    {
         return uid;
     }
 
@@ -176,14 +177,17 @@ public class Highscoreboard
     // Cuts list if more than maxSize has been added
     public void DropLowestScores()
     {
-        if (board.Count > listSize){
+        if (board.Count > listSize)
+        {
             board.RemoveRange(listSize, board.Count - listSize);
         }
     }
     // Drops only single lowest score
-    public string GetLowestScoreUIDToDelete(){
+    public string GetLowestScoreUIDToDelete()
+    {
         SortBoard();
-        if (board.Count <= listSize){
+        if (board.Count <= listSize)
+        {
             return null;
         }
         LeaderboardEntry lastEntry = board[board.Count - 1];
@@ -193,7 +197,8 @@ public class Highscoreboard
     public bool InsertEntry(LeaderboardEntry entry)
     {
         bool inserted = false;
-        if (board.Count == 0){
+        if (board.Count == 0)
+        {
             board.Add(entry);
             inserted = true;
         }
@@ -219,7 +224,8 @@ public class Highscoreboard
         return inserted;
     }
 
-    public List<LeaderboardEntry> GetBoard(){
+    public List<LeaderboardEntry> GetBoard()
+    {
         return board;
     }
 
