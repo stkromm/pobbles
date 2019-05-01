@@ -52,8 +52,9 @@ public class HighscoreHandler : MonoBehaviour
             string eName = newEntry.GetName();
             int eScore = newEntry.GetScore();
             object timestamp = Firebase.Database.ServerValue.Timestamp;
-            reference.Child("highscoreList").Child(eName).Child("score").SetValueAsync(eScore);
-            reference.Child("highscoreList").Child(eName).Child("timestamp").SetValueAsync(timestamp);
+            DatabaseReference specifiedRef = reference.Child("highscoreList").Child("allTime").Child(eName);
+            specifiedRef.Child("score").SetValueAsync(eScore);
+            specifiedRef.Child("timestamp").SetValueAsync(timestamp);
         }
 
 
