@@ -11,12 +11,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //startGameObject = Object.FindObjectOfType<StartGame>();
-        playGameButton.onClick.AddListener(delegate
-        {
-            SceneManager.LoadScene("SelectLevel");
-            //startGameObject.PlayGame();
-        });
+        
     }
 
     // Update is called once per frame

@@ -729,7 +729,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1619886714695456, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
-      value: HighscoreBubbleButton
+      value: MainMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -769,7 +769,7 @@ PrefabInstance:
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -846,8 +846,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 60287b9079fb944fa8c00703771614e5,
+      objectReference: {fileID: 21300000, guid: da8f1a51432bd4586aa58fa809b9e610,
         type: 3}
+    - target: {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
+      propertyPath: sceneName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
 --- !u!224 &807367468 stripped
@@ -1185,7 +1209,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1619886714695456, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
-      value: FeedbackBubbleButton
+      value: HighscoreButton
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -1307,7 +1331,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c15579e481f3f4895b8db7ea6e495075,
+      objectReference: {fileID: 21300000, guid: 60287b9079fb944fa8c00703771614e5,
         type: 3}
     - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -1356,7 +1380,7 @@ PrefabInstance:
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -1371,7 +1395,7 @@ PrefabInstance:
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -1386,12 +1410,12 @@ PrefabInstance:
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
@@ -1436,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec654a3dcd31d73478c11df2adf145a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Feedback
+  sceneName: HighscoreScreen
 --- !u!1 &1202743154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,8 +1887,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 807367468}
   - {fileID: 1887579859}
+  - {fileID: 807367468}
   - {fileID: 1131079434}
   m_Father: {fileID: 161180990}
   m_RootOrder: 5
@@ -1960,7 +1984,7 @@ PrefabInstance:
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224848599574200910, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
