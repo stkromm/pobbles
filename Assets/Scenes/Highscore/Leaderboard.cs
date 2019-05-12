@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
+using UnityEngine.SocialPlatforms;
 
 public class Leaderboard : MonoBehaviour {
 
@@ -153,6 +154,19 @@ public class Leaderboard : MonoBehaviour {
 
     public void LoadHighscores()
     {
+        // GameCenter Leaderboard
+        ILeaderboard board = Social.CreateLeaderboard();
+        board.id = "classic_alltime";
+        board.LoadScores(success =>
+        {
+            if (success){
+                foreach (IScore score in board.scores){
+                    Debug.Log("Loaded Score: " + score.formattedValue);
+                }
+            }
+        });
+
+        // Old highscoreboard
         Highscoreboard highscoreboard = new Highscoreboard();
 
         reference.Child("highscoreList").GetValueAsync().ContinueWith(task =>
