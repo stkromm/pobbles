@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -354,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadAdditiveByName
+      value: LoadByName
       objectReference: {fileID: 0}
     - target: {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: sceneName
@@ -699,11 +707,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 60287b9079fb944fa8c00703771614e5,
         type: 3}
-    - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -727,21 +730,12 @@ PrefabInstance:
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadAdditiveByName
+      value: LoadByName
       objectReference: {fileID: 0}
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
-      propertyPath: m_Name
-      value: FeedbackButtonText
-      objectReference: {fileID: 0}
-    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: delay
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3329427947694858594, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
@@ -782,6 +776,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
+      propertyPath: m_Name
+      value: FeedbackButtonText
+      objectReference: {fileID: 0}
+    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: delay
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
@@ -905,9 +913,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1308,11 +1317,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
         type: 3}
-    - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1343,6 +1347,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
+      propertyPath: sceneName
+      value: SelectLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
       value: PlayGameButtonText
@@ -1361,10 +1374,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
-      propertyPath: sceneName
-      value: SelectLevel
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -1553,11 +1562,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9f70159500e364b9b901a40cab193303,
         type: 3}
-    - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1581,12 +1585,17 @@ PrefabInstance:
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadAdditiveByName
+      value: LoadByName
       objectReference: {fileID: 0}
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
