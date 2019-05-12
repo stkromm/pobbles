@@ -85,6 +85,8 @@ public class Leaderboard : MonoBehaviour {
         });
 
         personalButton.image.color = Color.grey;
+
+        Social.ShowLeaderboardUI();
     }
 
     // Update is called once per frame
