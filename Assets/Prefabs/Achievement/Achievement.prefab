@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271485414888189697}
   - component: {fileID: 7885316779709272982}
+  - component: {fileID: 2432811953114243775}
   m_Layer: 5
   m_Name: Achievement
   m_TagString: Untagged
@@ -210,6 +211,26 @@ MonoBehaviour:
   achievementHeading: {fileID: 271485415351411120}
   achievementDescription: {fileID: 271485413896987958}
   achievementProgressSlider: {fileID: 8162533311804532701}
+--- !u!114 &2432811953114243775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271485414888189698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 384
+  m_PreferredHeight: 120
+  m_FlexibleWidth: 0.8
+  m_FlexibleHeight: 0.15
+  m_LayoutPriority: 1
 --- !u!1 &271485415233358795
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -660,7 +681,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8039908206195425522}
   m_FillRect: {fileID: 2273615793458156661}
   m_HandleRect: {fileID: 4723611377635316529}
