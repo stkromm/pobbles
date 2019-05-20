@@ -2,19 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Xml;
+using System.Xml.Serialization;
 
 public class Achievement
 {
-    public Sprite achievementIcon;
+    
+    //read from XML file
+    [XmlAttribute("heading")]
     public string achievementHeading;
+
+    //added later based on the read key
     public string achievementDescription;
     public float achievementProgressSlider;
+    public Sprite achievementIcon;
 
-    public Achievement(Sprite icon, string heading, string description, float progress)
+
+    public Achievement(){}
+
+    public Achievement(string heading, string description)
     {
-        achievementIcon = icon;
+        //available on init from xml
         achievementHeading = heading;
         achievementDescription = description;
-        achievementProgressSlider = progress;
+
+        achievementIcon = Resources.Load<Sprite>("AchievementIcons/" + heading);
+        achievementProgressSlider = LoadAchievementProgress(heading);
+    }
+
+    public float LoadAchievementProgress(string name)
+    {
+        //check if there is a progress saved for the acievement
+        if (PlayerPrefs.HasKey(name))
+        {
+            return PlayerPrefs.GetFloat(name);
+        }
+        //if nothing was saved for the achievement yet
+        else
+        {
+            return 0f;
+        }
+
+
     }
 }
