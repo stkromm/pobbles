@@ -2,27 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sound : MonoBehaviour {
-
+// TODO SKR 19-05-30 This design quickly will become unmaintainable as it will increase linear with new features.
+// This Manager should (atleast for Music) accept Music and play it on demand. Then every Scene can use some simple 'PlayMusic' API to change the 
+// background music on demand.
+public class Sound : MonoBehaviour
+{
     //setting variables
-    private bool effectsBool;
-    private bool musicBool;
-    private int effectsValue;
-    private int musicValue;
+    private bool effectsEnabled;
+    private bool musicEnabled;
+    private int effectsVolume;
+    private int musicVolume;
 
-    //Sound effect object and the different clips
     public AudioSource globalEffectObject;
-    public AudioClip BubblePop1;
-    public AudioClip BubblePop2;
-    public AudioClip BubblePop3;
+    public AudioClip bubblePop1;
+    public AudioClip bubblePop2;
+    public AudioClip bubblePop3;
 
-    //Music object and a clip
     public AudioSource globalMusicObject;
     public AudioClip arcadeGameMusic;
-    public AudioClip arcadeGameMusic1;
-    public AudioClip arcadeGameMusic2;
-    public AudioClip arcadeGameMusic3;
-    public AudioClip arcadeGameMusic4;
     public AudioClip menuMusic;
 
     //string to check which song was played before stopping
@@ -31,203 +28,152 @@ public class Sound : MonoBehaviour {
     private void Awake()
     {
         //load stored sound settings
-        //check if key exists
         if (PlayerPrefs.HasKey("effectsBool"))
         {
             // if so, load the stored value
-            this.effectsBool = IntToBool(PlayerPrefs.GetInt("effectsBool"));
+            this.effectsEnabled = IntToBool(PlayerPrefs.GetInt("effectsBool"));
         }
         else
         {
             //else set to default (true)
-            this.effectsBool = true;
+            this.effectsEnabled = true;
         }
 
         if (PlayerPrefs.HasKey("musicBool"))
         {
-            this.musicBool = IntToBool(PlayerPrefs.GetInt("musicBool"));
+            this.musicEnabled = IntToBool(PlayerPrefs.GetInt("musicBool"));
         }
         else
         {
-            this.musicBool = true;
+            this.musicEnabled = true;
         }
 
         if (PlayerPrefs.HasKey("effectsValue"))
         {
-            this.effectsValue = PlayerPrefs.GetInt("effectsValue");
+            this.effectsVolume = PlayerPrefs.GetInt("effectsValue");
         }
         else
         {
-            this.effectsValue = 100;
+            this.effectsVolume = 100;
         }
 
         if (PlayerPrefs.HasKey("musicValue"))
         {
-            
-            this.musicValue = PlayerPrefs.GetInt("musicValue");
-            Debug.Log("preset music value set to: " +this.musicValue);
+
+            this.musicVolume = PlayerPrefs.GetInt("musicValue");
+            Debug.Log("preset music value set to: " + this.musicVolume);
         }
         else
         {
-            this.musicValue = 15;
+            this.musicVolume = 15;
         }
-
-        //Update Sound Settings after loading the inital value
         UpdateSoundSettings();
     }
 
-    //play the menu soundtrack
     private void Start()
     {
         PlayMenuGameMusic();
     }
 
-    //set effects
-    public void SetEffectsBool(bool value)
+    public void SetEffectsEnabled(bool value)
     {
-        this.effectsBool = value;
+        this.effectsEnabled = value;
         //write effects bool as int into the playerPrefs
-        PlayerPrefs.SetInt("effectsBool", effectsBool ? 1 : 0);
+        PlayerPrefs.SetInt("effectsBool", effectsEnabled ? 1 : 0);
         UpdateSoundSettings();
     }
 
-    public void SetEffectsValue(int value)
+    public void SetEffectsVolume(int value)
     {
-        this.effectsValue = value;
+        this.effectsVolume = value;
         //write effects value as int into the playerPrefs
-        PlayerPrefs.SetInt("effectsValue", effectsValue);
+        PlayerPrefs.SetInt("effectsValue", effectsVolume);
         UpdateSoundSettings();
     }
 
     //get effects
     public bool GetEffectsBool()
     {
-        return this.effectsBool;
+        return this.effectsEnabled;
     }
-    
+
     public int GetEffectsValue()
     {
-        return this.effectsValue;
+        return effectsVolume;
     }
 
     //set music
-    public void SetMusicBool(bool value)
+    public void SetMusicEnabled(bool enabled)
     {
-        this.musicBool = value;
+        musicEnabled = enabled;
         //write music bool as int into the playerPrefs
-        PlayerPrefs.SetInt("musicBool", musicBool ? 1 : 0);
+        PlayerPrefs.SetInt("musicBool", musicEnabled ? 1 : 0);
         UpdateSoundSettings();
     }
 
-    public void SetMusicValue(int value)
+    public void SetMusicVolume(int value)
     {
-        this.musicValue = value;
+        musicVolume = value;
         //write music value as int into the playerPrefs
-        PlayerPrefs.SetInt("musicValue", musicValue);
+        PlayerPrefs.SetInt("musicValue", musicVolume);
         UpdateSoundSettings();
     }
-
-    //get music
-    public bool GetMusicBool()
-    {
-        return this.musicBool;
-    }
+    
+    public bool IsMusicEnabled() => musicEnabled;
 
     public int GetMusicValue()
     {
-        return this.musicValue;
+        return musicVolume;
     }
 
-    bool IntToBool(int value)
-    {
-        if (value == 0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+    bool IntToBool(int value) => value != 0;
 
-    //play pop sound
     public void PlayPopSound()
     {
-        
-        //check if effects are enabled
         if (GetEffectsBool())
         {
-            globalEffectObject.PlayOneShot(BubblePop1);
-            
+            globalEffectObject.PlayOneShot(bubblePop1);
+
         }
     }
 
     public void PlayNegativePopSound()
     {
-
-        //check if effects are enabled
         if (GetEffectsBool())
         {
-            
-            globalEffectObject.PlayOneShot(BubblePop3);
-            
+
+            globalEffectObject.PlayOneShot(bubblePop3);
+
         }
     }
 
-    //play arcade game music
     public void PlayArcadeGameMusic()
     {
-        
-        //start playing, if music enabled
-        if (GetMusicBool())
+        if (IsMusicEnabled())
         {
-            if (globalMusicObject.isPlaying && !(musicState=="arcade"))
+            if (globalMusicObject.isPlaying && !(musicState == "arcade"))
             {
                 globalMusicObject.Stop();
-                chooseTitle();
-
-
+                ChooseTitle();
             }
             else if (!globalMusicObject.isPlaying)
             {
-                chooseTitle();
+                ChooseTitle();
             }
         }
         musicState = "arcade";
     }
 
-    private void chooseTitle()
+    private void ChooseTitle()
     {
-        float rnd = Random.Range(0.0f, 1.0f);
-        Debug.Log("Random Number to chose the game music: " + rnd);
-        if (rnd < 0.2f)
-        {
-            globalMusicObject.PlayOneShot(arcadeGameMusic);
-        } else if(rnd >= 0.2f && rnd < 0.4f)
-        {
-            globalMusicObject.PlayOneShot(arcadeGameMusic1);
-        }
-        else if (rnd >= 0.4f && rnd < 0.6f)
-        {
-            globalMusicObject.PlayOneShot(arcadeGameMusic2);
-        }
-        else if (rnd >= 0.6f && rnd < 0.8f)
-        {
-            globalMusicObject.PlayOneShot(arcadeGameMusic3);
-        }
-        else
-        {
-            globalMusicObject.PlayOneShot(arcadeGameMusic4);
-        }
+        globalMusicObject.PlayOneShot(arcadeGameMusic);
     }
 
     //play menu music
     public void PlayMenuGameMusic()
     {
-        
-        
-        if (GetMusicBool())
-        { 
+        if (IsMusicEnabled())
+        {
             //if another music was played before, stop it and play the menu music. prevents a new start upon slider usage
             if (globalMusicObject.isPlaying && !(musicState == "menu"))
             {
@@ -247,9 +193,8 @@ public class Sound : MonoBehaviour {
     {
         globalMusicObject.volume = 0.01f * GetMusicValue();
         globalEffectObject.volume = 0.01f * GetEffectsValue();
-
-        //check if music is enabled/disabled
-        if (!GetMusicBool())
+        
+        if (!IsMusicEnabled())
         {
             globalMusicObject.Stop();
         }//check if menu music was played before
