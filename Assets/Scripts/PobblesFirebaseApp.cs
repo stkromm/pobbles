@@ -8,6 +8,7 @@ using Firebase.Unity.Editor;
 
 public class PobblesFirebaseApp : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
         FirebaseApp app = FirebaseApp.DefaultInstance;
@@ -19,22 +20,25 @@ public class PobblesFirebaseApp : MonoBehaviour {
         if (app.Options.DatabaseUrl != null)
             app.SetEditorDatabaseUrl(app.Options.DatabaseUrl);
         Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-        auth.SignInAnonymouslyAsync().ContinueWith(task => {
-            if (task.IsCanceled)
-            {
-                Debug.LogError("SignInAnonymouslyAsync was canceled.");
-                return;
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
-                return;
-            }
+        if (auth.CurrentUser == null){
+            auth.SignInAnonymouslyAsync().ContinueWith(task => {
+                if (task.IsCanceled)
+                {
+                    Debug.LogError("SignInAnonymouslyAsync was canceled.");
+                    return;
+                }
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
+                    return;
+                }
 
-            Firebase.Auth.FirebaseUser newUser = task.Result;
-            Debug.LogFormat("User signed in successfully: {0} ({1})",
-                newUser.DisplayName, newUser.UserId);
-        });
+                Firebase.Auth.FirebaseUser newUser = task.Result;
+                Debug.LogFormat("User signed in successfully: {0} ({1})",
+                    newUser.DisplayName, newUser.UserId);
+
+            });
+        }
     }
 	
 	// Update is called once per frame
