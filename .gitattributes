@@ -1,5 +1,13 @@
 * text=auto
+
 * text eol=lf
-*.png	-text
-*.ttf	-text
+
+*.png -text
+
+*.ttf -text
+
 *.wav -text
+*.xml -text
+
+
+.gitattributes -text
