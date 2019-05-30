@@ -79,6 +79,12 @@
           <string name="ResultRestartButtonText">Restart</string>
           <string name="ResultBackToMenuButtonText">Back To Menu</string>
           <string name="NewHighScoreText">New Highscore!</string>
+
+
+
+          <string name="trophyHeading">now english</string>
+          <string name="trophyDescription">englissadah aidjoisajd ajds hasd ha ds hahdöhsaödhaödh aöd</string>
+          
         </English>
         
         <French>
@@ -244,5 +250,8 @@
           <string name="ResultRestartButtonText">Erneut spielen</string>
           <string name="ResultBackToMenuButtonText">Zurück zum Menü</string>
           <string name="NewHighScoreText">Neuer Highscore!</string>
+
+          <string name="trophyHeading">deutsch</string>
+          <string name="trophyDescription">asddd</string>
         </German>
 </languages>
