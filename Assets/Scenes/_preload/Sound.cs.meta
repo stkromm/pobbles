@@ -9,12 +9,12 @@ MonoImporter:
   - BubblePop2: {fileID: 8300000, guid: bc08e5605327e4305b5195c26c4af6ca, type: 3}
   - BubblePop3: {fileID: 8300000, guid: c55a9f7cf4bd04aa6b1ad69d83178df2, type: 3}
   - globalMusicObject: {instanceID: 0}
-  - arcadeGameMusic: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  - arcadeGameMusic1: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  - arcadeGameMusic2: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  - arcadeGameMusic3: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  - arcadeGameMusic4: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  - menuMusic: {fileID: 8300000, guid: 8f4d4d1940b5de74c9aeac5a1b466040, type: 3}
+  - arcadeGameMusic: {fileID: 8300000, guid: 15f53d9624ca17740af8f7ef17aec28d, type: 3}
+  - arcadeGameMusic1: {instanceID: 0}
+  - arcadeGameMusic2: {instanceID: 0}
+  - arcadeGameMusic3: {instanceID: 0}
+  - arcadeGameMusic4: {instanceID: 0}
+  - menuMusic: {fileID: 8300000, guid: 4dc75b1ad9b3bcb4380dc2c056b490f3, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
