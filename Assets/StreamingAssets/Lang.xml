@@ -34,7 +34,7 @@
           <string name="FeedbackHeadingText">Feedback</string>
           <string name="FeedbackTextFieldPlaceholder">Enter your feedback...</string>
           <string name="FeedbackSendButtonText">Send</string>
-          <string name="FeedbackDescriptionText">We are always trying to improve the user experience of our app. That's why we are looking forward to get some feedback to it, so feel free to tell us what you like and what we could improve in order to make it more fun!</string>
+          <string name="FeedbackDescriptionText">We are always trying to improve the user experience of our app. Tell us what we could improve in order to make it more fun!</string>
           
           <string name="GamemodeArcadeResumeButtonText">Resume</string>
           <string name="GamemodeArcadeRestartButtonText">Restart</string>
@@ -79,11 +79,94 @@
           <string name="ResultRestartButtonText">Restart</string>
           <string name="ResultBackToMenuButtonText">Back To Menu</string>
           <string name="NewHighScoreText">New Highscore!</string>
+
+
+
+          <string name="trophyHeading">now english</string>
+          <string name="trophyDescription">englissadah aidjoisajd ajds hasd ha ds hahdöhsaödhaödh aöd</string>
+          
         </English>
         
         <French>
-            <string name="app_name">Unité Langue Soutien Multiple</string>
-            <string name="description">Ce script fournit un soutien multilingue pratique.</string>
+          <string name="MainMenuHeadingText">PUBBLES</string>
+          <string name="HighscoreButtonText">Highscore</string>
+          <string name="PlayGameButtonText">Jouer</string>
+          <string name="OptionsButtonText">Options</string>
+          <string name="FeedbackButtonText">Feedback</string>
+          <string name="CreditsText"></string>
+
+          <string name="AboutHeadingText">Quelque</string>
+          <string name="AboutBackToMenuButtonText">Retour</string>
+          <string name="AboutDetailsText">
+            PUBBLES
+
+            Publies:
+            Sudden Development GbR aka. SuddenDev
+
+            Développeur:
+            Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+
+            Adresse:
+            Hasenbergstraße 39b
+            70176 Stuttgart, Germany
+
+            Contact:
+            philipp.mittmann@web.de
+
+            Musique:
+            CueMasters - "Sunshine and Sand"
+            Holyhammer - "Pizzi and Glock Loop"
+
+          </string>
+
+          <string name="FeedbackHeadingText">Feedback</string>
+          <string name="FeedbackTextFieldPlaceholder">Entrez vos commentaires...</string>
+          <string name="FeedbackSendButtonText">Envoyer</string>
+          <string name="FeedbackDescriptionText">Aidez-nous à améliorer :)</string>
+
+          <string name="GamemodeArcadeResumeButtonText">Recommencer</string>
+          <string name="GamemodeArcadeRestartButtonText">Rejouer</string>
+          <string name="GamemodeArcadeExitButtonText">Sortir</string>
+          <string name="GamemodeArcadeGameStartText">Pop the Bubbles!</string>
+          <string name="GamemodeArcadeGameEndText">Bien fait!</string>
+          <string name="GamemodeArcadePauseHeading">En pause</string>
+          <string name="RedBubbleDied">Upsi!</string>
+          <string name="PerfectTiming">Parfait!</string>
+          <string name="GoodTiming">Bien!</string>
+          <string name="NegativeBubbleDied">Génial!</string>
+          <string name="NegativeBubbleClicked">Aie!</string>
+
+          <string name="HighscoreHeadingText">Highscore</string>
+          <string name="HighscoreScoreHeadingText">Score</string>
+          <string name="HighscoreNameHeadingText">Nom</string>
+          <string name="HighscorePersonalButtonText">Local</string>
+          <string name="HighscoreGlobalButtonText">Monde</string>
+          <string name="HighscoreLocalComparisonHeadingText">Ton Dernier Match</string>
+          <string name="HighscoreGlobalComparisonHeadingText">Meilleur Local Score</string>
+
+          <string name="Intro1Row1Text">Pop The Bubbles. Le plus petit, le mieux.</string>
+          <string name="Intro1Row2Text">Ne laissez pas les bulles rouges mourir.</string>
+          <string name="Intro2Row2Text">Bonnes réactions pour un bonus de timing.</string>
+          <string name="Intro3Row1Text">Don't Pop The Black Bubbles.</string>
+          <string name="Intro3Row2Text">Ne pas éclater les bulles noires.</string>
+          <string name="IntroductionPlayGameButtonText">Jouer</string>
+          <string name="IntroBoolToggleLabel">Montrer cette introduction à nouveau</string>
+          <string name="IntroControlsPageText">de</string>
+
+          <string name="OptionsHeadingText">Options</string>
+          <string name="AboutButtonText">Quelque</string>
+          <string name="OptionsIntroText">Introduction</string>
+          <string name="OptionsEffectsText">Effets sonores</string>
+          <string name="OptionsMusicText">Musique</string>
+
+          <string name="ResultGameCategoryText">Jou</string>
+          <string name="ResultTimingCategoryText">Timing</string>
+          <string name="ResultPlayerNameText">Entrez le nom</string>
+          <string name="ResultPlayerNamePlaceholder">Nom de joueur...</string>
+          <string name="ResultSaveScoreButtonText">Enregistrer vos score</string>
+          <string name="ResultRestartButtonText">Rejouer</string>
+          <string name="ResultBackToMenuButtonText">Retour</string>
+          <string name="NewHighScoreText">Nouveau Highscore!</string>
         </French>
         
         <German>
@@ -167,5 +250,8 @@
           <string name="ResultRestartButtonText">Erneut spielen</string>
           <string name="ResultBackToMenuButtonText">Zurück zum Menü</string>
           <string name="NewHighScoreText">Neuer Highscore!</string>
+
+          <string name="trophyHeading">deutsch</string>
+          <string name="trophyDescription">asddd</string>
         </German>
 </languages>

@@ -64,8 +64,25 @@ public class UpdateScores : MonoBehaviour {
 
 
     }
+
 	private void SaveScore(string name, int score)
     {
+        if (Social.localUser != null){
+            Social.ReportScore(score, "classic_alltime", (bool success) =>
+            {
+                if (success)
+                {
+                    Debug.Log("Successfully uploaded score");
+                }
+                else
+                {
+                    Debug.Log("Failed to upload score");
+                }
+            });
+        }else{
+            Debug.Log("No user logged in");
+        }
+
         //prevent multiple saving and disable button
         if (!scoreSaved)
         {
@@ -79,8 +96,10 @@ public class UpdateScores : MonoBehaviour {
         }
         
     }
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
         timer += Time.deltaTime;
         //increase until gameScore is reached
         if (timer < durationGameScore)
