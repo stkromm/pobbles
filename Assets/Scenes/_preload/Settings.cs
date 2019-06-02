@@ -71,7 +71,8 @@ public class Settings : MonoBehaviour {
 
     private void UpdateLanguage(string language)
     {
-        langObject.setLanguage(System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml"), language);
+        string path = System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml");
+        langObject = new Lang(path, language);
         this.language = language;
     }
 

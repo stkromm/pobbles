@@ -1,6 +1,37 @@
 <AchievementCollection>
   <Achievements>
-    <Achievement heading="testtest"></Achievement>
-    <Achievement heading="trophy"></Achievement>
+    <Achievement heading="WatchmanI"></Achievement>
+    <Achievement heading="WatchmanII"></Achievement>
+    <Achievement heading="WatchmanIII"></Achievement>
+    <Achievement heading="MrPerfectI"></Achievement>
+    <Achievement heading="MrPerfectII"></Achievement>
+    <Achievement heading="MrPerfectIII"></Achievement>
+    <Achievement heading="MrGoodI"></Achievement>
+    <Achievement heading="MrGoodII"></Achievement>
+    <Achievement heading="MrGoodIII"></Achievement>
+    <Achievement heading="LuckyLukeI"></Achievement>
+    <Achievement heading="LuckyLukeII"></Achievement>
+    <Achievement heading="LuckyLukeIII"></Achievement>
+    <Achievement heading="RobinHoodI"></Achievement>
+    <Achievement heading="RobinHoodII"></Achievement>
+    <Achievement heading="RobinHoodIII"></Achievement>
+    <Achievement heading="HighscorerI"></Achievement>
+    <Achievement heading="HighscorerII"></Achievement>
+    <Achievement heading="HighscorerIII"></Achievement>
+    <Achievement heading="AllOutI"></Achievement>
+    <Achievement heading="AllOutII"></Achievement>
+    <Achievement heading="AllOutIII"></Achievement>
+    <Achievement heading="LetsPopItI"></Achievement>
+    <Achievement heading="LetsPopItII"></Achievement>
+    <Achievement heading="LetsPopItIII"></Achievement>
+    <Achievement heading="LastManStandingI"></Achievement>
+    <Achievement heading="LastManStandingII"></Achievement>
+    <Achievement heading="LastManStandingIII"></Achievement>
+    <Achievement heading="DontMissAGoodChanceI"></Achievement>
+    <Achievement heading="DontMissAGoodChanceII"></Achievement>
+    <Achievement heading="DontMissAGoodChanceIII"></Achievement>
+    <Achievement heading="DontMissAPerfectChanceI"></Achievement>
+    <Achievement heading="DontMissAPerfectChanceII"></Achievement>
+    <Achievement heading="DontMissAPerfectChanceIII"></Achievement>
   </Achievements>
 </AchievementCollection>
