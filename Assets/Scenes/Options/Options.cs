@@ -19,7 +19,7 @@ public class Options : MonoBehaviour {
         this.soundObject = Object.FindObjectOfType<Sound>();
         this.settingsObject = Object.FindObjectOfType<Settings>();
         effectsToggle.isOn = soundObject.GetEffectsBool();
-        musicToggle.isOn = soundObject.GetMusicBool();
+        musicToggle.isOn = soundObject.IsMusicEnabled();
         introToggle.isOn = settingsObject.GetIntroBool();
         effectsSlider.value = soundObject.GetEffectsValue();
         musicSlider.value = soundObject.GetMusicValue();
@@ -71,22 +71,22 @@ public class Options : MonoBehaviour {
     //handle toggle change
     void EffectsToggleValueChanged(bool value)
     {
-        soundObject.SetEffectsBool(value);
+        soundObject.SetEffectsEnabled(value);
     }
 
     void MusicToggleValueChanged(bool value)
     {
-        soundObject.SetMusicBool(value);
+        soundObject.SetMusicEnabled(value);
     }
 
     //handle slider change
     void EffectsSliderValueChanged(int value)
     {
-        soundObject.SetEffectsValue(value);
+        soundObject.SetEffectsVolume(value);
     }
 
     void MusicSliderValueChanged(int value)
     {
-        soundObject.SetMusicValue(value);
+        soundObject.SetMusicVolume(value);
     }
 }
