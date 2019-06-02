@@ -65,8 +65,8 @@ public class Settings : MonoBehaviour {
             //else set to default system language
             this.language = Application.systemLanguage.ToString();
         }
-        //language object initialized with current language as Hashtable
-        langObject = new Lang(System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml"), this.language, false);
+        string path = System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml");
+        langObject = new Lang(path, this.language);
     }
 
     private void UpdateLanguage(string language)

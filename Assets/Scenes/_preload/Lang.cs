@@ -35,16 +35,13 @@ public class Lang
 
     var LangClass : Lang = new Lang(wwwXML.text, currentLang, true)
     */
-    public Lang(string path, string language, bool web)
+    public Lang(string path, string language)
     {
-        if (!web)
-        {
-            setLanguage(path, language);
-        }
-        else
-        {
-            setLanguageWeb(path, language);
-        }
+#if UNITY_ANDROID
+        setLanguageWeb(path, language);
+#else
+        setLanguage(path, language);
+#endif
     }
 
     /*
@@ -92,10 +89,12 @@ public class Lang
 
     var LangClass : Lang = new Lang(wwwXML.text, currentLang)
     */
-    public void setLanguageWeb(string xmlText, string language)
+    public void setLanguageWeb(string path, string language)
     {
+        var file = new WWW(path);
+        while (!file.isDone) { }
         var xml = new XmlDocument();
-        xml.Load(new StringReader(xmlText));
+        xml.LoadXml(file.text);
 
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];
