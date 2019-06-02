@@ -91,3 +91,4 @@ Assets/GooglePlayGames.meta
 # Builds
 *.apk
 *.unitypackage
+ Logs/**/*.* Assets/Plugins/Android/**/*.*
