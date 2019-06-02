@@ -23,7 +23,7 @@ public class Sound : MonoBehaviour
     public AudioClip menuMusic;
 
     //string to check which song was played before stopping
-    private string musicState;
+    private string lastPlayedMusic;
 
     private void Awake()
     {
@@ -151,7 +151,7 @@ public class Sound : MonoBehaviour
     {
         if (IsMusicEnabled())
         {
-            if (globalMusicObject.isPlaying && !(musicState == "arcade"))
+            if (globalMusicObject.isPlaying && !(lastPlayedMusic == "arcade"))
             {
                 globalMusicObject.Stop();
                 ChooseTitle();
@@ -161,7 +161,7 @@ public class Sound : MonoBehaviour
                 ChooseTitle();
             }
         }
-        musicState = "arcade";
+        lastPlayedMusic = "arcade";
     }
 
     private void ChooseTitle()
@@ -175,7 +175,7 @@ public class Sound : MonoBehaviour
         if (IsMusicEnabled())
         {
             //if another music was played before, stop it and play the menu music. prevents a new start upon slider usage
-            if (globalMusicObject.isPlaying && !(musicState == "menu"))
+            if (globalMusicObject.isPlaying && !(lastPlayedMusic == "menu"))
             {
                 globalMusicObject.Stop();
                 globalMusicObject.PlayOneShot(menuMusic);
@@ -186,7 +186,7 @@ public class Sound : MonoBehaviour
                 globalMusicObject.PlayOneShot(menuMusic);
             }
         }
-        musicState = "menu";
+        lastPlayedMusic = "menu";
     }
 
     void UpdateSoundSettings()
@@ -198,11 +198,11 @@ public class Sound : MonoBehaviour
         {
             globalMusicObject.Stop();
         }//check if menu music was played before
-        else if (musicState == "menu")
+        else if (lastPlayedMusic == "menu")
         {
             PlayMenuGameMusic();
         }//check if arcade music was played before
-        else if (musicState == "arcade")
+        else if (lastPlayedMusic == "arcade")
         {
             PlayArcadeGameMusic();
         }
