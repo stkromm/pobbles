@@ -23,11 +23,18 @@ public class AchievementContainer
 
     public static AchievementContainer Load(string path)
     {
+#if UNITY_ANDROID
+        var file = new WWW(path);
+        while (!file.isDone) { }
+        return LoadFromText(file.text);
+#else
         var serializer = new XmlSerializer(typeof(AchievementContainer));
         using (var stream = new FileStream(path, FileMode.Open))
         {
             return serializer.Deserialize(stream) as AchievementContainer;
         }
+#endif
+
     }
 
     //Loads the xml directly from the given string. Useful in combination with www.text.
