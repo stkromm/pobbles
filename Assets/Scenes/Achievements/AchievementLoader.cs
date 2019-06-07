@@ -22,7 +22,7 @@ public class AchievementLoader : MonoBehaviour
         achievements = new ArrayList();
         foreach (Achievement achievement in achievementCollection.Achievements)
         {
-            achievements.Add(new Achievement(settingsObject.GetStringFromHashtable(achievement.achievementHeading + "Heading"), settingsObject.GetStringFromHashtable(achievement.achievementHeading + "Description")));
+            achievements.Add(new Achievement(achievement.achievementHeading, settingsObject.GetStringFromHashtable(achievement.achievementHeading + "Heading"), settingsObject.GetStringFromHashtable(achievement.achievementHeading + "Description")));
         }
         return achievements;
 

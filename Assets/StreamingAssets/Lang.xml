@@ -3,9 +3,9 @@
 
 	     <string name="WatchmanIHeading">Watchman I</string>
 	     <string name="WatchmanIDescription">Let less than five bubbles pop accidentally</string>
-	     <string name="WatchmanIIHeading">Watchman I</string>
+	     <string name="WatchmanIIHeading">Watchman II</string>
 	     <string name="WatchmanIIDescription">Let less than three bubbles pop accidentally</string>
-	     <string name="WatchmanIIIHeading">Watchman I</string>
+	     <string name="WatchmanIIIHeading">Watchman III</string>
 	     <string name="WatchmanIIIDescription">Let no bubbles pop accidentally</string>
 
 	     <string name="MrPerfectIHeading">Mr. Perfect I</string>
@@ -257,9 +257,9 @@
 
 	     <string name="WatchmanIHeading">Watchman I</string>
 	     <string name="WatchmanIDescription">Lasse weniger als 5 Blasen unbeabsichtigt platzen</string>
-	     <string name="WatchmanIIHeading">Watchman I</string>
+	     <string name="WatchmanIIHeading">Watchman II</string>
 	     <string name="WatchmanIIDescription">Lasse weniger als 3 Blasen unbeabsichtigt platzen</string>
-	     <string name="WatchmanIIIHeading">Watchman I</string>
+	     <string name="WatchmanIIIHeading">Watchman III</string>
 	     <string name="WatchmanIIIDescription">Lasse keine Blasen unbeabsichtigt platzen</string>
 
 	     <string name="MrPerfectIHeading">Mr. Perfect I</string>

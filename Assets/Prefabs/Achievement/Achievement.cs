@@ -20,14 +20,14 @@ public class Achievement
 
     public Achievement(){}
 
-    public Achievement(string heading, string description)
+    public Achievement(string key, string heading, string description)
     {
         //available on init from xml
         achievementHeading = heading;
         achievementDescription = description;
-
-        achievementIcon = Resources.Load<Sprite>("AchievementIcons/" + heading);
-        achievementProgressSlider = LoadAchievementProgress(heading);
+        Debug.Log("achievement heading: " + heading);
+        achievementIcon = Resources.Load<Sprite>("AchievementIcons/" + key);
+        achievementProgressSlider = LoadAchievementProgress(key);
     }
 
     public float LoadAchievementProgress(string name)
