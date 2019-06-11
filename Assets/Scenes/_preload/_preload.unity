@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -153,7 +161,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4dc75b1ad9b3bcb4380dc2c056b490f3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -280,7 +288,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 326587192b67f4720b6e4cdc4b13a5a8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -395,9 +403,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -569,16 +578,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalEffectObject: {fileID: 1055013806}
-  BubblePop1: {fileID: 8300000, guid: 326587192b67f4720b6e4cdc4b13a5a8, type: 3}
-  BubblePop2: {fileID: 8300000, guid: bc08e5605327e4305b5195c26c4af6ca, type: 3}
-  BubblePop3: {fileID: 8300000, guid: c55a9f7cf4bd04aa6b1ad69d83178df2, type: 3}
+  bubblePop1: {fileID: 8300000, guid: 326587192b67f4720b6e4cdc4b13a5a8, type: 3}
+  bubblePop2: {fileID: 8300000, guid: bc08e5605327e4305b5195c26c4af6ca, type: 3}
+  bubblePop3: {fileID: 8300000, guid: c55a9f7cf4bd04aa6b1ad69d83178df2, type: 3}
   globalMusicObject: {fileID: 891017821}
-  arcadeGameMusic: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  arcadeGameMusic1: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  arcadeGameMusic2: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  arcadeGameMusic3: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  arcadeGameMusic4: {fileID: 8300000, guid: b0a16444be465e842854a0025666686f, type: 3}
-  menuMusic: {fileID: 8300000, guid: 8f4d4d1940b5de74c9aeac5a1b466040, type: 3}
+  arcadeGameMusic: {fileID: 8300000, guid: 532b492d53389844dbeaaec2d5aa13d7, type: 3}
+  menuMusic: {fileID: 8300000, guid: 24b61e6950ceb5d45a07dfd64960613c, type: 3}
 --- !u!114 &2073949314
 MonoBehaviour:
   m_ObjectHideFlags: 0

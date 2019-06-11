@@ -1,5 +1,89 @@
 <languages>
         <English>
+
+	     <string name="WatchmanIHeading">Watchman I</string>
+	     <string name="WatchmanIDescription">Let less than five bubbles pop accidentally</string>
+	     <string name="WatchmanIIHeading">Watchman II</string>
+	     <string name="WatchmanIIDescription">Let less than three bubbles pop accidentally</string>
+	     <string name="WatchmanIIIHeading">Watchman III</string>
+	     <string name="WatchmanIIIDescription">Let no bubbles pop accidentally</string>
+
+	     <string name="MrPerfectIHeading">Mr. Perfect I</string>
+	     <string name="MrPerfectIDescription">Pop two bubble perfectly in one game!</string>
+	     <string name="MrPerfectIIHeading">Mr. Perfect II</string>
+	     <string name="MrPerfectIIDescription">Pop five bubble perfectly in one game!</string>
+	     <string name="MrPerfectIIIHeading">Mr. Perfect III</string>
+	     <string name="MrPerfectIIIDescription">Pop ten bubble perfectly in one game!</string>
+
+	     <string name="MrGoodIHeading">Mr. Good I</string>
+	     <string name="MrGoodIDescription">Pop 15x bubble "good" in one game!</string>
+	     <string name="MrGoodIIHeading">Mr. Good II</string>
+	     <string name="MrGoodIIDescription">Pop 25x bubble "good" in one game!</string>
+	     <string name="MrGoodIIIHeading">Mr. Good III</string>
+	     <string name="MrGoodIIIDescription">Pop 30x bubble "good" in one game!</string>
+
+	     <string name="LuckyLukeIHeading">LuckyLuke I</string>
+	     <string name="LuckyLukeIDescription">Pop 20x bubbles in less than 5 sec</string>
+	     <string name="LuckyLukeIIHeading">LuckyLuke II</string>
+	     <string name="LuckyLukeIIDescription">Pop 25x bubbles in less than 5 sec</string>
+	     <string name="LuckyLukeIIIHeading">LuckyLuke III</string>
+	     <string name="LuckyLukeIIIDescription">Pop 30x bubbles in less than 5 sec</string>
+
+
+	     <string name="RobinHoodIHeading">Robin Hood I</string>
+	     <string name="RobinHoodIDescription">Tap less than 20x next to the bubbles in a game</string>
+	     <string name="RobinHoodIIHeading">Robin Hood II</string>
+	     <string name="RobinHoodIIDescription">Tap less than 10x next to the bubbles in a game</string>
+	     <string name="RobinHoodIIIHeading">Robin Hood III</string>
+	     <string name="RobinHoodIIIDescription">Don't tap next to the bubbles in a game</string>
+
+	     <string name="HighscorerIHeading">Highscorer I</string>
+	     <string name="HighscorerIDescription">Achieve more than 25000 points in one game</string>
+	     <string name="HighscorerIIHeading">Highscorer II</string>
+	     <string name="HighscorerIIDescription">Achieve more than 30000 points in one game</string>
+	     <string name="HighscorerIIIHeading">Highscorer III</string>
+	     <string name="HighscorerIIIDescription">Achieve more than 35000 points in one game</string>
+
+	     <string name="AllOutIHeading">AllOut I</string>
+	     <string name="AllOutIDescription">Let 130 bubbles pop in one game</string>
+	     <string name="AllOutIIHeading">AllOut II</string>
+	     <string name="AllOutIIDescription">Let 180 bubbles pop in one game</string>
+	     <string name="AllOutIIIHeading">AllOut III</string>
+	     <string name="AllOutIIIDescription">Let 200 bubbles pop in one game</string>
+		
+	     <string name="LastManStandingIHeading">Last Man Standing I</string>
+	     <string name="LastManStandingIDescription">Play three games in a row (directly via Restart)!</string>
+	     <string name="LastManStandingIIHeading">Last Man Standing II</string>
+	     <string name="LastManStandingIIDescription">Play six games in a row (directly via Restart)!</string>
+	     <string name="LastManStandingIIIHeading">Last Man Standing III</string>
+	     <string name="LastManStandingIIIDescription">Play ten games in a row (directly via Restart)!</string>
+
+	     <string name="LetsPopItIHeading">Lets Pop It! I</string>
+	     <string name="LetsPopItIDescription">Let 1000x bubbles pop</string>
+	     <string name="LetsPopItIIHeading">Lets Pop It! II</string>
+	     <string name="LetsPopItIIDescription">Let 5000x bubbles pop</string>
+	     <string name="LetsPopItIIIHeading">Lets Pop It! III</string>
+	     <string name="LetsPopItIIIDescription">Let 10000x bubbles pop</string>
+		
+	     <string name="DontMissAGoodChanceIHeading">Dont miss a good chance I</string>
+	     <string name="DontMissAGoodChanceIDescription">Let 150x bubbles at least "good" pop</string>
+	     <string name="DontMissAGoodChanceIIHeading">Dont miss a good chance II</string>
+	     <string name="DontMissAGoodChanceIIDescription">Let 300x bubbles at least "good" pop</string>
+	     <string name="DontMissAGoodChanceIIIHeading">Dont miss a good chance III</string>
+	     <string name="DontMissAGoodChanceIIIDescription">Let 600x bubbles at least "good" pop</string>
+		
+	     <string name="DontMissAPerfectChanceIHeading">Don't miss a perfect chance I</string>
+	     <string name="DontMissAPerfectChanceIDescription">Let 50x bubbles pop perfectly</string>
+	     <string name="DontMissAPerfectChanceIIHeading">Don't miss a perfect chance II</string>
+	     <string name="DontMissAPerfectChanceIIDescription">Let 100x bubbles pop perfectly</string>
+	     <string name="DontMissAPerfectChanceIIIHeading">Don't miss a perfect chance III</string>
+	     <string name="DontMissAPerfectChanceIIIDescription">Let 200x bubbles pop perfectly</string>
+
+
+
+
+
+
           <string name="MainMenuHeadingText">PUBBLES</string>
           <string name="HighscoreButtonText">Highscore</string>
           <string name="PlayGameButtonText">Play Game</string>
@@ -19,7 +103,7 @@
             Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
             Address:
-            Hasenbergstraße 39b
+            HasenbergstraÃŸe 39b
             70176 Stuttgart, Germany
 
             Contact:
@@ -83,7 +167,7 @@
 
 
           <string name="trophyHeading">now english</string>
-          <string name="trophyDescription">englissadah aidjoisajd ajds hasd ha ds hahdöhsaödhaödh aöd</string>
+          <string name="trophyDescription">englissadah aidjoisajd ajds hasd ha ds hahdÃ¶hsaÃ¶dhaÃ¶dh aÃ¶d</string>
           
         </English>
         
@@ -103,11 +187,11 @@
             Publies:
             Sudden Development GbR aka. SuddenDev
 
-            Développeur:
+            DÃ©veloppeur:
             Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
             Adresse:
-            Hasenbergstraße 39b
+            HasenbergstraÃŸe 39b
             70176 Stuttgart, Germany
 
             Contact:
@@ -122,7 +206,7 @@
           <string name="FeedbackHeadingText">Feedback</string>
           <string name="FeedbackTextFieldPlaceholder">Entrez vos commentaires...</string>
           <string name="FeedbackSendButtonText">Envoyer</string>
-          <string name="FeedbackDescriptionText">Aidez-nous à améliorer :)</string>
+          <string name="FeedbackDescriptionText">Aidez-nous Ã  amÃ©liorer :)</string>
 
           <string name="GamemodeArcadeResumeButtonText">Recommencer</string>
           <string name="GamemodeArcadeRestartButtonText">Rejouer</string>
@@ -133,7 +217,7 @@
           <string name="RedBubbleDied">Upsi!</string>
           <string name="PerfectTiming">Parfait!</string>
           <string name="GoodTiming">Bien!</string>
-          <string name="NegativeBubbleDied">Génial!</string>
+          <string name="NegativeBubbleDied">GÃ©nial!</string>
           <string name="NegativeBubbleClicked">Aie!</string>
 
           <string name="HighscoreHeadingText">Highscore</string>
@@ -146,11 +230,11 @@
 
           <string name="Intro1Row1Text">Pop The Bubbles. Le plus petit, le mieux.</string>
           <string name="Intro1Row2Text">Ne laissez pas les bulles rouges mourir.</string>
-          <string name="Intro2Row2Text">Bonnes réactions pour un bonus de timing.</string>
+          <string name="Intro2Row2Text">Bonnes rÃ©actions pour un bonus de timing.</string>
           <string name="Intro3Row1Text">Don't Pop The Black Bubbles.</string>
-          <string name="Intro3Row2Text">Ne pas éclater les bulles noires.</string>
+          <string name="Intro3Row2Text">Ne pas Ã©clater les bulles noires.</string>
           <string name="IntroductionPlayGameButtonText">Jouer</string>
-          <string name="IntroBoolToggleLabel">Montrer cette introduction à nouveau</string>
+          <string name="IntroBoolToggleLabel">Montrer cette introduction Ã  nouveau</string>
           <string name="IntroControlsPageText">de</string>
 
           <string name="OptionsHeadingText">Options</string>
@@ -170,6 +254,91 @@
         </French>
         
         <German>
+
+	     <string name="WatchmanIHeading">Watchman I</string>
+	     <string name="WatchmanIDescription">Lasse weniger als 5 Blasen unbeabsichtigt platzen</string>
+	     <string name="WatchmanIIHeading">Watchman II</string>
+	     <string name="WatchmanIIDescription">Lasse weniger als 3 Blasen unbeabsichtigt platzen</string>
+	     <string name="WatchmanIIIHeading">Watchman III</string>
+	     <string name="WatchmanIIIDescription">Lasse keine Blasen unbeabsichtigt platzen</string>
+
+	     <string name="MrPerfectIHeading">Mr. Perfect I</string>
+	     <string name="MrPerfectIDescription">Lasse zwei Blasen perfekt platzen</string>
+	     <string name="MrPerfectIIHeading">Mr. Perfect II</string>
+	     <string name="MrPerfectIIDescription">Lasse fünf Blasen perfekt platzen</string>
+	     <string name="MrPerfectIIIHeading">Mr. Perfect III</string>
+	     <string name="MrPerfectIIIDescription">Lasse zehn Blasen perfekt platzen</string>
+
+	     <string name="MrGoodIHeading">Mr. Good I</string>
+	     <string name="MrGoodIDescription">Lasse 15 Blasen gut platzen</string>
+	     <string name="MrGoodIIHeading">Mr. Good II</string>
+	     <string name="MrGoodIIDescription">Lasse 25 Blasen gut platzen</string>
+	     <string name="MrGoodIIIHeading">Mr. Good III</string>
+	     <string name="MrGoodIIIDescription">Lasse 30 Blasen gut platzen</string>
+
+	     <string name="LuckyLukeIHeading">LuckyLuke I</string>
+	     <string name="LuckyLukeIDescription">Lasse 20x Blasen in weniger als 5 Sekunden platzen</string>
+	     <string name="LuckyLukeIIHeading">LuckyLuke II</string>
+	     <string name="LuckyLukeIIDescription">Lasse 25x Blasen in weniger als 5 Sekunden platzen</string>
+	     <string name="LuckyLukeIIIHeading">LuckyLuke III</string>
+	     <string name="LuckyLukeIIIDescription">Lasse 30x Blasen in weniger als 5 Sekunden platzen</string>
+
+
+	     <string name="RobinHoodIHeading">Robin Hood I</string>
+	     <string name="RobinHoodIDescription">Tippe weniger als 20x in einem Spiel daneben</string>
+	     <string name="RobinHoodIIHeading">Robin Hood II</string>
+	     <string name="RobinHoodIIDescription">Tippe weniger als 10x in einem Spiel daneben</string>
+	     <string name="RobinHoodIIIHeading">Robin Hood III</string>
+	     <string name="RobinHoodIIIDescription">Tippe kein einziges mal in einem Spiel daneben</string>
+
+	     <string name="HighscorerIHeading">Highscorer I</string>
+	     <string name="HighscorerIDescription">Erreiche mehr als 25000 Punkte in einem Spiel</string>
+	     <string name="HighscorerIIHeading">Highscorer II</string>
+	     <string name="HighscorerIIDescription">Erreiche mehr als 30000 Punkte in einem Spiel</string>
+	     <string name="HighscorerIIIHeading">Highscorer III</string>
+	     <string name="HighscorerIIIDescription">Erreiche mehr als 35000 Punkte in einem Spiel</string>
+
+	     <string name="AllOutIHeading">AllOut I</string>
+	     <string name="AllOutIDescription">Lasse 130 Blasen in einem Spiel platzen</string>
+	     <string name="AllOutIIHeading">AllOut II</string>
+	     <string name="AllOutIIDescription">Lasse 180 Blasen in einem Spiel platzen</string>
+	     <string name="AllOutIIIHeading">AllOut III</string>
+	     <string name="AllOutIIIDescription">Lasse 200 Blasen in einem Spiel platzen</string>
+		
+	     <string name="LastManStandingIHeading">Last Man Standing I</string>
+	     <string name="LastManStandingIDescription">Spiele drei Spiele direkt hintereinander (über Restart)</string>
+	     <string name="LastManStandingIIHeading">Last Man Standing II</string>
+	     <string name="LastManStandingIIDescription">Spiele sechs Spiele direkt hintereinander (über Restart)</string>
+	     <string name="LastManStandingIIIHeading">Last Man Standing III</string>
+	     <string name="LastManStandingIIIDescription">Spiele zehn Spiele direkt hintereinander (über Restart)</string>
+
+	     <string name="LetsPopItIHeading">Lets Pop It! I</string>
+	     <string name="LetsPopItIDescription">Lasse insgesamt 1000x Blasen platzen</string>
+	     <string name="LetsPopItIIHeading">Lets Pop It! II</string>
+	     <string name="LetsPopItIIDescription">Lasse insgesamt 5000x Blasen platzen</string>
+	     <string name="LetsPopItIIIHeading">Lets Pop It! III</string>
+	     <string name="LetsPopItIIIDescription">Lasse insgesamt 10000x Blasen platzen</string>
+		
+	     <string name="DontMissAGoodChanceIHeading">Verpasse keine gute Chance I</string>
+	     <string name="DontMissAGoodChanceIDescription">Lasse 150x Blasen mindestens gut platzen</string>
+	     <string name="DontMissAGoodChanceIIHeading">Verpasse keine gute ChanceII</string>
+	     <string name="DontMissAGoodChanceIIDescription">Lasse 300x Blasen mindestens gut platzen</string>
+	     <string name="DontMissAGoodChanceIIIHeading">Verpasse keine gute Chance III</string>
+	     <string name="DontMissAGoodChanceIIIDescription">Lasse 600x Blasen mindestens gut platzen</string>
+		
+	     <string name="DontMissAPerfectChanceIHeading">Verpasse keine perfekte Chance I</string>
+	     <string name="DontMissAPerfectChanceIDescription">Lasse mindestens 50x Blasen perfekt platzen</string>
+	     <string name="DontMissAPerfectChanceIIHeading">Verpasse keine perfekte Chance II</string>
+	     <string name="DontMissAPerfectChanceIIDescription">Lasse mindestens 100x Blasen perfekt platzen</string>
+	     <string name="DontMissAPerfectChanceIIIHeading">Verpasse keine perfekte Chance III</string>
+	     <string name="DontMissAPerfectChanceIIIDescription">Lasse mindestens 200x Blasen perfekt platzen</string>
+
+
+
+
+
+
+
           
           <string name="MainMenuHeadingText">PUBBLES</string>
           <string name="HighscoreButtonText">Highscore</string>
@@ -178,25 +347,25 @@
           <string name="FeedbackButtonText">Feedback</string>
           <string name="CreditsText"></string>
           
-          <string name="AboutHeadingText">Über</string>
-          <string name="AboutBackToMenuButtonText">Zurück zum Menü</string>
+          <string name="AboutHeadingText">Ãœber</string>
+          <string name="AboutBackToMenuButtonText">ZurÃ¼ck zum MenÃ¼</string>
           <string name="AboutDetailsText">
             PUBBLES
 
-            Veröffentlicht durch:
+            VerÃ¶ffentlicht durch:
             Sudden Development GbR aka. SuddenDev
 
             Entwickler:
             Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
             Adresse:
-            Hasenbergstraße 39b
+            HasenbergstraÃŸe 39b
             70176 Stuttgart, Deutschland
 
             Kontakt:
             philipp.mittmann@web.de
 
-            Musik (aktuell in Preview-Modus für Testzwecke):
+            Musik (aktuell in Preview-Modus fÃ¼r Testzwecke):
             CueMasters - "Sunshine and Sand"
             Holyhammer - "Pizzi and Glock Loop"
 
@@ -205,7 +374,7 @@
           <string name="FeedbackHeadingText">Feedback</string>
           <string name="FeedbackTextFieldPlaceholder">Gebe dein Feedback ein...</string>
           <string name="FeedbackSendButtonText">Senden</string>
-          <string name="FeedbackDescriptionText">Wir versuchen stets das Erlebnis unserer Nutzer zu verbessern. Darum brauchen wir dein Feedback! Erzähle uns, wie du die App weiterentwickeln würdest und bestimme dadruch maßgeblich die Entwicklung mit!</string>
+          <string name="FeedbackDescriptionText">Wir versuchen stets das Erlebnis unserer Nutzer zu verbessern. Darum brauchen wir dein Feedback! ErzÃ¤hle uns, wie du die App weiterentwickeln wÃ¼rdest und bestimme dadruch maÃŸgeblich die Entwicklung mit!</string>
           
           <string name="GamemodeArcadeResumeButtonText">Weiterspielen</string>
           <string name="GamemodeArcadeRestartButtonText">Neustart</string>
@@ -225,20 +394,20 @@
           <string name="HighscorePersonalButtonText">Lokal</string>
           <string name="HighscoreGlobalButtonText">Global</string>
           <string name="HighscoreLocalComparisonHeadingText">Dein Letztes Spiels</string>
-          <string name="HighscoreGlobalComparisonHeadingText">Persönlicher Highscore</string>
+          <string name="HighscoreGlobalComparisonHeadingText">PersÃ¶nlicher Highscore</string>
           
           <string name="Intro1Row1Text">Pop The Bubbles. Je kleiner, desto besser.</string>
           <string name="Intro1Row2Text">Lasse die roten Bubbles nicht sterben.</string>
-          <string name="Intro2Row2Text">Für gute Reaktionen bekommst du einen Timing Bonus.</string>
-          <string name="Intro3Row1Text">Drücke nicht auf die schwarzen Bubbles.</string>
+          <string name="Intro2Row2Text">FÃ¼r gute Reaktionen bekommst du einen Timing Bonus.</string>
+          <string name="Intro3Row1Text">DrÃ¼cke nicht auf die schwarzen Bubbles.</string>
           <string name="Intro3Row2Text">Lass die schwarzen Bubbles sterben.</string>
           <string name="IntroductionPlayGameButtonText">Jetzt spielen</string>
-          <string name="IntroBoolToggleLabel">Diese Einführung erneut zeigen</string>
+          <string name="IntroBoolToggleLabel">Diese EinfÃ¼hrung erneut zeigen</string>
           <string name="IntroControlsPageText">von</string>
           
           <string name="OptionsHeadingText">Optionen</string>
-          <string name="AboutButtonText">Über</string>
-          <string name="OptionsIntroText">Einführung</string>
+          <string name="AboutButtonText">Ãœber</string>
+          <string name="OptionsIntroText">EinfÃ¼hrung</string>
           <string name="OptionsEffectsText">Soundeffekte</string>
           <string name="OptionsMusicText">Musik</string>
           
@@ -248,7 +417,7 @@
           <string name="ResultPlayerNamePlaceholder">Dein Name...</string>
           <string name="ResultSaveScoreButtonText">Punkte speichern</string>
           <string name="ResultRestartButtonText">Erneut spielen</string>
-          <string name="ResultBackToMenuButtonText">Zurück zum Menü</string>
+          <string name="ResultBackToMenuButtonText">ZurÃ¼ck zum MenÃ¼</string>
           <string name="NewHighScoreText">Neuer Highscore!</string>
 
           <string name="trophyHeading">deutsch</string>
