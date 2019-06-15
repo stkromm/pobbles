@@ -33,13 +33,11 @@ public class NegativeBubbleScoreBehaviour : MonoBehaviour {
         
     }
 
-    void Start () {
-        Debug.Log("Bubble Score object created.");
+    void Start () {        
     }
 
 	// Update is called once per frame
 	void Update () {
-
         //destroy bubble score text when lifetime over
         lifetime -= Time.deltaTime;
         if (lifetime < 0)

@@ -32,13 +32,21 @@ public class BubbleSpawner : MonoBehaviour
             //20% chance for a negativ bubble
             if (Random.Range(0.0f, 1.0f) < 0.2f)
             {
+
+                //random position 2D
                 float spawnY2 = Random.Range
     (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.25f - 0.5f);
                 float spawnX2 = Random.Range
                     (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.25f);
-
                 Vector2 spawnPosition2 = new Vector2(spawnX2, spawnY2);
-                Instantiate(negativeBubble, spawnPosition2, Quaternion.identity);
+
+                //instantiating the bubble
+                GameObject nBubble = Instantiate(negativeBubble, spawnPosition2, Quaternion.identity);
+
+                //rotation around z-axis
+                nBubble.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f,360f));
+                
+
             }
         }
     }
