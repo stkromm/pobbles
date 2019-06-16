@@ -28,7 +28,7 @@ public class NegativeBubbleBehaviour : MonoBehaviour {
             gameScore = scores[0];
         }
         lifetime = (int)(Random.value * (maxLifetime * 0.5f));
-        spriteRenderer.color = Color.black;
+        spriteRenderer.color = Color.white;
     }
 	
 	// Update is called once per frame

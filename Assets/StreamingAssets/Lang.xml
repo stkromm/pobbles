@@ -94,25 +94,30 @@
           <string name="AboutHeadingText">About</string>
           <string name="AboutBackToMenuButtonText">Back To Menu</string>
           <string name="AboutDetailsText">
-            PUBBLES
+PUBBLES
 
-            Published by:
-            Sudden Development GbR aka. SuddenDev
+Published by:
+Sudden Development aka. SuddenDev
 
-            Creators:
-            Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+Creators:
+Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
-            Address:
-            HasenbergstraÃŸe 39b
-            70176 Stuttgart, Germany
+Address:
+Hasenbergstrasse 39b
+70176 Stuttgart
 
-            Contact:
-            philipp.mittmann@web.de
+Contact:
+philipp.mittmann@web.de
 
-            Music (both atm in preview version for testing):
-            CueMasters - "Sunshine and Sand"
-            Holyhammer - "Pizzi and Glock Loop"
+Music:
+CueMasters - "Sunshine and Sand"
+Holyhammer - "Pizzi and Glock Loop"
 
+Privacy Policy:
+https://pobbles-dev.firebaseapp.com/pubbles.html#privacy
+
+Terms &amp; Conditions:
+https://pobbles-dev.firebaseapp.com/pubbles.html#terms
           </string>
           
           <string name="FeedbackHeadingText">Feedback</string>
@@ -154,6 +159,7 @@
           <string name="OptionsIntroText">Introduction</string>
           <string name="OptionsEffectsText">Soundeffects</string>
           <string name="OptionsMusicText">Music</string>
+          <string name="OptionsLanguageText">Language</string>
           
           <string name="ResultGameCategoryText">Game</string>
           <string name="ResultTimingCategoryText">Timing</string>
@@ -163,11 +169,7 @@
           <string name="ResultRestartButtonText">Restart</string>
           <string name="ResultBackToMenuButtonText">Back To Menu</string>
           <string name="NewHighScoreText">New Highscore!</string>
-
-
-
-          <string name="trophyHeading">now english</string>
-          <string name="trophyDescription">englissadah aidjoisajd ajds hasd ha ds hahdÃ¶hsaÃ¶dhaÃ¶dh aÃ¶d</string>
+          <string name="ShareButtonText">PUBBLES! 3..2..1..Pop the bubbles! Play the new, amazing arcade game and show your friends how good you are.</string>
           
         </English>
         
@@ -182,25 +184,30 @@
           <string name="AboutHeadingText">Quelque</string>
           <string name="AboutBackToMenuButtonText">Retour</string>
           <string name="AboutDetailsText">
-            PUBBLES
+PUBBLES
 
-            Publies:
-            Sudden Development GbR aka. SuddenDev
+Published by:
+Sudden Development aka. SuddenDev
 
-            DÃ©veloppeur:
-            Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+Creators:
+Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
-            Adresse:
-            HasenbergstraÃŸe 39b
-            70176 Stuttgart, Germany
+Address:
+Hasenbergstrasse 39b
+70176 Stuttgart
 
-            Contact:
-            philipp.mittmann@web.de
+Contact:
+philipp.mittmann@web.de
 
-            Musique:
-            CueMasters - "Sunshine and Sand"
-            Holyhammer - "Pizzi and Glock Loop"
+Music:
+CueMasters - "Sunshine and Sand"
+Holyhammer - "Pizzi and Glock Loop"
 
+Privacy Policy:
+https://pobbles-dev.firebaseapp.com/pubbles.html#privacy
+
+Terms &amp; Conditions:
+https://pobbles-dev.firebaseapp.com/pubbles.html#terms
           </string>
 
           <string name="FeedbackHeadingText">Feedback</string>
@@ -242,6 +249,7 @@
           <string name="OptionsIntroText">Introduction</string>
           <string name="OptionsEffectsText">Effets sonores</string>
           <string name="OptionsMusicText">Musique</string>
+          <string name="OptionsLanguageText">Langue</string>
 
           <string name="ResultGameCategoryText">Jou</string>
           <string name="ResultTimingCategoryText">Timing</string>
@@ -251,6 +259,8 @@
           <string name="ResultRestartButtonText">Rejouer</string>
           <string name="ResultBackToMenuButtonText">Retour</string>
           <string name="NewHighScoreText">Nouveau Highscore!</string>
+
+          <string name="ShareButtonText">PUBBLES! 3..2..1..Pop the bubbles! Joue le noveaux Jou aujourd'hui verus votre amis!</string>
         </French>
         
         <German>
@@ -334,12 +344,12 @@
 	     <string name="DontMissAPerfectChanceIIIDescription">Lasse mindestens 200x Blasen perfekt platzen</string>
 
 
-
-
-
-
-
+          <string name="ShareButtonText">PUBBLES! 3..2..1..Pop the bubbles! Spiele jetzt das neue, spannende Arcade Game und messe dich mit deinen Freunden.</string>
           
+
+
+
+
           <string name="MainMenuHeadingText">PUBBLES</string>
           <string name="HighscoreButtonText">Highscore</string>
           <string name="PlayGameButtonText">Jetzt Spielen</string>
@@ -347,34 +357,39 @@
           <string name="FeedbackButtonText">Feedback</string>
           <string name="CreditsText"></string>
           
-          <string name="AboutHeadingText">Ãœber</string>
-          <string name="AboutBackToMenuButtonText">ZurÃ¼ck zum MenÃ¼</string>
+          <string name="AboutHeadingText">Über</string>
+          <string name="AboutBackToMenuButtonText">Zurück zum Menü</string>
           <string name="AboutDetailsText">
-            PUBBLES
+PUBBLES
 
-            VerÃ¶ffentlicht durch:
-            Sudden Development GbR aka. SuddenDev
+Veröffentlicht durch:
+Sudden Development aka. SuddenDev
 
-            Entwickler:
-            Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+Entwickler:
+Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
-            Adresse:
-            HasenbergstraÃŸe 39b
-            70176 Stuttgart, Deutschland
+Adresse:
+Hasenbergstrasse 39b
+70176 Stuttgart
 
-            Kontakt:
-            philipp.mittmann@web.de
+Kontakt:
+philipp.mittmann@web.de
 
-            Musik (aktuell in Preview-Modus fÃ¼r Testzwecke):
-            CueMasters - "Sunshine and Sand"
-            Holyhammer - "Pizzi and Glock Loop"
+Musik:
+CueMasters - "Sunshine and Sand"
+Holyhammer - "Pizzi and Glock Loop"
 
+Privacy Policy:
+https://pobbles-dev.firebaseapp.com/pubbles.html#privacy
+
+Terms &amp; Conditions:
+https://pobbles-dev.firebaseapp.com/pubbles.html#terms
           </string>
           
           <string name="FeedbackHeadingText">Feedback</string>
           <string name="FeedbackTextFieldPlaceholder">Gebe dein Feedback ein...</string>
           <string name="FeedbackSendButtonText">Senden</string>
-          <string name="FeedbackDescriptionText">Wir versuchen stets das Erlebnis unserer Nutzer zu verbessern. Darum brauchen wir dein Feedback! ErzÃ¤hle uns, wie du die App weiterentwickeln wÃ¼rdest und bestimme dadruch maÃŸgeblich die Entwicklung mit!</string>
+          <string name="FeedbackDescriptionText">Wir versuchen stets das Erlebnis unserer Nutzer zu verbessern. Darum brauchen wir dein Feedback! Erzähle uns, wie du die App weiterentwickeln würdest und bestimme dadruch maßgeblich die Entwicklung mit!</string>
           
           <string name="GamemodeArcadeResumeButtonText">Weiterspielen</string>
           <string name="GamemodeArcadeRestartButtonText">Neustart</string>
@@ -394,22 +409,23 @@
           <string name="HighscorePersonalButtonText">Lokal</string>
           <string name="HighscoreGlobalButtonText">Global</string>
           <string name="HighscoreLocalComparisonHeadingText">Dein Letztes Spiels</string>
-          <string name="HighscoreGlobalComparisonHeadingText">PersÃ¶nlicher Highscore</string>
+          <string name="HighscoreGlobalComparisonHeadingText">Persönlicher Highscore</string>
           
           <string name="Intro1Row1Text">Pop The Bubbles. Je kleiner, desto besser.</string>
           <string name="Intro1Row2Text">Lasse die roten Bubbles nicht sterben.</string>
-          <string name="Intro2Row2Text">FÃ¼r gute Reaktionen bekommst du einen Timing Bonus.</string>
-          <string name="Intro3Row1Text">DrÃ¼cke nicht auf die schwarzen Bubbles.</string>
+          <string name="Intro2Row2Text">Für gute Reaktionen bekommst du einen Timing Bonus.</string>
+          <string name="Intro3Row1Text">Drücke nicht auf die schwarzen Bubbles.</string>
           <string name="Intro3Row2Text">Lass die schwarzen Bubbles sterben.</string>
           <string name="IntroductionPlayGameButtonText">Jetzt spielen</string>
-          <string name="IntroBoolToggleLabel">Diese EinfÃ¼hrung erneut zeigen</string>
+          <string name="IntroBoolToggleLabel">Diese Einführung erneut zeigen</string>
           <string name="IntroControlsPageText">von</string>
           
           <string name="OptionsHeadingText">Optionen</string>
-          <string name="AboutButtonText">Ãœber</string>
-          <string name="OptionsIntroText">EinfÃ¼hrung</string>
+          <string name="AboutButtonText">Über</string>
+          <string name="OptionsIntroText">Einführung</string>
           <string name="OptionsEffectsText">Soundeffekte</string>
           <string name="OptionsMusicText">Musik</string>
+          <string name="OptionsLanguageText">Sprache</string>
           
           <string name="ResultGameCategoryText">Spiel</string>
           <string name="ResultTimingCategoryText">Timing</string>
@@ -417,10 +433,8 @@
           <string name="ResultPlayerNamePlaceholder">Dein Name...</string>
           <string name="ResultSaveScoreButtonText">Punkte speichern</string>
           <string name="ResultRestartButtonText">Erneut spielen</string>
-          <string name="ResultBackToMenuButtonText">ZurÃ¼ck zum MenÃ¼</string>
+          <string name="ResultBackToMenuButtonText">Zurück zum Menü</string>
           <string name="NewHighScoreText">Neuer Highscore!</string>
 
-          <string name="trophyHeading">deutsch</string>
-          <string name="trophyDescription">asddd</string>
         </German>
 </languages>

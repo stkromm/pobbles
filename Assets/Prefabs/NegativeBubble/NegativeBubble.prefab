@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 224050659552227796}
   - component: {fileID: 212634344920607876}
+  - component: {fileID: 8868654932803190804}
   - component: {fileID: 50123425758145438}
   - component: {fileID: 58791496528284390}
   - component: {fileID: 222940388830955702}
-  - component: {fileID: 8868654932803190804}
   m_Layer: 0
   m_Name: NegativeBubble
   m_TagString: Untagged
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 592b7601a53e3e940b3e27ee4e628550, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4bc8ddc1acb0c444e9e1707a5c513b33, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8868654932803190804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320311679558542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e14be0f330cbf42a15fde2488479bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &50123425758145438
 Rigidbody2D:
   serializedVersion: 4
@@ -133,15 +145,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320311679558542}
   m_CullTransparentMesh: 0
---- !u!114 &8868654932803190804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320311679558542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e14be0f330cbf42a15fde2488479bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
