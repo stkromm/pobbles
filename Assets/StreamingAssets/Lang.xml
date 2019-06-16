@@ -169,11 +169,7 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
           <string name="ResultRestartButtonText">Restart</string>
           <string name="ResultBackToMenuButtonText">Back To Menu</string>
           <string name="NewHighScoreText">New Highscore!</string>
-
-
-
-          <string name="trophyHeading">now english</string>
-          <string name="trophyDescription">englissadah aidjoisajd ajds hasd ha ds hahdÃ¶hsaÃ¶dhaÃ¶dh aÃ¶d</string>
+          <string name="ShareButtonText">PUBBLES! 3..2..1..Pop the bubbles! Play the new, amazing arcade game and show your friends how good you are.</string>
           
         </English>
         
@@ -263,6 +259,8 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
           <string name="ResultRestartButtonText">Rejouer</string>
           <string name="ResultBackToMenuButtonText">Retour</string>
           <string name="NewHighScoreText">Nouveau Highscore!</string>
+
+          <string name="ShareButtonText">PUBBLES! 3..2..1..Pop the bubbles! Joue le noveaux Jou aujourd'hui verus votre amis!</string>
         </French>
         
         <German>
@@ -346,12 +344,12 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
 	     <string name="DontMissAPerfectChanceIIIDescription">Lasse mindestens 200x Blasen perfekt platzen</string>
 
 
-
-
-
-
-
+          <string name="ShareButtonText">PUBBLES! 3..2..1..Pop the bubbles! Spiele jetzt das neue, spannende Arcade Game und messe dich mit deinen Freunden.</string>
           
+
+
+
+
           <string name="MainMenuHeadingText">PUBBLES</string>
           <string name="HighscoreButtonText">Highscore</string>
           <string name="PlayGameButtonText">Jetzt Spielen</string>

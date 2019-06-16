@@ -29,9 +29,11 @@ public class Options : MonoBehaviour {
         {
             if (option.text == settingsObject.GetLanguage())
             {
+                Debug.Log("counter in if: " + counter);
                 languageDropdown.value = counter;
             }
-            counter = +1;
+            counter = counter + 1;
+            Debug.Log("counter: " + counter);
         }
 
         //listener for toggle state changes
