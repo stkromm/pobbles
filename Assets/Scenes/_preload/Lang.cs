@@ -104,7 +104,10 @@ public class Lang
             while (elemEnum.MoveNext())
             {
                 var xmlItem = (XmlElement)elemEnum.Current;
-                Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
+                if (xmlItem.GetAttribute("name") != null)
+                {
+                    Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
+                }
             }
         }
         else
