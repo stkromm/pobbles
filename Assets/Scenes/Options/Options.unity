@@ -221,6 +221,22 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_Text
+      value: ABOUT
+      objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
+        type: 3}
     - target: {fileID: 6235681012336048725, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_Sprite
@@ -266,22 +282,6 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_Text
-      value: ABOUT
-      objectReference: {fileID: 0}
-    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114175412595516690, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: dddd4b343f5936e4996106146d36766c,
-        type: 3}
     - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
       value: AboutButtonText
@@ -2120,11 +2120,13 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: German
-      m_Image: {fileID: 0}
     - m_Text: English
       m_Image: {fileID: 0}
-    - m_Text: French
+    - m_Text: Deutsch
+      m_Image: {fileID: 0}
+    - m_Text: Francais
+      m_Image: {fileID: 0}
+    - m_Text: Espanol
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3916,7 +3918,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: German
+  m_Text: English
 --- !u!222 &2034275906
 CanvasRenderer:
   m_ObjectHideFlags: 0
