@@ -87,7 +87,7 @@ public class Leaderboard : MonoBehaviour {
 
         personalButton.image.color = Color.grey;
 
-        Social.ShowLeaderboardUI();
+        //Social.ShowLeaderboardUI();
     }
 
     // Update is called once per frame
@@ -162,10 +162,15 @@ public class Leaderboard : MonoBehaviour {
             if (success){
                 foreach (IScore score in board.scores){
                     Debug.Log("Loaded Score: " + score.formattedValue);
+                    Highscoreboard hb = new Highscoreboard();
+                    LeaderboardEntry e = new LeaderboardEntry(null, score.userID, (int)score.value);
+                    hb.GetBoard().Add(e);
+                    Debug.Log("Added to board: " + e.GetName() + " with score: " + e.GetScore());
+                    SetupOnlineLists(hb);
                 }
             }
         });
-
+        /*
         // Old highscoreboard
         Highscoreboard highscoreboard = new Highscoreboard();
 
@@ -203,7 +208,7 @@ public class Leaderboard : MonoBehaviour {
                     }
                 }
             }
-        });
+        });*/
     }
 
     private void SetupOnlineLists(Highscoreboard highscoreboard){
