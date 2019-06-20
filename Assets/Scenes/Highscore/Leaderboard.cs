@@ -1,10 +1,7 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Firebase;
-using Firebase.Database;
-using Firebase.Unity.Editor;
 using UnityEngine.SocialPlatforms;
 
 public class Leaderboard : MonoBehaviour {
@@ -33,7 +30,6 @@ public class Leaderboard : MonoBehaviour {
     private IList<int> onlineScoreList;
     public Button personalButton;
     public Button globalButton;
-    DatabaseReference reference;
     private bool updateToGlobal = false;
     private bool updateToLocal = false;
     private bool isLocal = true;
@@ -43,10 +39,6 @@ public class Leaderboard : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
-        // Setup Firebase
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://pobbles-dev.firebaseio.com/");
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
         // Setup List
         scoreObject = GameObject.FindObjectOfType<Score>();
         playerList = scoreObject.GetPlayerList();
@@ -170,45 +162,6 @@ public class Leaderboard : MonoBehaviour {
                 }
             }
         });
-        /*
-        // Old highscoreboard
-        Highscoreboard highscoreboard = new Highscoreboard();
-
-        reference.Child("highscoreList").GetValueAsync().ContinueWith(task =>
-        {
-            if (task.IsFaulted)
-            {
-                // Handle the error...
-            }
-            else if (task.IsCompleted)
-            {
-                DataSnapshot snapshot = task.Result;
-                // Do something with snapshot...
-                int counter = 0;
-                foreach (var child in snapshot.Children)
-                {
-                    foreach (var listpair in child.Children)
-                    {
-                        string username = listpair.Key;
-                        string scoreString = listpair.Value.ToString();
-                        int score = int.Parse(scoreString);
-                        string uid = child.Key;
-
-                        LeaderboardEntry newLBEntry = new LeaderboardEntry(uid, username, score);
-                        highscoreboard.GetBoard().Add(newLBEntry);
-                        counter += 1;
-
-                        if (counter == snapshot.ChildrenCount){
-                            // Sort Descending
-                            highscoreboard.SortBoard();
-                            // Cut list if more than maxSize has been added
-                            highscoreboard.DropLowestScores();
-                            SetupOnlineLists(highscoreboard);
-                        }
-                    }
-                }
-            }
-        });*/
     }
 
     private void SetupOnlineLists(Highscoreboard highscoreboard){
