@@ -59,6 +59,7 @@ public class ScoreScript : MonoBehaviour
             gameStartText.text = "";
 
             timeLeft -= Time.deltaTime;
+            Debug.Log("time left: " + timeLeft);
             if (Mathf.Round(timeLeft) >= initialTime)
             {
                 int minutes = Mathf.FloorToInt(timeLeft / 60.0f);
