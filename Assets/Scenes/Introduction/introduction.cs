@@ -10,14 +10,14 @@ public class introduction : MonoBehaviour
     public Toggle introBoolToggle;
     private Settings settingsObject;
 
-    public Button forwardButton;
+    /*public Button forwardButton;
     public Button backwardButton;
     private int introPageCount = 1;
     private int maxPageCount = 3;
     public Text pageText;
     public Canvas intro1;
     public Canvas intro2;
-    public Canvas intro3;
+    public Canvas intro3;*/
 
 
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class introduction : MonoBehaviour
         {
             SceneManager.LoadScene("GamemodeArcade");
         }
-        
+
 
         playGameButton.onClick.AddListener(delegate
         {
@@ -37,8 +37,9 @@ public class introduction : MonoBehaviour
             settingsObject.SetIntroBool(introBoolToggle.isOn);
             SceneManager.LoadScene("GamemodeArcade");
         });
-
-        //handle forward button
+    }
+        //old implementation. maybe needed for level select
+        /*//handle forward button
         forwardButton.onClick.AddListener(delegate
         {
             introPageCount += 1;
@@ -102,5 +103,5 @@ public class introduction : MonoBehaviour
         {
             intro3.gameObject.SetActive(true);
         }
-    }
+    }*/
 }
