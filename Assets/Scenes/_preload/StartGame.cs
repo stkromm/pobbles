@@ -14,7 +14,7 @@ public class StartGame : MonoBehaviour {
     Settings settingsObject;
     PobblesFirebaseApp firebaseApp;
     const string FIREBASE_URL = "https://pobbles-dev.firebaseio.com";
-    bool init = false;
+    string init = "start";
     
     void Start ()
     {
@@ -40,22 +40,23 @@ public class StartGame : MonoBehaviour {
 
                     Debug.LogFormat("User signed in successfully: {0} ({1})",
                     user.DisplayName, user.UserId);
-                    init = true;
+                    init = "init";
                 }
                 catch (Exception e)
                 {
-                    init = true;
+                    init = "init";
 
                 }
         }
-        init = true;
+        init = "init";
     }
 
     void Update()
     {
-        if (init)
+        if (init.Equals("init"))
         {
             SceneManager.LoadScene("MainMenu");
+            init = "update";
         }        
     }
 

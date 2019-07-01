@@ -13,10 +13,10 @@ public class PobblesFirebaseApp : MonoBehaviour {
 
     void Start()
     {
-        
-    }
-
-    async public Task Init() {
-       
+        PobblesFirebaseApp[] lights = (PobblesFirebaseApp[])GameObject.FindObjectsOfType(typeof(PobblesFirebaseApp));
+        if (lights.Length > 1)
+        {
+            Destroy(this);
+        }
     }
 }
