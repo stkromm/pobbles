@@ -65,7 +65,13 @@ public class Leaderboard : MonoBehaviour {
 
         onlinePlayerList = new List<string>();
         onlineScoreList = new List<int>();
-        LoadHighscores();
+        Social.localUser.Authenticate((bool success) =>
+        {
+            if (success)
+            {
+                LoadHighscores();
+            }
+        });
 
         globalButton.onClick.AddListener(delegate
         {
