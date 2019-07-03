@@ -16,7 +16,7 @@ public class PobblesFirebaseApp : MonoBehaviour {
         
     }
 
-    async public Task Init() {
+   /* async public Task Init() {
        
-    }
+    }*/
 }
