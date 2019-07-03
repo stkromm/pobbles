@@ -90,10 +90,6 @@ Sudden Development aka. SuddenDev
 Creators:
 Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
-Address:
-Hasenbergstrasse 39b
-70176 Stuttgart
-
 Contact:
 philipp.mittmann@web.de
 
@@ -257,10 +253,6 @@ Sudden Development aka. SuddenDev
 
 Entwickler:
 Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
-
-Adresse:
-Hasenbergstrasse 39b
-70176 Stuttgart
 
 Kontakt:
 philipp.mittmann@web.de
@@ -685,10 +677,6 @@ Sudden Development aka. SuddenDev
 Creators:
 Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
-Address:
-Hasenbergstrasse 39b
-70176 Stuttgart
-
 Contact:
 philipp.mittmann@web.de
 
@@ -735,13 +723,13 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
 		<string name='HighscoreGlobalComparisonHeadingText'> Highscore personal </string>
 
 		<comment name='#Introduction104'/>
-		<string name='Intro1Row1Text'>Peta las burbujas. Cuanto m&#225;s pequeñas mejor</string>
+		<string name='Intro1Row1Text'>Peta las burbujas. Cuanto m&#225;s peque&#241;as mejor</string>
 		<string name='Intro1Row2Text'>No dejes morir las burbujas rojas</string>
 		<string name='Intro2Row2Text'>Por buenas reacciones recibes un timing bonus </string>
 		<string name='Intro3Row1Text'>No petes las burbujas  negras</string>
 		<string name='Intro3Row2Text'>Deja morir las burbujas negras</string>
 		<string name='IntroductionPlayGameButtonText'>Jugar ahora</string>
-		<string name='IntroBoolToggleLabel'>Enseñar la introducci&#243;n de nuevo</string>
+		<string name='IntroBoolToggleLabel'>Ense&#241;ar la introducci&#243;n de nuevo</string>
 		<string name='IntroControlsPageText'>de </string>
 
 		<comment name='#Options113'/>
@@ -756,7 +744,7 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
 		<string name='ResultGameCategoryText'>partida</string>
 		<string name='ResultTimingCategoryText'>timing</string>
 		<string name='ResultPlayerNameText'>introduce nombre</string>
-		<string name='ResultPlayerNamePlaceholder'>tu nombre…</string>
+		<string name='ResultPlayerNamePlaceholder'>tu nombre</string>
 		<string name='ResultSaveScoreButtonText'>guardar puntos</string>
 		<string name='ResultRestartButtonText'>jugar de nuevo</string>
 		<string name='ResultBackToMenuButtonText'>volver al men&#250;</string>

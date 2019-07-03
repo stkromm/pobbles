@@ -1,4 +1,4 @@
-﻿using Firebase;
+using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Unity.Editor;
@@ -23,7 +23,7 @@ public class StartGame : MonoBehaviour {
         Init();
     }
 
-    async void Init()
+    void Init()
     {
             FirebaseApp app = FirebaseApp.DefaultInstance;
             FirebaseApp.LogLevel = LogLevel.Verbose;
@@ -51,17 +51,19 @@ public class StartGame : MonoBehaviour {
         init = "init";
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (init.Equals("init"))
         {
             SceneManager.LoadScene("MainMenu");
             init = "update";
-        }        
+        }       
     }
 
     public void PlayGame()
     {
+        Debug.Log("play Game called");
         if (settingsObject.GetIntroBool())
         {
             SceneManager.LoadScene("Introduction");
