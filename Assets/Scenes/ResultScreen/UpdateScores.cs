@@ -68,17 +68,19 @@ public class UpdateScores : MonoBehaviour {
 	private void SaveScore(string name, int score)
     {
         if (Social.localUser != null){
-            Social.ReportScore(score, "classic_alltime", (bool success) =>
+          if (Social.localUser.authenticated)
             {
-                if (success)
+                SaveScoreIfAuthenticated(name, score);
+            } else
+            {
+                Social.localUser.Authenticate((bool success) =>
                 {
-                    Debug.Log("Successfully uploaded score");
-                }
-                else
-                {
-                    Debug.Log("Failed to upload score");
-                }
-            });
+                    if (success)
+                    {
+                        SaveScoreIfAuthenticated(name, score);
+                    }
+                });
+            }
         }else{
             Debug.Log("No user logged in");
         }
@@ -97,6 +99,27 @@ public class UpdateScores : MonoBehaviour {
         
     }
 
+    private void SaveScoreIfAuthenticated(string name, int score)
+    {
+        if (Social.localUser != null)
+        {
+            Social.ReportScore(score, "classic_alltime", (bool success) =>
+            {
+                if (success)
+                {
+                    Debug.Log("Successfully uploaded score");
+                }
+                else
+                {
+                    Debug.Log("Failed to upload score");
+                }
+            });
+        }
+        else
+        {
+            Debug.Log("No user logged in");
+        }
+    }
 
     // Update is called once per frame
     void Update () {
