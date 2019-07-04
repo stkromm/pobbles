@@ -23,7 +23,7 @@ public class StartGame : MonoBehaviour {
         Init();
     }
 
-    void Init()
+    async void Init()
     {
             FirebaseApp app = FirebaseApp.DefaultInstance;
             FirebaseApp.LogLevel = LogLevel.Verbose;

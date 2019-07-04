@@ -62,8 +62,20 @@ public class Settings : MonoBehaviour {
         }
         else
         {
+            if (Application.systemLanguage == SystemLanguage.German)
+            {
+                this.language = "Deutsch";
+            }
+            else if (Application.systemLanguage == SystemLanguage.Spanish)
+            {
+                language = "Espanol";
+            }
+            else 
+            {
+                language = "English";
+            }
             //else set to default system language
-            this.language = Application.systemLanguage.ToString();
+            
         }
         string path = System.IO.Path.Combine(Application.streamingAssetsPath, "Lang.xml");
         langObject = new Lang(path, this.language);
