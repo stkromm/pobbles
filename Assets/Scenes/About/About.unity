@@ -269,12 +269,34 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "PUBBLES\n\nPublished by:\nSudden Development GbR aka. SuddenDev\n\nCreators:\nPhilipp
-    Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig\n\nAddress:\nHasenbergstra\xDFe
-    39b\n70176 Stuttgart\n\nContact:\nphilipp.mittmann@web.de\n\nMusic (both atm in
-    preview version for testing):\nCueMasters - \"Sunshine and Sand\"\nHolyhammer
-    - \"Pizzi and Glock Loop\"\n\nPrivacy Policy:\nhttps://pobbles-dev.firebaseapp.com/pubbles.html#privacy\n\nTerms
-    & Conditions:\nhttps://pobbles-dev.firebaseapp.com/pubbles.html#terms\n"
+  m_Text: 'PUBBLES
+
+
+    Published by:
+
+    sudden-dev
+
+
+    Creators:
+
+    Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
+
+
+    Contact:
+
+    support@sudden-dev.com
+
+
+    Privacy Policy:
+
+    https://sudden-dev.com/pubbles#privacy
+
+
+    Terms & Conditions:
+
+    https://sudden-dev.com/pubbles#terms
+
+'
 --- !u!222 &85427779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -675,7 +697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA9SuddenDev 2019"
+  m_Text: "\xA9sudden-dev 2019"
 --- !u!222 &1361647322
 CanvasRenderer:
   m_ObjectHideFlags: 0

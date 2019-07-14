@@ -536,7 +536,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA9SuddenDev 2019"
+  m_Text: "\xA9sudden-dev 2019"
 --- !u!222 &947288519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -753,6 +753,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: delay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_PreserveAspect
@@ -761,11 +766,6 @@ PrefabInstance:
     - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
       value: FeedbackButtonText
-      objectReference: {fileID: 0}
-    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: delay
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7464108928659568013, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
@@ -1345,6 +1345,11 @@ PrefabInstance:
       propertyPath: sceneName
       value: SelectLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
+      propertyPath: pulseSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 114967792905426338, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
       propertyPath: m_PreserveAspect
@@ -1353,11 +1358,6 @@ PrefabInstance:
     - target: {fileID: 1353767361505774, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: m_Name
       value: PlayGameButtonText
-      objectReference: {fileID: 0}
-    - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
-        type: 3}
-      propertyPath: pulseSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224861347519955828, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}

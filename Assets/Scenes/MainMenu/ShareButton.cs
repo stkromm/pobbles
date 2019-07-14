@@ -14,10 +14,9 @@ public class ShareButton : MonoBehaviour
         //TODO setup native share as in readme file
         NativeShare nativeShare = new NativeShare();
         //share url stores
-        string playStoreURL = "https://pobbles-dev.firebaseapp.com/";
-        string appStoreURL = "https://pobbles-dev.firebaseapp.com/";
-        //TODO include translation later
-        nativeShare.SetText(settingsObject.GetStringFromHashtable("ShareButtonText") + "\n\n Android: " + playStoreURL + "\n\n iOS: " + appStoreURL);
+        string playStoreURL = "https://sudden-dev.com/pubbles";
+        
+        nativeShare.SetText(settingsObject.GetStringFromHashtable("ShareButtonText") + "\n\n " + playStoreURL);
         nativeShare.Share();
     }
 

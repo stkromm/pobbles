@@ -2325,7 +2325,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA9SuddenDev 2019"
+  m_Text: "\xA9sudden-dev 2019"
 --- !u!222 &1134906531
 CanvasRenderer:
   m_ObjectHideFlags: 0

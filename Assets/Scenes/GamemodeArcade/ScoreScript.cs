@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public float initialTime = 45.0f;
-    public float timeLeft;
+    public float initialTime;
+    float timeLeft;
     public float countdown = 3.0f;
     int score;
     public Text finalScoreText;
@@ -34,7 +34,7 @@ public class ScoreScript : MonoBehaviour
         timeLeft = initialTime;
         settingsObject = Object.FindObjectOfType<Settings>();
         scoreText.text = "0";
-        timerText.text = "0:45";
+        timerText.text = "0:30";
         gameStartText.text = settingsObject.GetStringFromHashtable(gameStartText.name) + "\n \n" + (countdown).ToString("0");
 
         //start the arcade game music

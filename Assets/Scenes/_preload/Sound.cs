@@ -65,7 +65,7 @@ public class Sound : MonoBehaviour
         }
         else
         {
-            this.musicVolume = 15;
+            this.musicVolume = 50;
         }
         UpdateSoundSettings();
     }
