@@ -581,7 +581,8 @@ MonoBehaviour:
   globalEffectObject: {fileID: 1055013806}
   bubblePop1: {fileID: 8300000, guid: 326587192b67f4720b6e4cdc4b13a5a8, type: 3}
   bubblePop2: {fileID: 8300000, guid: bc08e5605327e4305b5195c26c4af6ca, type: 3}
-  bubblePop3: {fileID: 8300000, guid: c55a9f7cf4bd04aa6b1ad69d83178df2, type: 3}
+  negativeBubblePop: {fileID: 8300000, guid: c55a9f7cf4bd04aa6b1ad69d83178df2, type: 3}
+  magneticBubblePop: {fileID: 8300000, guid: bc08e5605327e4305b5195c26c4af6ca, type: 3}
   globalMusicObject: {fileID: 891017821}
   arcadeGameMusic: {fileID: 8300000, guid: 532b492d53389844dbeaaec2d5aa13d7, type: 3}
   menuMusic: {fileID: 8300000, guid: 24b61e6950ceb5d45a07dfd64960613c, type: 3}

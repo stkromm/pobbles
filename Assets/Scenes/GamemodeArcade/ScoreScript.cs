@@ -99,6 +99,12 @@ public class ScoreScript : MonoBehaviour
                     Destroy(c.gameObject);
                 }
 
+                Component[] magneticBubbles = FindObjectsOfType(typeof(MagneticBubbleBehaviour)) as Component[];
+                foreach (Component c in magneticBubbles)
+                {
+                    Destroy(c.gameObject);
+                }
+
                 /*
                 scoreText.enabled = false;
                 bubbleText.enabled = false;
@@ -171,7 +177,7 @@ public class ScoreScript : MonoBehaviour
 
     }
 
-    
+
     private int CalculateBubbleScore(float lifetime, float maxLifetime)
     {
         int score;

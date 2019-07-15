@@ -306,6 +306,8 @@ MonoBehaviour:
   bubble: {fileID: 1320311679558542, guid: 486b46124c0807f489ec23273a527a53, type: 3}
   negativeBubble: {fileID: 1320311679558542, guid: 7b0d9e53c67fa084dae6612d4be6a1e0,
     type: 3}
+  magneticBubble: {fileID: 1320311679558542, guid: 9a202d1f5449a614298d91f438dc049c,
+    type: 3}
   countdown: 3
 --- !u!224 &66669290
 RectTransform:

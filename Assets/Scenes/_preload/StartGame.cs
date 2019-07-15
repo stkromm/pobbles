@@ -45,10 +45,10 @@ public class StartGame : MonoBehaviour {
                 catch (Exception e)
                 {
                     init = "init";
-
+                    Debug.Log("Init exception");
                 }
-        }
-        init = "init";
+            }
+            init = "init";
     }
 
     // Update is called once per frame
