@@ -2124,8 +2124,6 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Deutsch
       m_Image: {fileID: 0}
-    - m_Text: Francais
-      m_Image: {fileID: 0}
     - m_Text: Espanol
       m_Image: {fileID: 0}
   m_OnValueChanged:
