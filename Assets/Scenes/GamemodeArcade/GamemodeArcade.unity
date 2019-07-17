@@ -272,8 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ad8e8c8bd64674d852d4bfa7b2aff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialTime: 45
-  timeLeft: 60
+  initialTime: 30
   countdown: 3
   finalScoreText: {fileID: 0}
   gameStartText: {fileID: 511018658}
@@ -306,6 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble: {fileID: 1320311679558542, guid: 486b46124c0807f489ec23273a527a53, type: 3}
   negativeBubble: {fileID: 1320311679558542, guid: 7b0d9e53c67fa084dae6612d4be6a1e0,
+    type: 3}
+  magneticBubble: {fileID: 1320311679558542, guid: 9a202d1f5449a614298d91f438dc049c,
     type: 3}
   countdown: 3
 --- !u!224 &66669290

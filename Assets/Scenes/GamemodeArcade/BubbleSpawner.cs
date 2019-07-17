@@ -6,6 +6,7 @@ public class BubbleSpawner : MonoBehaviour
 {
     public GameObject bubble;
     public GameObject negativeBubble;
+    public GameObject magneticBubble;
     public float countdown = 3.0f;
 
     // Use this for initialization
@@ -48,6 +49,26 @@ public class BubbleSpawner : MonoBehaviour
                 
 
             }
+
+            //3% chance for a magnetic bubble
+            if (Random.Range(0.0f, 1.0f) < 0.1f)
+            {
+
+                //random position 2D
+                float spawnY3 = Random.Range
+    (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.25f - 0.5f);
+                float spawnX3 = Random.Range
+                    (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.25f);
+                Vector2 spawnPosition3 = new Vector2(spawnX3, spawnY3);
+
+                //instantiating the bubble
+                GameObject mBubble = Instantiate(magneticBubble, spawnPosition3, Quaternion.identity);
+
+                //rotation around z-axis
+                mBubble.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+
+
+            }
         }
     }
 
@@ -60,6 +81,7 @@ public class BubbleSpawner : MonoBehaviour
         
         Object[] bubbles = FindObjectsOfType(typeof(BubbleBehaviour));
         Object[] negativeBubbles = FindObjectsOfType(typeof(NegativeBubbleBehaviour));
+        Object[] magneticBubbles = FindObjectsOfType(typeof(MagneticBubbleBehaviour));
         //spawn bubbles if not enough bubbles on screen
         if (bubbles.Length < 5)
         {
@@ -88,6 +110,12 @@ public class BubbleSpawner : MonoBehaviour
                     negativeBubble.onPop();
                 }
 
+                MagneticBubbleBehaviour magneticBubble = hit.collider.gameObject.GetComponent(typeof(MagneticBubbleBehaviour)) as MagneticBubbleBehaviour;
+                if (magneticBubble != null)
+                {
+                    magneticBubble.onPop();
+                }
+
             }
         }
 
@@ -114,6 +142,11 @@ public class BubbleSpawner : MonoBehaviour
                     negativeBubble.onPop();
                 }
 
+                MagneticBubbleBehaviour magneticBubble = hit.collider.gameObject.GetComponent(typeof(MagneticBubbleBehaviour)) as MagneticBubbleBehaviour;
+                if (magneticBubble != null)
+                {
+                    magneticBubble.onPop();
+                }
             }
         }
     }

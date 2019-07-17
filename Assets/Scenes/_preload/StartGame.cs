@@ -5,7 +5,7 @@ using Firebase.Unity.Editor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Callbacks;
+//using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,10 +45,10 @@ public class StartGame : MonoBehaviour {
                 catch (Exception e)
                 {
                     init = "init";
-
+                    Debug.Log("Init exception");
                 }
-        }
-        init = "init";
+            }
+            init = "init";
     }
 
     // Update is called once per frame

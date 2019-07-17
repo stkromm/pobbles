@@ -85,23 +85,19 @@
 PUBBLES
 
 Published by:
-Sudden Development aka. SuddenDev
+sudden-dev
 
 Creators:
 Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
 Contact:
-philipp.mittmann@web.de
-
-Music:
-CueMasters - "Sunshine and Sand"
-Holyhammer - "Pizzi and Glock Loop"
+support@sudden-dev.com
 
 Privacy Policy:
-https://pobbles-dev.firebaseapp.com/pubbles.html#privacy
+https://sudden-dev.com/pubbles#privacy
 
 Terms &amp; Conditions:
-https://pobbles-dev.firebaseapp.com/pubbles.html#terms
+https://sudden-dev.com/pubbles#terms
           </string>
 
 		<comment name='#Feedback79'/>
@@ -249,23 +245,19 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
 PUBBLES
 
 Ver&#246;ffentlicht durch:
-Sudden Development aka. SuddenDev
+sudden-dev
 
 Entwickler:
 Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
 Kontakt:
-philipp.mittmann@web.de
-
-Musik:
-CueMasters - "Sunshine and Sand"
-Holyhammer - "Pizzi and Glock Loop"
+support@sudden-dev.com
 
 Privacy Policy:
-https://pobbles-dev.firebaseapp.com/pubbles.html#privacy
+https://sudden-dev.com/pubbles#privacy
 
 Terms &amp; Conditions:
-https://pobbles-dev.firebaseapp.com/pubbles.html#terms
+https://sudden-dev.com/pubbles#terms
           </string>
 
 		<comment name='#Feedback79'/>
@@ -672,23 +664,19 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
 PUBBLES
 
 Published by:
-Sudden Development aka. SuddenDev
+sudden-dev
 
 Creators:
 Philipp Mittmann, Steffen Kromm, Tim Wilkens, Matthias Liebig
 
 Contact:
-philipp.mittmann@web.de
-
-Music:
-CueMasters - "Sunshine and Sand"
-Holyhammer - "Pizzi and Glock Loop"
+support@sudden-dev.com
 
 Privacy Policy:
-https://pobbles-dev.firebaseapp.com/pubbles.html#privacy
+https://sudden-dev.com/pubbles#privacy
 
 Terms &amp; Conditions:
-https://pobbles-dev.firebaseapp.com/pubbles.html#terms
+https://sudden-dev.com/pubbles#terms
           </string>
 
 		<comment name='#Feedback79'/>
@@ -744,7 +732,7 @@ https://pobbles-dev.firebaseapp.com/pubbles.html#terms
 		<string name='ResultGameCategoryText'>partida</string>
 		<string name='ResultTimingCategoryText'>timing</string>
 		<string name='ResultPlayerNameText'>introduce nombre</string>
-		<string name='ResultPlayerNamePlaceholder'>tu nombre</string>
+		<string name='ResultPlayerNamePlaceholder'>tu nombre…</string>
 		<string name='ResultSaveScoreButtonText'>guardar puntos</string>
 		<string name='ResultRestartButtonText'>jugar de nuevo</string>
 		<string name='ResultBackToMenuButtonText'>volver al men&#250;</string>
