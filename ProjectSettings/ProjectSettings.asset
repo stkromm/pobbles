@@ -257,7 +257,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/daten/AppProjekte/PUBBLES/pobbles/PubblesAndroid.keystore
+  AndroidKeystoreName: C:/Users/kromm/Workspace/PubblesAndroid.keystore
   AndroidKeyaliasName: pubblesandroid
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

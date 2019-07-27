@@ -1,10 +1,12 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SocialPlatforms;
+using GooglePlayGames;
 
-public class Leaderboard : MonoBehaviour {
+public class Leaderboard : MonoBehaviour
+{
 
     private IList<string> playerList;
     public Text player0;
@@ -24,55 +26,32 @@ public class Leaderboard : MonoBehaviour {
 
     public Text localComparisonHeading;
     public Text globalComparisonHeading;
-
+    public GameObject socialSignInButtons;
     // ONLINE 
     private IList<string> onlinePlayerList;
     private IList<int> onlineScoreList;
     public Button personalButton;
     public Button globalButton;
-    private bool updateToGlobal = false;
-    private bool updateToLocal = false;
-    private bool isLocal = true;
-
+    public Button retrySignInButton;
     private Score scoreObject;
     private Settings settingsObject;
+    private bool isLocal;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         // Setup List
-        scoreObject = GameObject.FindObjectOfType<Score>();
+        scoreObject = FindObjectOfType<Score>();
         playerList = scoreObject.GetPlayerList();
         scoreList = scoreObject.GetScoreList();
-        Debug.Log("player 0: " + playerList[0].ToString());
-        player0.text = playerList[0];
-        Debug.Log("player 0: " + player0.text);
-        player1.text = playerList[1];
-        player2.text = playerList[2];
-        player3.text = playerList[3];
-        player4.text = playerList[4];
-        score0.text = scoreList[0].ToString();
-        score1.text = scoreList[1].ToString();
-        score2.text = scoreList[2].ToString();
-        score3.text = scoreList[3].ToString();
-        score4.text = scoreList[4].ToString();
 
         //show the last game's Score as comparison
-        settingsObject = GameObject.FindObjectOfType<Settings>();
+        settingsObject = FindObjectOfType<Settings>();
         globalComparisonHeading.gameObject.SetActive(false);
         localComparisonHeading.gameObject.SetActive(true);
-        comparisonPlayer.text = scoreObject.GetPlayerPrefsString("lastGamesPlayer");
-        comparisonScore.text = "" + scoreObject.GetPlayerPrefsInt("lastGamesScore");
 
         onlinePlayerList = new List<string>();
         onlineScoreList = new List<int>();
-        Social.localUser.Authenticate((bool success) =>
-        {
-            if (success)
-            {
-                LoadHighscores();
-            }
-        });
-
         globalButton.onClick.AddListener(delegate
         {
             ClickedGlobal();
@@ -82,17 +61,85 @@ public class Leaderboard : MonoBehaviour {
         {
             ClickedPersonal();
         });
-
+        retrySignInButton.onClick.AddListener(delegate
+        {
+            SocialSignin.TrySignIn((success) =>
+            {
+                if (!isLocal) { 
+                    ClickedGlobal();
+                }
+            });
+        });
         personalButton.image.color = Color.grey;
-
-        //Social.ShowLeaderboardUI();
+        ClickedPersonal();
+        LoadHighscores();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetComparsionEntry(bool local, string name, string score)
     {
-        if (updateToGlobal)
+        globalComparisonHeading.gameObject.SetActive(!local);
+        localComparisonHeading.gameObject.SetActive(local);
+        comparisonPlayer.text = name;
+        comparisonScore.text = score;
+    }
+
+    private void ClickedPersonal()
+    {
+        Debug.Log("Clicked personal");
+        isLocal = true;
+        socialSignInButtons.SetActive(false);
+        globalButton.image.color = personalButton.image.color;
+        personalButton.image.color = Color.grey;
+        player0.text = playerList[0];
+        player1.text = playerList[1];
+        player2.text = playerList[2];
+        player3.text = playerList[3];
+        player4.text = playerList[4];
+        score0.text = scoreList[0].ToString();
+        score1.text = scoreList[1].ToString();
+        score2.text = scoreList[2].ToString();
+        score3.text = scoreList[3].ToString();
+        score4.text = scoreList[4].ToString();
+        
+        SetComparsionEntry(
+            true,
+            scoreObject.GetPlayerPrefsString("lastGamesPlayer"),
+            scoreObject.GetPlayerPrefsInt("lastGamesScore").ToString()
+        );
+
+    }
+
+    private ILeaderboard GetAllTimeLeaderboard()
+    {
+        ILeaderboard board = Social.Active.CreateLeaderboard();
+        board.id = "classic_alltime";
+        return board;
+    }
+
+    private void ClickedGlobal()
+    {
+        Debug.Log("Clicked global");
+        isLocal = false;
+        personalButton.image.color = globalButton.image.color;
+        globalButton.image.color = Color.grey;
+        if (SocialSignin.IsAuthenticated())
         {
+            player0.text = "";
+            player1.text = "";
+            player2.text = "";
+            player3.text = "";
+            player4.text = "";
+            score0.text = "";
+            score1.text = "";
+            score2.text = "";
+            score3.text = "";
+            score4.text = "";
+            socialSignInButtons.SetActive(true);
+        }
+        else if (!Social.Active.GetLoading(GetAllTimeLeaderboard()))
+        {
+
+            socialSignInButtons.SetActive(false);
             player0.text = onlinePlayerList[0];
             player1.text = onlinePlayerList[1];
             player2.text = onlinePlayerList[2];
@@ -103,62 +150,24 @@ public class Leaderboard : MonoBehaviour {
             score2.text = onlineScoreList[2].ToString();
             score3.text = onlineScoreList[3].ToString();
             score4.text = onlineScoreList[4].ToString();
-            updateToGlobal = false;
-
-            //show best offline Score as comparison
-            localComparisonHeading.gameObject.SetActive(false);
-            globalComparisonHeading.gameObject.SetActive(true);
-            comparisonPlayer.text = playerList[0];
-            comparisonScore.text = scoreList[0].ToString();
         }
-        else if (updateToLocal)
+        else
         {
-            player0.text = playerList[0];
-            player1.text = playerList[1];
-            player2.text = playerList[2];
-            player3.text = playerList[3];
-            player4.text = playerList[4];
-            score0.text = scoreList[0].ToString();
-            score1.text = scoreList[1].ToString();
-            score2.text = scoreList[2].ToString();
-            score3.text = scoreList[3].ToString();
-            score4.text = scoreList[4].ToString();
-            updateToLocal = false;
-
-            //show the last game's Score as comparison
-            globalComparisonHeading.gameObject.SetActive(false);
-            localComparisonHeading.gameObject.SetActive(true);
-            comparisonPlayer.text = scoreObject.GetPlayerPrefsString("lastGamesPlayer");
-            comparisonScore.text = "" + scoreObject.GetPlayerPrefsInt("lastGamesScore");
+            // Show loader
         }
-    }
-    private void ClickedPersonal(){
-        // Switch to personal highscore list
-        Debug.Log("Clicked Personal");
-
-        //get the orange on the global button and then color the personal button in grey
-        globalButton.image.color = personalButton.image.color;
-        personalButton.image.color = Color.grey;
-        updateToLocal = true;
-    }
-
-    private void ClickedGlobal(){
-        // Switch to global highscore list
-        Debug.Log("clicked global");
-        personalButton.image.color = globalButton.image.color;
-        globalButton.image.color = Color.grey;
-        updateToGlobal = true;
+        
+        SetComparsionEntry(false, playerList[0], scoreList[0].ToString());
     }
 
     public void LoadHighscores()
     {
-        // GameCenter Leaderboard
-        ILeaderboard board = Social.CreateLeaderboard();
-        board.id = "classic_alltime";
+        var board = GetAllTimeLeaderboard();
         board.LoadScores(success =>
         {
-            if (success){
-                foreach (IScore score in board.scores){
+            if (success)
+            {
+                foreach (IScore score in board.scores)
+                {
                     Debug.Log("Loaded Score: " + score.formattedValue);
                     Highscoreboard hb = new Highscoreboard();
                     LeaderboardEntry e = new LeaderboardEntry(null, score.userID, (int)score.value);
@@ -167,14 +176,20 @@ public class Leaderboard : MonoBehaviour {
                     SetupOnlineLists(hb);
                 }
             }
+            if (!isLocal)
+            {
+                ClickedGlobal();
+            }
         });
     }
 
-    private void SetupOnlineLists(Highscoreboard highscoreboard){
+    private void SetupOnlineLists(Highscoreboard highscoreboard)
+    {
         List<LeaderboardEntry> board = highscoreboard.GetBoard();
         onlinePlayerList.Clear();
         onlineScoreList.Clear();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             if (board.Count > i)
             {
                 onlinePlayerList.Insert(i, board[i].GetName());
@@ -185,8 +200,6 @@ public class Leaderboard : MonoBehaviour {
                 onlinePlayerList.Add("-");
                 onlineScoreList.Add(0);
             }
-
         }
-
     }
 }
