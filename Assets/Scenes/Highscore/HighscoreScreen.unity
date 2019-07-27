@@ -1202,6 +1202,7 @@ MonoBehaviour:
   socialSignInButtons: {fileID: 1737489132}
   personalButton: {fileID: 588790}
   globalButton: {fileID: 1781683546}
+  retrySignInButton: {fileID: 1737489136}
 --- !u!1 &816462839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,6 +2396,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadByName
       objectReference: {fileID: 0}
@@ -2541,6 +2547,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1601275298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1737489136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114682573690772824, guid: 58c83a7daaeb59d479616ef9d0ea5868,
+    type: 3}
+  m_PrefabInstance: {fileID: 1601275298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737489132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1774952026
 GameObject:
   m_ObjectHideFlags: 0

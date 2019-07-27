@@ -61,6 +61,7 @@ public class Leaderboard : MonoBehaviour
         {
             ClickedPersonal();
         });
+        retrySignInButton = socialSignInButtons.GetComponent<Button>();
         retrySignInButton.onClick.AddListener(delegate
         {
             SocialSignin.TrySignIn((success) =>
@@ -88,7 +89,7 @@ public class Leaderboard : MonoBehaviour
         Debug.Log("Clicked personal");
         isLocal = true;
         socialSignInButtons.SetActive(false);
-        globalButton.image.color = personalButton.image.color;
+        globalButton.image.color = new Color(0xF3 / 256f, 0xA5 / 256f, 0x8F / 256f);
         personalButton.image.color = Color.grey;
         player0.text = playerList[0];
         player1.text = playerList[1];
@@ -119,8 +120,8 @@ public class Leaderboard : MonoBehaviour
     private void ClickedGlobal()
     {
         Debug.Log("Clicked global");
-        isLocal = false;
-        personalButton.image.color = globalButton.image.color;
+        isLocal = false; 
+        personalButton.image.color = new Color(0xF3 / 256f, 0xA5 / 256f, 0x8F / 256f);
         globalButton.image.color = Color.grey;
         if (SocialSignin.IsAuthenticated())
         {
