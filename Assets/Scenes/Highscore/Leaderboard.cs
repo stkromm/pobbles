@@ -76,6 +76,7 @@ public class Leaderboard : MonoBehaviour
         personalButton.image.color = Color.grey;
         ClickedPersonal();
         LoadHighscores();
+        Social.ShowLeaderboardUI();
     }
 
     private void SetComparsionEntry(bool local, string name, string score)
@@ -116,6 +117,7 @@ public class Leaderboard : MonoBehaviour
     {
         ILeaderboard board = Social.Active.CreateLeaderboard();
         board.id = "classic_alltime";
+        board.userScope = UserScope.Global;
         return board;
     }
 
@@ -166,36 +168,62 @@ public class Leaderboard : MonoBehaviour
         resetOnlineList();
         var board = GetAllTimeLeaderboard();
 
-        Social.Active.LoadScores("classic_alltime", scores =>
+        board.LoadScores(success =>
         {
-            if (scores.Length > 0){
-                Debug.Log("Loaded scores: " + scores.Length);
-                var maxIndex = Mathf.Min((int)5, (int)scores.Length);
-
-                for (int i = 0; i < maxIndex; i++)
+            if (success){
+                Debug.Log("Loading scores for scope: "+board.userScope.ToString());
+                var scores = board.scores;
+                if (scores.Length > 0)
                 {
-                    int index = i;
-                    IScore score = scores[i];
-                    Debug.Log("Score: " + score.value);
-                    onlineScoreList.Insert(i, (int)score.value);
-                    Debug.Log("UserID: " + score.userID);
-                    Debug.Log("Load name for ID: " + score.userID);
-                    string[] userId = new string[1];
-                    userId[0] = score.userID;
-                    string username = "Unnamed";
-                    Debug.Log("Try to get username");
-                    Social.Active.LoadUsers(userId, users =>
+                    Debug.Log("Loaded scores: " + scores.Length);
+                    var maxIndex = Mathf.Min((int)5, (int)scores.Length);
+                    var userIds = new string[maxIndex];
+                    for (int i = 0; i < maxIndex; i++)
                     {
-                        Debug.Log("userID: " + userId + " usersCount: " + users.Length);
-                        username = users[0].userName;
-                        Debug.Log("Username: " + username);
-                        onlinePlayerList.Insert(index, username);
+                        int index = i;
+                        IScore score = scores[i];
+                        Debug.Log("Score: " + score.value);
+                        onlineScoreList.Insert(i, (int)score.value);
+
+                        userIds[i] = score.userID;
+
+
+                        /*
+                        Debug.Log("UserID: " + score.userID);
+                        Debug.Log("Load name for ID: " + score.userID);
+                        string[] userId = new string[1];
+                        userId[0] = score.userID;
+                        string username = "Unnamed";
+                        Debug.Log("Try to get username");
+                        Social.Active.LoadUsers(userId, users =>
+                        {
+                            Debug.Log("userID: " + userId + " usersCount: " + users.Length);
+                            username = users[0].userName;
+                            Debug.Log("Username: " + username);
+                            onlinePlayerList.Insert(index, username);
+                        });*/
+                    }
+                    // Load usernames;
+                    Debug.Log("uidArray: " + userIds);
+                    Debug.Log("Loading usernames...");
+                    Social.Active.LoadUsers(userIds, users =>
+                    {
+                        for (int i = 0; i < userIds.Length; i++){
+                            IUserProfile user = users[i];
+                            Debug.Log("Loaded username: " + user.userName + " for ID: " + user.id);
+                            onlinePlayerList.Insert(i, user.userName);
+                        }
                     });
                 }
             }
             if (!isLocal){
                 ClickedGlobal();
             }
+        });
+
+        Social.Active.LoadScores("classic_alltime", scores =>
+        {
+
         });
 
     }
