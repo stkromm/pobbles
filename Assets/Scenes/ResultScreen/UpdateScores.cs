@@ -68,6 +68,7 @@ public class UpdateScores : MonoBehaviour {
 
 	private void SaveScore(string name, int score)
     {
+        scoreObject.RegisterNewScoreInLeaderboard(name, score);
         if (SocialSignin.IsAuthenticated()) {
             SaveScoreIfAuthenticated(name, score);
         }
@@ -81,19 +82,6 @@ public class UpdateScores : MonoBehaviour {
                 }
             });
         }
-
-        //prevent multiple saving and disable button
-        if (!scoreSaved)
-        {
-            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
-            scoreSaved = true;
-            saveScoreButton.interactable = false;
-            saveScoreButton.image.color = Color.grey;
-
-            HighscoreHandler handler = new HighscoreHandler();
-            handler.WriteLeaderboard(playerNameInput.text, overallScore);
-        }
-        
     }
 
     private void SaveScoreIfAuthenticated(string name, int score)
