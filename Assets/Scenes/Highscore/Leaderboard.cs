@@ -114,7 +114,7 @@ public class Leaderboard : MonoBehaviour
 
     private ILeaderboard GetAllTimeLeaderboard()
     {
-        ILeaderboard board = Social.CreateLeaderboard();
+        ILeaderboard board = Social.Active.CreateLeaderboard();
         board.id = "classic_alltime";
         return board;
     }
@@ -162,65 +162,9 @@ public class Leaderboard : MonoBehaviour
         SetComparsionEntry(false, playerList[0], scoreList[0].ToString());
     }
 
-    public void LoadHighscores2()
-    {
-        var board = GetAllTimeLeaderboard();
-        board.LoadScores(success =>
-        {
-            if (success)
-            {
-                onlinePlayerList.Clear();
-                onlineScoreList.Clear();
-                foreach (IScore score in board.scores)
-                { 
-                    Debug.Log("Loaded Score: " + score.formattedValue);
-                    Highscoreboard hb = new Highscoreboard();
-                    string[] userId = new string[1];
-                    userId[0] = score.userID;
-                    string username = "Unnamed";
-                    Debug.Log("Try to get username");
-                    Social.Active.LoadUsers(userId, users =>
-                    {
-                        Debug.Log("userID: " + userId + " usersCount: " + users.Length);
-                        username = users[0].userName;
-                        Debug.Log("Username: " + username);
-                        LeaderboardEntry e = new LeaderboardEntry(null, username, (int)score.value);
-                        hb.GetBoard().Add(e);
-                        Debug.Log("Added to board: " + e.GetName() + " with score: " + e.GetScore());
-                        SetupOnlineLists(hb);
-                    });
-                }
-            }
-            if (!isLocal)
-            {
-                ClickedGlobal();
-            }
-        });
-    }
-
     public void LoadHighscores(){
         resetOnlineList();
         var board = GetAllTimeLeaderboard();
-        /*board.LoadScores(success =>
-         {
-             if (success)
-             {
-                 Debug.Log("Number of scores: " + board.scores.Length);
-                 var maxIndex = Mathf.Min((int)5, (int)board.scores.Length);
-
-                 for (int i = 0; i < maxIndex; i++)
-                 {
-                     IScore score = board.scores[i];
-                     Debug.Log("Score: " + score.value);
-                     onlineScoreList.Add((int)score.value);
-                     Debug.Log("UserID: " + score.userID);
-                     onlinePlayerList.Add(score.userID);
-                 }
-             }
-             if (!isLocal){
-                 ClickedGlobal();
-             }
-         });*/
 
         Social.Active.LoadScores("classic_alltime", scores =>
         {
@@ -230,11 +174,23 @@ public class Leaderboard : MonoBehaviour
 
                 for (int i = 0; i < maxIndex; i++)
                 {
+                    int index = i;
                     IScore score = scores[i];
                     Debug.Log("Score: " + score.value);
                     onlineScoreList.Insert(i, (int)score.value);
                     Debug.Log("UserID: " + score.userID);
-                    onlinePlayerList.Insert(i, score.userID);
+                    Debug.Log("Load name for ID: " + score.userID);
+                    string[] userId = new string[1];
+                    userId[0] = score.userID;
+                    string username = "Unnamed";
+                    Debug.Log("Try to get username");
+                    Social.Active.LoadUsers(userId, users =>
+                    {
+                        Debug.Log("userID: " + userId + " usersCount: " + users.Length);
+                        username = users[0].userName;
+                        Debug.Log("Username: " + username);
+                        onlinePlayerList.Insert(index, username);
+                    });
                 }
             }
             if (!isLocal){
