@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
+using System.Xml;
 
 [XmlRoot("AchievementCollection")]
 public class AchievementContainer
@@ -28,6 +29,8 @@ public class AchievementContainer
         while (!file.isDone) { }
         return LoadFromText(file.text);
 #else
+        XmlDocument xml = new XmlDocument();
+        xml.Load(path);
         var serializer = new XmlSerializer(typeof(AchievementContainer));
         using (var stream = new FileStream(path, FileMode.Open))
         {

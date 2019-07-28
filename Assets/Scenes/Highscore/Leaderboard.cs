@@ -176,14 +176,17 @@ public class Leaderboard : MonoBehaviour
                     string[] userId = new string[1];
                     userId[0] = score.userID;
                     string username = "Unnamed";
+                    Debug.Log("Try to get username");
                     Social.Active.LoadUsers(userId, users =>
                     {
+                        Debug.Log("userID: " + userId + " usersCount: " + users.Length);
                         username = users[0].userName;
+                        Debug.Log("Username: " + username);
+                        LeaderboardEntry e = new LeaderboardEntry(null, username, (int)score.value);
+                        hb.GetBoard().Add(e);
+                        Debug.Log("Added to board: " + e.GetName() + " with score: " + e.GetScore());
+                        SetupOnlineLists(hb);
                     });
-                    LeaderboardEntry e = new LeaderboardEntry(null, username, (int)score.value);
-                    hb.GetBoard().Add(e);
-                    Debug.Log("Added to board: " + e.GetName() + " with score: " + e.GetScore());
-                    SetupOnlineLists(hb);
                 }
             }
             if (!isLocal)
