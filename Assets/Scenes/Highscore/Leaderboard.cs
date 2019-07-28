@@ -162,13 +162,15 @@ public class Leaderboard : MonoBehaviour
         SetComparsionEntry(false, playerList[0], scoreList[0].ToString());
     }
 
-    public void LoadHighscores()
+    public void LoadHighscores2()
     {
         var board = GetAllTimeLeaderboard();
         board.LoadScores(success =>
         {
             if (success)
             {
+                onlinePlayerList.Clear();
+                onlineScoreList.Clear();
                 foreach (IScore score in board.scores)
                 { 
                     Debug.Log("Loaded Score: " + score.formattedValue);
@@ -196,11 +198,64 @@ public class Leaderboard : MonoBehaviour
         });
     }
 
+    public void LoadHighscores(){
+        resetOnlineList();
+        var board = GetAllTimeLeaderboard();
+        /*board.LoadScores(success =>
+         {
+             if (success)
+             {
+                 Debug.Log("Number of scores: " + board.scores.Length);
+                 var maxIndex = Mathf.Min((int)5, (int)board.scores.Length);
+
+                 for (int i = 0; i < maxIndex; i++)
+                 {
+                     IScore score = board.scores[i];
+                     Debug.Log("Score: " + score.value);
+                     onlineScoreList.Add((int)score.value);
+                     Debug.Log("UserID: " + score.userID);
+                     onlinePlayerList.Add(score.userID);
+                 }
+             }
+             if (!isLocal){
+                 ClickedGlobal();
+             }
+         });*/
+
+        Social.Active.LoadScores("classic_alltime", scores =>
+        {
+            if (scores.Length > 0){
+                Debug.Log("Loaded scores: " + scores.Length);
+                var maxIndex = Mathf.Min((int)5, (int)scores.Length);
+
+                for (int i = 0; i < maxIndex; i++)
+                {
+                    IScore score = scores[i];
+                    Debug.Log("Score: " + score.value);
+                    onlineScoreList.Insert(i, (int)score.value);
+                    Debug.Log("UserID: " + score.userID);
+                    onlinePlayerList.Insert(i, score.userID);
+                }
+            }
+            if (!isLocal){
+                ClickedGlobal();
+            }
+        });
+
+    }
+
+    private void resetOnlineList(){
+        onlinePlayerList.Clear();
+        onlineScoreList.Clear();
+        for (int i = 0; i < 5; i++){
+            onlinePlayerList.Add("-");
+            onlineScoreList.Add(0);
+        }
+    }
+
     private void SetupOnlineLists(Highscoreboard highscoreboard)
     {
         List<LeaderboardEntry> board = highscoreboard.GetBoard();
-        onlinePlayerList.Clear();
-        onlineScoreList.Clear();
         for (int i = 0; i < 5; i++)
         {
             if (board.Count > i)
