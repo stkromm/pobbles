@@ -85,3 +85,8 @@ Not tested yet.
 
 For building the iOS client you need xCode.
 https://developer.apple.com/xcode/
+
+## Debugging
+
+### Android
+https://developer.android.com/studio/releases/platform-tools.html

@@ -732,7 +732,9 @@ https://sudden-dev.com/pubbles#terms
 		<string name='ResultGameCategoryText'>partida</string>
 		<string name='ResultTimingCategoryText'>timing</string>
 		<string name='ResultPlayerNameText'>introduce nombre</string>
+
 		<string name='ResultPlayerNamePlaceholder'>tu nombre...</string>
+
 		<string name='ResultSaveScoreButtonText'>guardar puntos</string>
 		<string name='ResultRestartButtonText'>jugar de nuevo</string>
 		<string name='ResultBackToMenuButtonText'>volver al men&#250;</string>

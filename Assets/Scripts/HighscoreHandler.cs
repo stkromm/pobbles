@@ -1,104 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Firebase;
-using Firebase.Database;
-using Firebase.Unity.Editor;
 using System.Linq;
 using System;
 using System.Threading.Tasks;
 
-public class HighscoreHandler : MonoBehaviour
+public class HighscoreHandler
 {
-    Highscoreboard board;
-    private DatabaseReference reference;
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Set up the Editor before calling into the realtime database.
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://pobbles-dev.firebaseio.com/");
-
-        // Get the root reference location of the database.
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
-        LoadHighscores();
-    }
-
-    public HighscoreHandler()
-    {
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://pobbles-dev.firebaseio.com/");
-
-        // Get the root reference location of the database.
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
-        LoadHighscores();
-    }
-
-
     public void WriteLeaderboard(string username, int score)
     {
-        if (board == null)
-        {
-            board = new Highscoreboard();
-        }
-
-        if (username == "")
-        {
-            username = "Random User";
-        }
-
-        LeaderboardEntry newEntry = new LeaderboardEntry(username, score);
-        if (board.InsertEntry(newEntry))
-        {
-            // Successfully inserted - Update Firebase Data
-            string eName = newEntry.GetName();
-            int eScore = newEntry.GetScore();
-            object timestamp = Firebase.Database.ServerValue.Timestamp;
-            DatabaseReference specifiedRef = reference.Child("highscoreList").Child("allTime").Child(eName);
-            specifiedRef.Child("score").SetValueAsync(eScore);
-            specifiedRef.Child("timestamp").SetValueAsync(timestamp);
-        }
-
-
-    }
-
-    public void LoadHighscores()
-    {
-        Highscoreboard highscoreboard = new Highscoreboard();
-
-        reference.Child("highscoreList").GetValueAsync().ContinueWith(task =>
-        {
-            if (task.IsFaulted)
-            {
-                // Handle the error...
-            }
-            else if (task.IsCompleted)
-            {
-                DataSnapshot snapshot = task.Result;
-                // Do something with snapshot...
-                int counter = 0;
-                foreach (var child in snapshot.Children)
-                {
-                    foreach (var listpair in child.Children)
-                    {
-                        string pairname = listpair.Key;
-                        string scoreString = listpair.Value.ToString();
-                        int pairscore = int.Parse(scoreString);
-                        string uid = child.Key;
-
-                        LeaderboardEntry newLBEntry = new LeaderboardEntry(uid, pairname, pairscore);
-                        highscoreboard.GetBoard().Add(newLBEntry);
-                        counter += 1;
-                        if (counter == snapshot.ChildrenCount)
-                        {
-                            // Sort Descending
-                            highscoreboard.SortBoard();
-                            // Cut list if more than maxSize has been added
-                            highscoreboard.DropLowestScores();
-                            board = highscoreboard;
-                        }
-                    }
-                }
-            }
-        });
     }
 }
 

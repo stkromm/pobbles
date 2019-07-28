@@ -25,15 +25,20 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630766454092-tapns62uttikjhv8odbme5c70ri0nic6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "630766454092-dm684v9tv5ehmarcqr0iu7553r01kh2j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.suddendev.pobbles"
+              }
+            }
+          ]
         }
       }
     }

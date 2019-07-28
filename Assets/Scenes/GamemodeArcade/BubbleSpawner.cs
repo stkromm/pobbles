@@ -50,8 +50,8 @@ public class BubbleSpawner : MonoBehaviour
 
             }
 
-            //3% chance for a magnetic bubble
-            if (Random.Range(0.0f, 1.0f) < 0.1f)
+            /*3% chance for a magnetic bubble
+            if (Random.Range(0.0f, 1.0f) < -0.1f)
             {
 
                 //random position 2D
@@ -68,7 +68,7 @@ public class BubbleSpawner : MonoBehaviour
                 mBubble.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
 
 
-            }
+            }*/
         }
     }
 
