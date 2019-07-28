@@ -123,7 +123,7 @@ public class Leaderboard : MonoBehaviour
         isLocal = false; 
         personalButton.image.color = new Color(0xF3 / 256f, 0xA5 / 256f, 0x8F / 256f);
         globalButton.image.color = Color.grey;
-        if (SocialSignin.IsAuthenticated())
+        if (!SocialSignin.IsAuthenticated())
         {
             player0.text = "";
             player1.text = "";

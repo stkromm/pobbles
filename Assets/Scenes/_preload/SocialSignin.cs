@@ -13,7 +13,7 @@ public class SocialSignin
 #if UNITY_ANDROID
         return PlayGamesPlatform.Instance.IsAuthenticated();
 #else
-        return !Social.localUser.authenticated
+        return Social.localUser.authenticated
 #endif
     }
     public static void TrySignIn(System.Action<bool> callback)
