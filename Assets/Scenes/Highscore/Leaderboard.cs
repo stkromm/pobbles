@@ -170,7 +170,7 @@ public class Leaderboard : MonoBehaviour
             if (success)
             {
                 foreach (IScore score in board.scores)
-                {
+                { 
                     Debug.Log("Loaded Score: " + score.formattedValue);
                     Highscoreboard hb = new Highscoreboard();
                     string[] userId = new string[1];

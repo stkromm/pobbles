@@ -67,22 +67,18 @@ public class UpdateScores : MonoBehaviour {
 
 	private void SaveScore(string name, int score)
     {
-        if (Social.localUser != null){
-          if (Social.localUser.authenticated)
+        if (SocialSignin.IsAuthenticated()) {
+            SaveScoreIfAuthenticated(name, score);
+        }
+        else
+        {
+            SocialSignin.TrySignIn(success =>
             {
-                SaveScoreIfAuthenticated(name, score);
-            } else
-            {
-                Social.localUser.Authenticate((bool success) =>
+                if (success)
                 {
-                    if (success)
-                    {
-                        SaveScoreIfAuthenticated(name, score);
-                    }
-                });
-            }
-        }else{
-            Debug.Log("No user logged in");
+                    SaveScoreIfAuthenticated(name, score);
+                }
+            });
         }
 
         //prevent multiple saving and disable button
@@ -101,24 +97,17 @@ public class UpdateScores : MonoBehaviour {
 
     private void SaveScoreIfAuthenticated(string name, int score)
     {
-        if (Social.localUser != null)
+        Social.Active.ReportScore(score, "classic_alltime", (bool success) =>
         {
-            Social.ReportScore(score, "classic_alltime", (bool success) =>
+            if (success)
             {
-                if (success)
-                {
-                    Debug.Log("Successfully uploaded score");
-                }
-                else
-                {
-                    Debug.Log("Failed to upload score");
-                }
-            });
-        }
-        else
-        {
-            Debug.Log("No user logged in");
-        }
+                Debug.Log("Successfully uploaded score");
+            }
+            else
+            {
+                Debug.Log("Failed to upload score");
+            }
+        });
     }
 
     // Update is called once per frame
@@ -153,7 +142,6 @@ public class UpdateScores : MonoBehaviour {
             {
                 newHighScoreText.gameObject.SetActive(true);
             }
-
         }
     }
 }
