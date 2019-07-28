@@ -114,7 +114,7 @@ public class Leaderboard : MonoBehaviour
 
     private ILeaderboard GetAllTimeLeaderboard()
     {
-        ILeaderboard board = Social.Active.CreateLeaderboard();
+        ILeaderboard board = Social.CreateLeaderboard();
         board.id = "classic_alltime";
         return board;
     }
