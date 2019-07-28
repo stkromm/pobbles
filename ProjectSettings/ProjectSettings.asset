@@ -727,7 +727,7 @@ PlayerSettings:
   webGLWasmStreaming: 0
   scriptingDefineSymbols: {}
   platformArchitecture:
-    iPhone: 0
+    iPhone: 1
   scriptingBackend:
     Android: 0
     iPhone: 1
