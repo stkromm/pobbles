@@ -201,26 +201,47 @@ public class Leaderboard : MonoBehaviour
     public void LoadHighscores(){
         resetOnlineList();
         var board = GetAllTimeLeaderboard();
-        board.LoadScores(success =>
+        /*board.LoadScores(success =>
+         {
+             if (success)
+             {
+                 Debug.Log("Number of scores: " + board.scores.Length);
+                 var maxIndex = Mathf.Min((int)5, (int)board.scores.Length);
+
+                 for (int i = 0; i < maxIndex; i++)
+                 {
+                     IScore score = board.scores[i];
+                     Debug.Log("Score: " + score.value);
+                     onlineScoreList.Add((int)score.value);
+                     Debug.Log("UserID: " + score.userID);
+                     onlinePlayerList.Add(score.userID);
+                 }
+             }
+             if (!isLocal){
+                 ClickedGlobal();
+             }
+         });*/
+
+        Social.Active.LoadScores("classic_alltime", scores =>
         {
-            if (success)
-            {
-                Debug.Log("Number of scores: " + board.scores.Length);
-                var maxIndex = Mathf.Min((int)5, (int)board.scores.Length);
+            if (scores.Length > 0){
+                Debug.Log("Loaded scores: " + scores.Length);
+                var maxIndex = Mathf.Min((int)5, (int)scores.Length);
 
                 for (int i = 0; i < maxIndex; i++)
                 {
-                    IScore score = board.scores[i];
+                    IScore score = scores[i];
                     Debug.Log("Score: " + score.value);
-                    onlineScoreList.Add((int)score.value);
+                    onlineScoreList.Insert(i, (int)score.value);
                     Debug.Log("UserID: " + score.userID);
-                    onlinePlayerList.Add(score.userID);
+                    onlinePlayerList.Insert(i, score.userID);
                 }
             }
             if (!isLocal){
                 ClickedGlobal();
             }
         });
+
     }
 
     private void resetOnlineList(){
