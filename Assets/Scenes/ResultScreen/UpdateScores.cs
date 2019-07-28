@@ -45,6 +45,7 @@ public class UpdateScores : MonoBehaviour {
         //overallScore already calculated at the beginning, so if sb skips animation, the right value gets to the leaderboard
         overallScore = gameScore + timingScore + specialsScore;
 
+        playerNameInput.text = SocialSignin.IsAuthenticated() ? Social.Active.localUser.userName : "Player";
         backToMenuButton.onClick.AddListener(delegate
         {
             //prevent multile score saving
