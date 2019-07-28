@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SocialPlatforms;
+#if UNITY_ANDROID
 using GooglePlayGames;
+#endif
 
 public class Leaderboard : MonoBehaviour
 {
@@ -171,7 +173,14 @@ public class Leaderboard : MonoBehaviour
                 { 
                     Debug.Log("Loaded Score: " + score.formattedValue);
                     Highscoreboard hb = new Highscoreboard();
-                    LeaderboardEntry e = new LeaderboardEntry(null, score.userID, (int)score.value);
+                    string[] userId = new string[1];
+                    userId[0] = score.userID;
+                    string username = "Unnamed";
+                    Social.Active.LoadUsers(userId, users =>
+                    {
+                        username = users[0].userName;
+                    });
+                    LeaderboardEntry e = new LeaderboardEntry(null, username, (int)score.value);
                     hb.GetBoard().Add(e);
                     Debug.Log("Added to board: " + e.GetName() + " with score: " + e.GetScore());
                     SetupOnlineLists(hb);
