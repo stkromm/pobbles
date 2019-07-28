@@ -189,12 +189,14 @@ public class Sound : MonoBehaviour
             if (globalMusicObject.isPlaying && !(lastPlayedMusic == "menu"))
             {
                 globalMusicObject.Stop();
-                globalMusicObject.PlayOneShot(menuMusic);
+                globalMusicObject.clip = menuMusic;
+                globalMusicObject.Play();
             }
             //if there was no other music playing before, just start the menu music 
             else if (!globalMusicObject.isPlaying)
             {
-                globalMusicObject.PlayOneShot(menuMusic);
+                globalMusicObject.clip = menuMusic;
+                globalMusicObject.Play();
             }
         }
         lastPlayedMusic = "menu";
