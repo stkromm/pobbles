@@ -169,47 +169,27 @@ public class Leaderboard : MonoBehaviour
         {
             if (success)
             {
+                var i = 0;
+                var userIds = new ArrayList();
                 foreach (IScore score in board.scores)
-                { 
-                    Debug.Log("Loaded Score: " + score.formattedValue);
-                    Highscoreboard hb = new Highscoreboard();
-                    string[] userId = new string[1];
-                    userId[0] = score.userID;
-                    string username = "Unnamed";
-                    Social.Active.LoadUsers(userId, users =>
-                    {
-                        username = users[0].userName;
-                    });
-                    LeaderboardEntry e = new LeaderboardEntry(null, username, (int)score.value);
-                    hb.GetBoard().Add(e);
-                    Debug.Log("Added to board: " + e.GetName() + " with score: " + e.GetScore());
-                    SetupOnlineLists(hb);
+                {
+                    onlineScoreList[i] = (int)score.value;
+                    onlinePlayerList[i] = "";
+                    userIds.Add(score.userID);
+                    i++;
                 }
+                Social.Active.LoadUsers((string[])userIds.ToArray(), (users) =>
+                {
+                    for (int index = 0; index < users.Length; ++index)
+                    {
+                        onlinePlayerList[index] = users[index].userName;
+                    }
+                });
             }
             if (!isLocal)
             {
                 ClickedGlobal();
             }
         });
-    }
-
-    private void SetupOnlineLists(Highscoreboard highscoreboard)
-    {
-        List<LeaderboardEntry> board = highscoreboard.GetBoard();
-        onlinePlayerList.Clear();
-        onlineScoreList.Clear();
-        for (int i = 0; i < 5; i++)
-        {
-            if (board.Count > i)
-            {
-                onlinePlayerList.Insert(i, board[i].GetName());
-                onlineScoreList.Insert(i, board[i].GetScore());
-            }
-            else
-            {
-                onlinePlayerList.Add("-");
-                onlineScoreList.Add(0);
-            }
-        }
     }
 }

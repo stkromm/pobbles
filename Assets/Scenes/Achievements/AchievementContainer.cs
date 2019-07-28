@@ -28,6 +28,7 @@ public class AchievementContainer
         while (!file.isDone) { }
         return LoadFromText(file.text);
 #else
+
         var serializer = new XmlSerializer(typeof(AchievementContainer));
         using (var stream = new FileStream(path, FileMode.Open))
         {

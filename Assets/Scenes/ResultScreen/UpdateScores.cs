@@ -22,7 +22,6 @@ public class UpdateScores : MonoBehaviour {
     private Score scoreObject;
     public InputField playerNameInput;
     public Button backToMenuButton;
-    public Button saveScoreButton;
     public Button restartButton;
     bool scoreSaved = false;
 
@@ -47,8 +46,6 @@ public class UpdateScores : MonoBehaviour {
 
         backToMenuButton.onClick.AddListener(delegate
         {
-            //prevent multile score saving
-            
             SaveScore(playerNameInput.text, overallScore);
             SceneManager.LoadScene("MainMenu");
         });
@@ -57,12 +54,6 @@ public class UpdateScores : MonoBehaviour {
             SaveScore(playerNameInput.text, overallScore);
             startGameObject.PlayGame();
         });
-        saveScoreButton.onClick.AddListener(delegate
-        {
-            SaveScore(playerNameInput.text, overallScore);
-        });
-
-
     }
 
 	private void SaveScore(string name, int score)
@@ -80,19 +71,6 @@ public class UpdateScores : MonoBehaviour {
                 }
             });
         }
-
-        //prevent multiple saving and disable button
-        if (!scoreSaved)
-        {
-            scoreObject.RegisterNewScoreInLeaderboard(playerNameInput.text, overallScore);
-            scoreSaved = true;
-            saveScoreButton.interactable = false;
-            saveScoreButton.image.color = Color.grey;
-
-            HighscoreHandler handler = new HighscoreHandler();
-            handler.WriteLeaderboard(playerNameInput.text, overallScore);
-        }
-        
     }
 
     private void SaveScoreIfAuthenticated(string name, int score)
