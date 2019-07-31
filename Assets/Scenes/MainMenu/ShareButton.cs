@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ShareButton : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class ShareButton : MonoBehaviour
         
         nativeShare.SetText(settingsObject.GetStringFromHashtable("ShareButtonText") + "\n\n " + playStoreURL);
         nativeShare.Share();
+        EventSystem.current.SetSelectedGameObject(null);
+
     }
 
 }

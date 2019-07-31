@@ -10,12 +10,9 @@ public class SocialSignin
 {
     public static bool IsAuthenticated()
     {
-#if UNITY_ANDROID
-        return PlayGamesPlatform.Instance.IsAuthenticated();
-#else
         return Social.localUser.authenticated;
-#endif
     }
+
     public static void TrySignIn(System.Action<bool> callback)
     {
         Debug.Log("Entering Login");

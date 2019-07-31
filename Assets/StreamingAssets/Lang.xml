@@ -70,15 +70,17 @@
 		<string name='DontMissAPerfectChanceIIDescription'>Let 100x bubbles pop perfectly</string>
 		<string name='DontMissAPerfectChanceIIIHeading'>Don't miss a perfect chance III</string>
 		<string name='DontMissAPerfectChanceIIIDescription'>Let 200x bubbles pop perfectly</string>
+		<string name='AchievementsComingSoonText'>Coming soon...</string>
+		<string name='AchievementsHeadingText'>Achievements</string>
 
-		<comment name='#MainMenu69'/>
+		<comment name='#MainMenu71'/>
 		<string name='MainMenuHeadingText'>PUBBLES</string>
 		<string name='HighscoreButtonText'>Highscore</string>
 		<string name='PlayGameButtonText'>Play Game</string>
 		<string name='OptionsButtonText'>Options</string>
 		<string name='FeedbackButtonText'>Feedback</string>
 
-		<comment name='#About75'/>
+		<comment name='#About77'/>
 		<string name='AboutHeadingText'>About</string>
 		<string name='AboutBackToMenuButtonText'>Back To Menu</string>
 		<string name='AboutDetailsText'>
@@ -100,13 +102,13 @@ Terms &amp; Conditions:
 https://sudden-dev.com/pubbles#terms
           </string>
 
-		<comment name='#Feedback79'/>
+		<comment name='#Feedback81'/>
 		<string name='FeedbackHeadingText'>Feedback</string>
 		<string name='FeedbackTextFieldPlaceholder'>Enter your feedback...</string>
 		<string name='FeedbackSendButtonText'>Send</string>
-		<string name='FeedbackDescriptionText'>We are always trying to improve the user experience of our app. Tell us what we could improve in order to make it more fun!</string>
+		<string name='FeedbackDescriptionText'>Your suggestions and ideas are very important to us. We can't answer everyone, but that doesn't mean we don't take your feedback seriously. Only through your feedback can we develop PUBBLES further. So share your thoughts with us! Who knows, maybe you will already recognize YOUR feedback in the next version. We are looking forward to what you have to tell us!</string>
 
-		<comment name='#GamemodeAracade84'/>
+		<comment name='#GamemodeAracade86'/>
 		<string name='GamemodeArcadeResumeButtonText'>Resume</string>
 		<string name='GamemodeArcadeRestartButtonText'>Restart</string>
 		<string name='GamemodeArcadeExitButtonText'>Exit</string>
@@ -119,23 +121,21 @@ https://sudden-dev.com/pubbles#terms
 		<string name='NegativeBubbleDied'>Great!</string>
 		<string name='NegativeBubbleClicked'>Ouch!</string>
 
-		<comment name='#Highscore96'/>
+		<comment name='#Highscore98'/>
 		<string name='HighscoreHeadingText'>Highscore</string>
 		<string name='HighscoreScoreHeadingText'>Score</string>
 		<string name='HighscoreNameHeadingText'>Name</string>
 		<string name='HighscorePersonalButtonText'>Personal</string>
-		<string name='HighscoreGlobalButtonText'>World</string>
+		<string name='HighscoreGlobalButtonText'>Global</string>
 		<string name='HighscoreLocalComparisonHeadingText'>Your Last Game</string>
 		<string name='HighscoreGlobalComparisonHeadingText'>Best Personal Score</string>
 
-		<comment name='#Introduction104'/>
-		<string name='Intro1Row1Text'>Pop The Bubbles. The Smaller, The Better.</string>
-		<string name='Intro1Row2Text'>Don't Let The Red Bubbles Die.</string>
-		<string name='Intro2Row2Text'>Good Reactions For a Timing Bonus.</string>
-		<string name='Intro3Row1Text'>Don't Pop The Black Bubbles.</string>
-		<string name='Intro3Row2Text'>Let The Black Bubbles Die.</string>
+		<comment name='#Introduction106'/>
 		<string name='IntroductionPlayGameButtonText'>Play Game</string>
 		<string name='IntroBoolToggleLabel'>Show This Introduction Again</string>
+		<string name='IntroductionHeadingText'>Introduction</string>
+		<string name='IntroductionPositiveBubblesText'>Pop the bubbles as fast as possible.</string>
+		<string name='IntroductionNegativeBubblesText'>Do not pop the black bubbles.</string>
 		<string name='IntroControlsPageText'>of</string>
 
 		<comment name='#Options113'/>
@@ -230,15 +230,17 @@ https://sudden-dev.com/pubbles#terms
 		<string name='DontMissAPerfectChanceIIDescription'>Lasse mindestens 100x Blasen perfekt platzen</string>
 		<string name='DontMissAPerfectChanceIIIHeading'>Verpasse keine perfekte Chance III</string>
 		<string name='DontMissAPerfectChanceIIIDescription'>Lasse mindestens 200x Blasen perfekt platzen</string>
+		<string name='AchievementsComingSoonText'>Bald verf&#252;gbar...</string>
+		<string name='AchievementsHeadingText'>Erfolge</string>
 
-		<comment name='#MainMenu69'/>
+		<comment name='#MainMenu71'/>
 		<string name='MainMenuHeadingText'>PUBBLES</string>
 		<string name='HighscoreButtonText'>Highscore</string>
 		<string name='PlayGameButtonText'>Jetzt Spielen</string>
 		<string name='OptionsButtonText'>Einstellungen</string>
 		<string name='FeedbackButtonText'>Feedback</string>
 
-		<comment name='#About75'/>
+		<comment name='#About77'/>
 		<string name='AboutHeadingText'>&#220;ber</string>
 		<string name='AboutBackToMenuButtonText'>Zur&#252;ck zum Men&#252;</string>
 		<string name='AboutDetailsText'>
@@ -260,13 +262,13 @@ Terms &amp; Conditions:
 https://sudden-dev.com/pubbles#terms
           </string>
 
-		<comment name='#Feedback79'/>
+		<comment name='#Feedback81'/>
 		<string name='FeedbackHeadingText'>Feedback</string>
-		<string name='FeedbackTextFieldPlaceholder'>Gebe dein Feedback ein...</string>
+		<string name='FeedbackTextFieldPlaceholder'>Gib dein Feedback ein...</string>
 		<string name='FeedbackSendButtonText'>Senden</string>
-		<string name='FeedbackDescriptionText'>Wir versuchen stets das Erlebnis unserer Nutzer zu verbessern. Darum brauchen wir dein Feedback! Erz&#228;hle uns, wie du die App weiterentwickeln w&#252;rdest und bestimme dadruch ma&#223;geblich die Entwicklung mit!</string>
+		<string name='FeedbackDescriptionText'>Deine Vorschl&#228;ge und Ideen sind f&#252;r uns besonders wichtig. Wir k&#246;nnen zwar nicht jedem antworten, das hei&#223;t aber nicht, dass wir das Feedback nicht ber&#252;cksichtigen. Nur durch dein Feedback k&#246;nnen wir PUBBLES weiterentwickeln. Also teile deine Gedanken mit uns! Wer wei&#223;, vielleicht kannst du schon in der n&#228;chsten Version DEIN Feedback wiedererkennen. Wir sind gespannt, was du uns zu sagen hast!</string>
 
-		<comment name='#GamemodeAracade84'/>
+		<comment name='#GamemodeAracade86'/>
 		<string name='GamemodeArcadeResumeButtonText'>Weiterspielen</string>
 		<string name='GamemodeArcadeRestartButtonText'>Neustart</string>
 		<string name='GamemodeArcadeExitButtonText'>Verlassen</string>
@@ -279,23 +281,21 @@ https://sudden-dev.com/pubbles#terms
 		<string name='NegativeBubbleDied'>Super!</string>
 		<string name='NegativeBubbleClicked'>Ouch!</string>
 
-		<comment name='#Highscore96'/>
+		<comment name='#Highscore98'/>
 		<string name='HighscoreHeadingText'>Highscore</string>
 		<string name='HighscoreScoreHeadingText'>Punkte</string>
 		<string name='HighscoreNameHeadingText'>Name</string>
 		<string name='HighscorePersonalButtonText'>Lokal</string>
 		<string name='HighscoreGlobalButtonText'>Global</string>
-		<string name='HighscoreLocalComparisonHeadingText'>Dein Letztes Spiels</string>
+		<string name='HighscoreLocalComparisonHeadingText'>Dein letztes Spiels</string>
 		<string name='HighscoreGlobalComparisonHeadingText'>Pers&#246;nlicher Highscore</string>
 
-		<comment name='#Introduction104'/>
-		<string name='Intro1Row1Text'>Pop The Bubbles. Je kleiner, desto besser.</string>
-		<string name='Intro1Row2Text'>Lasse die roten Bubbles nicht sterben.</string>
-		<string name='Intro2Row2Text'>F&#252;r gute Reaktionen bekommst du einen Timing Bonus.</string>
-		<string name='Intro3Row1Text'>Dr&#252;cke nicht auf die schwarzen Bubbles.</string>
-		<string name='Intro3Row2Text'>Lass die schwarzen Bubbles sterben.</string>
+		<comment name='#Introduction106'/>
 		<string name='IntroductionPlayGameButtonText'>Jetzt spielen</string>
 		<string name='IntroBoolToggleLabel'>Diese Einf&#252;hrung erneut zeigen</string>
+		<string name='IntroductionHeadingText'>Einf&#252;hrung</string>
+		<string name='IntroductionPositiveBubblesText'>Lass die Blasen so schnell wie m&#246;glich platzen.</string>
+		<string name='IntroductionNegativeBubblesText'>Ber&#252;hre nicht die schwarzen Blasen.</string>
 		<string name='IntroControlsPageText'>von</string>
 
 		<comment name='#Options113'/>
@@ -454,91 +454,91 @@ https://sudden-dev.com/pubbles#terms
 
 		<comment name='DontMissAPerfectChanceIIIDescription68'/>
 
-		<comment name='#MainMenu69'/>
+		<comment name='AchievementsComingSoonText69'/>
 
-		<comment name='MainMenuHeadingText70'/>
+		<comment name='AchievementsHeadingText70'/>
 
-		<comment name='HighscoreButtonText71'/>
+		<comment name='#MainMenu71'/>
 
-		<comment name='PlayGameButtonText72'/>
+		<comment name='MainMenuHeadingText72'/>
 
-		<comment name='OptionsButtonText73'/>
+		<comment name='HighscoreButtonText73'/>
 
-		<comment name='FeedbackButtonText74'/>
+		<comment name='PlayGameButtonText74'/>
 
-		<comment name='#About75'/>
+		<comment name='OptionsButtonText75'/>
 
-		<comment name='AboutHeadingText76'/>
+		<comment name='FeedbackButtonText76'/>
 
-		<comment name='AboutBackToMenuButtonText77'/>
+		<comment name='#About77'/>
 
-		<comment name='AboutDetailsText78'/>
+		<comment name='AboutHeadingText78'/>
 
-		<comment name='#Feedback79'/>
+		<comment name='AboutBackToMenuButtonText79'/>
 
-		<comment name='FeedbackHeadingText80'/>
+		<comment name='AboutDetailsText80'/>
 
-		<comment name='FeedbackTextFieldPlaceholder81'/>
+		<comment name='#Feedback81'/>
 
-		<comment name='FeedbackSendButtonText82'/>
+		<comment name='FeedbackHeadingText82'/>
 
-		<comment name='FeedbackDescriptionText83'/>
+		<comment name='FeedbackTextFieldPlaceholder83'/>
 
-		<comment name='#GamemodeAracade84'/>
+		<comment name='FeedbackSendButtonText84'/>
 
-		<comment name='GamemodeArcadeResumeButtonText85'/>
+		<comment name='FeedbackDescriptionText85'/>
 
-		<comment name='GamemodeArcadeRestartButtonText86'/>
+		<comment name='#GamemodeAracade86'/>
 
-		<comment name='GamemodeArcadeExitButtonText87'/>
+		<comment name='GamemodeArcadeResumeButtonText87'/>
 
-		<comment name='GamemodeArcadeGameStartText88'/>
+		<comment name='GamemodeArcadeRestartButtonText88'/>
 
-		<comment name='GamemodeArcadeGameEndText89'/>
+		<comment name='GamemodeArcadeExitButtonText89'/>
 
-		<comment name='GamemodeArcadePauseHeading90'/>
+		<comment name='GamemodeArcadeGameStartText90'/>
 
-		<comment name='RedBubbleDied91'/>
+		<comment name='GamemodeArcadeGameEndText91'/>
 
-		<comment name='PerfectTiming92'/>
+		<comment name='GamemodeArcadePauseHeading92'/>
 
-		<comment name='GoodTiming93'/>
+		<comment name='RedBubbleDied93'/>
 
-		<comment name='NegativeBubbleDied94'/>
+		<comment name='PerfectTiming94'/>
 
-		<comment name='NegativeBubbleClicked95'/>
+		<comment name='GoodTiming95'/>
 
-		<comment name='#Highscore96'/>
+		<comment name='NegativeBubbleDied96'/>
 
-		<comment name='HighscoreHeadingText97'/>
+		<comment name='NegativeBubbleClicked97'/>
 
-		<comment name='HighscoreScoreHeadingText98'/>
+		<comment name='#Highscore98'/>
 
-		<comment name='HighscoreNameHeadingText99'/>
+		<comment name='HighscoreHeadingText99'/>
 
-		<comment name='HighscorePersonalButtonText100'/>
+		<comment name='HighscoreScoreHeadingText100'/>
 
-		<comment name='HighscoreGlobalButtonText101'/>
+		<comment name='HighscoreNameHeadingText101'/>
 
-		<comment name='HighscoreLocalComparisonHeadingText102'/>
+		<comment name='HighscorePersonalButtonText102'/>
 
-		<comment name='HighscoreGlobalComparisonHeadingText103'/>
+		<comment name='HighscoreGlobalButtonText103'/>
 
-		<comment name='#Introduction104'/>
+		<comment name='HighscoreLocalComparisonHeadingText104'/>
 
-		<comment name='Intro1Row1Text105'/>
+		<comment name='HighscoreGlobalComparisonHeadingText105'/>
 
-		<comment name='Intro1Row2Text106'/>
+		<comment name='#Introduction106'/>
 
-		<comment name='Intro2Row2Text107'/>
+		<comment name='IntroductionPlayGameButtonText107'/>
 
-		<comment name='Intro3Row1Text108'/>
+		<comment name='IntroBoolToggleLabel108'/>
 
-		<comment name='Intro3Row2Text109'/>
+		<comment name='IntroductionHeadingText109'/>
 
-		<comment name='IntroductionPlayGameButtonText110'/>
+		<comment name='IntroductionPositiveBubblesText110'/>
 
-		<comment name='IntroBoolToggleLabel111'/>
+		<comment name='IntroductionNegativeBubblesText111'/>
 
 		<comment name='IntroControlsPageText112'/>
 
@@ -649,17 +649,19 @@ https://sudden-dev.com/pubbles#terms
 		<string name='DontMissAPerfectChanceIIDescription'>como m&#237;nimo deja explotar 100 burbujas perfectas</string>
 		<string name='DontMissAPerfectChanceIIIHeading'>Don't miss a perfect chance III</string>
 		<string name='DontMissAPerfectChanceIIIDescription'>como m&#237;nimo deja explotar 200 burbujas perfectas</string>
+		<string name='AchievementsComingSoonText'>Pr&#243;ximamente...</string>
+		<string name='AchievementsHeadingText'>&#201;xitos</string>
 
-		<comment name='#MainMenu69'/>
+		<comment name='#MainMenu71'/>
 		<string name='MainMenuHeadingText'>PUBBLES</string>
 		<string name='HighscoreButtonText'>Highscore</string>
-		<string name='PlayGameButtonText'>jugar </string>
+		<string name='PlayGameButtonText'>Jugar </string>
 		<string name='OptionsButtonText'>Opciones</string>
 		<string name='FeedbackButtonText'>Feedback</string>
 
-		<comment name='#About75'/>
-		<string name='AboutHeadingText'>sobre</string>
-		<string name='AboutBackToMenuButtonText'>volver al men&#250;</string>
+		<comment name='#About77'/>
+		<string name='AboutHeadingText'>Sobre</string>
+		<string name='AboutBackToMenuButtonText'>Volver al men&#250;</string>
 		<string name='AboutDetailsText'>
 PUBBLES
 
@@ -679,29 +681,28 @@ Terms &amp; Conditions:
 https://sudden-dev.com/pubbles#terms
           </string>
 
-		<comment name='#Feedback79'/>
+		<comment name='#Feedback81'/>
 		<string name='FeedbackHeadingText'>Feedback</string>
 
-		<comment name='FeedbackTextFieldPlaceholder81'/>
+		<comment name='FeedbackTextFieldPlaceholder83'/>
 
-		<comment name='FeedbackSendButtonText82'/>
+		<comment name='FeedbackSendButtonText84'/>
+		<string name='FeedbackDescriptionText'>Sus sugerencias e ideas son particularmente importantes para nosotros. No podemos responder a todos, pero eso no significa que no tengamos en cuenta la opini&#243;n de todos. S&#243;lo a trav&#233;s de sus comentarios podremos seguir desarrollando PUBBLES. As&#237; que comparte tus pensamientos con nosotros! Qui&#233;n sabe, tal vez ya puedas reconocer TU opini&#243;n en la pr&#243;xima versi&#243;n. Tenemos curiosidad por saber qu&#233; tiene que decirnos!</string>
 
-		<comment name='FeedbackDescriptionText83'/>
-
-		<comment name='#GamemodeAracade84'/>
+		<comment name='#GamemodeAracade86'/>
 		<string name='GamemodeArcadeResumeButtonText'>Reanudar partida</string>
 		<string name='GamemodeArcadeRestartButtonText'>Reiniciar partida</string>
 		<string name='GamemodeArcadeExitButtonText'>Salir</string>
 		<string name='GamemodeArcadeGameStartText'>Peta las burbujas!</string>
 		<string name='GamemodeArcadeGameEndText'>bien hecho!</string>
-		<string name='GamemodeArcadePauseHeading'>pausado</string>
+		<string name='GamemodeArcadePauseHeading'>Pausado</string>
 		<string name='RedBubbleDied'>ups!</string>
 		<string name='PerfectTiming'>perfecto!</string>
 		<string name='GoodTiming'>bien!</string>
 		<string name='NegativeBubbleDied'>muy bien!</string>
 		<string name='NegativeBubbleClicked'>ouch!</string>
 
-		<comment name='#Highscore96'/>
+		<comment name='#Highscore98'/>
 		<string name='HighscoreHeadingText'>Highscore</string>
 		<string name='HighscoreScoreHeadingText'>Puntos</string>
 		<string name='HighscoreNameHeadingText'>Nombre</string>
@@ -710,37 +711,32 @@ https://sudden-dev.com/pubbles#terms
 		<string name='HighscoreLocalComparisonHeadingText'>Tu &#250;ltima partida</string>
 		<string name='HighscoreGlobalComparisonHeadingText'> Highscore personal </string>
 
-		<comment name='#Introduction104'/>
-		<string name='Intro1Row1Text'>Peta las burbujas. Cuanto m&#225;s peque&#241;as mejor</string>
-		<string name='Intro1Row2Text'>No dejes morir las burbujas rojas</string>
-		<string name='Intro2Row2Text'>Por buenas reacciones recibes un timing bonus </string>
-		<string name='Intro3Row1Text'>No petes las burbujas  negras</string>
-		<string name='Intro3Row2Text'>Deja morir las burbujas negras</string>
+		<comment name='#Introduction106'/>
 		<string name='IntroductionPlayGameButtonText'>Jugar ahora</string>
 		<string name='IntroBoolToggleLabel'>Ense&#241;ar la introducci&#243;n de nuevo</string>
+		<string name='IntroductionHeadingText'>Introducci&#243;n</string>
+		<string name='IntroductionPositiveBubblesText'>Peta las burbujas.</string>
+		<string name='IntroductionNegativeBubblesText'>No peta las burbujas negras</string>
 		<string name='IntroControlsPageText'>de </string>
 
 		<comment name='#Options113'/>
 		<string name='OptionsHeadingText'>Opciones</string>
-		<string name='AboutButtonText'>sobre</string>
+		<string name='AboutButtonText'>Sobre</string>
 		<string name='OptionsIntroText'>Introducci&#243;n</string>
 		<string name='OptionsEffectsText'>Sonido</string>
-		<string name='OptionsMusicText'>m&#250;sica</string>
-		<string name='OptionsLanguageText'>idioma</string>
+		<string name='OptionsMusicText'>M&#250;sica</string>
+		<string name='OptionsLanguageText'>Idioma</string>
 
 		<comment name='#ResultScreen120'/>
-		<string name='ResultGameCategoryText'>partida</string>
-		<string name='ResultTimingCategoryText'>timing</string>
-		<string name='ResultPlayerNameText'>introduce nombre</string>
-
-		<string name='ResultPlayerNamePlaceholder'>tu nombre...</string>
-
-		<string name='ResultSaveScoreButtonText'>guardar puntos</string>
-		<string name='ResultRestartButtonText'>jugar de nuevo</string>
-		<string name='ResultBackToMenuButtonText'>volver al men&#250;</string>
-		<string name='NewHighScoreText'>nuevo highscore</string>
-
-		<comment name='ShareButtonText129'/>
+		<string name='ResultGameCategoryText'>Partida</string>
+		<string name='ResultTimingCategoryText'>Timing</string>
+		<string name='ResultPlayerNameText'>Introduce nombre</string>
+		<string name='ResultPlayerNamePlaceholder'>Tu nombre...</string>
+		<string name='ResultSaveScoreButtonText'>Guardar puntos</string>
+		<string name='ResultRestartButtonText'>Jugar de nuevo</string>
+		<string name='ResultBackToMenuButtonText'>Volver al men&#250;</string>
+		<string name='NewHighScoreText'>Nuevo highscore</string>
+		<string name='ShareButtonText'>PUBBLES! 3..2..1..Pop las burbujas! Juega el nuevo y emocionante juego de arcade y compite con tus amigos. Desc&#225;rgalo hoy!</string>
 
 	</Espanol>
 
