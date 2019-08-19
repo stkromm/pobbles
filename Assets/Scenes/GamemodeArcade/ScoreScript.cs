@@ -105,6 +105,12 @@ public class ScoreScript : MonoBehaviour
                     Destroy(c.gameObject);
                 }
 
+                Component[] freezeBubbles = FindObjectsOfType(typeof(FreezeBubbleBehaviour)) as Component[];
+                foreach (Component c in freezeBubbles)
+                {
+                    Destroy(c.gameObject);
+                }
+
                 /*
                 scoreText.enabled = false;
                 bubbleText.enabled = false;

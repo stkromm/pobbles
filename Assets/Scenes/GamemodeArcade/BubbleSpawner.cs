@@ -7,6 +7,7 @@ public class BubbleSpawner : MonoBehaviour
     public GameObject bubble;
     public GameObject negativeBubble;
     public GameObject magneticBubble;
+    public GameObject freezeBubble;
     public float countdown = 3.0f;
 
     // Use this for initialization
@@ -50,8 +51,8 @@ public class BubbleSpawner : MonoBehaviour
 
             }
 
-            /*3% chance for a magnetic bubble
-            if (Random.Range(0.0f, 1.0f) < -0.1f)
+            
+            if (Random.Range(0.0f, 1.0f) < 0.03f)
             {
 
                 //random position 2D
@@ -68,7 +69,26 @@ public class BubbleSpawner : MonoBehaviour
                 mBubble.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
 
 
-            }*/
+            }
+
+            
+                if (Random.Range(0.0f, 1.0f) < 0.03f)
+                {
+
+                    //random position 2D
+                    float spawnY4 = Random.Range
+        (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.25f - 0.5f);
+                    float spawnX4 = Random.Range
+                        (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.25f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.25f);
+                    Vector2 spawnPosition4 = new Vector2(spawnX4, spawnY4);
+
+                    //instantiating the bubble
+                    GameObject fBubble = Instantiate(freezeBubble, spawnPosition4, Quaternion.identity);
+                    
+
+
+                }
+
         }
     }
 
@@ -82,6 +102,7 @@ public class BubbleSpawner : MonoBehaviour
         Object[] bubbles = FindObjectsOfType(typeof(BubbleBehaviour));
         Object[] negativeBubbles = FindObjectsOfType(typeof(NegativeBubbleBehaviour));
         Object[] magneticBubbles = FindObjectsOfType(typeof(MagneticBubbleBehaviour));
+        Object[] freezeBubbles = FindObjectsOfType(typeof(FreezeBubbleBehaviour));
         //spawn bubbles if not enough bubbles on screen
         if (bubbles.Length < 5)
         {
@@ -116,6 +137,12 @@ public class BubbleSpawner : MonoBehaviour
                     magneticBubble.onPop();
                 }
 
+                FreezeBubbleBehaviour freezeBubble = hit.collider.gameObject.GetComponent(typeof(FreezeBubbleBehaviour)) as FreezeBubbleBehaviour;
+                if (freezeBubble != null)
+                {
+                    freezeBubble.onPop();
+                }
+
             }
         }
 
@@ -146,6 +173,12 @@ public class BubbleSpawner : MonoBehaviour
                 if (magneticBubble != null)
                 {
                     magneticBubble.onPop();
+                }
+
+                FreezeBubbleBehaviour freezeBubble = hit.collider.gameObject.GetComponent(typeof(FreezeBubbleBehaviour)) as FreezeBubbleBehaviour;
+                if (freezeBubble != null)
+                {
+                    freezeBubble.onPop();
                 }
             }
         }

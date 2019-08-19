@@ -13,6 +13,9 @@ public class GameCenterOverlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+#if UNITY_ANDROID
+
+#else
         Debug.Log("Script on disabled object called.");
         socialSigninButton.onClick.AddListener(delegate
         {
@@ -29,10 +32,16 @@ public class GameCenterOverlay : MonoBehaviour
         {
             gameCenterOverlay.SetActive(false);
         });
+
+        setLanguage(path, language);
+#endif
     }
 
+#if UNITY_ANDROID
+#else
     void LinkToIOSSettings()
     {
         //open iOS game center settings
     }
+#endif
 }

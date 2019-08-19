@@ -18,6 +18,7 @@ public class Sound : MonoBehaviour
     public AudioClip bubblePop2;
     public AudioClip negativeBubblePop;
     public AudioClip magneticBubblePop;
+    public AudioClip freezeBubblePop;
 
     public AudioSource globalMusicObject;
     public AudioClip arcadeGameMusic;
@@ -154,6 +155,16 @@ public class Sound : MonoBehaviour
         {
 
             globalEffectObject.PlayOneShot(magneticBubblePop);
+
+        }
+    }
+
+    public void PlayFreezePopSound()
+    {
+        if (GetEffectsBool())
+        {
+
+            globalEffectObject.PlayOneShot(freezeBubblePop);
 
         }
     }
