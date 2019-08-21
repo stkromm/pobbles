@@ -157,6 +157,9 @@ https://sudden-dev.com/pubbles#terms
 		<string name='NewHighScoreText'>New Highscore!</string>
 		<string name='ShareButtonText'>PUBBLES! 3..2..1..Pop the bubbles! Play the new, amazing arcade game and show your friends how good you are. Download it today!</string>
 
+		<comment name='#LevelSelect130'/>
+		<string name='ClassicModeHeadingText'>Classic Mode</string>
+
 	</English>
 
 
@@ -316,6 +319,9 @@ https://sudden-dev.com/pubbles#terms
 		<string name='ResultBackToMenuButtonText'>Zur&#252;ck zum Men&#252;</string>
 		<string name='NewHighScoreText'>Neuer Highscore!</string>
 		<string name='ShareButtonText'>PUBBLES! 3..2..1..Pop the bubbles! Spiele das neue, spannende Arcade Game und messe dich mit deinen Freunden. Lade es noch heute herunter!</string>
+
+		<comment name='#LevelSelect130'/>
+		<string name='ClassicModeHeadingText'>Classic Mode</string>
 
 	</Deutsch>
 
@@ -576,6 +582,10 @@ https://sudden-dev.com/pubbles#terms
 
 		<comment name='ShareButtonText129'/>
 
+		<comment name='#LevelSelect130'/>
+
+		<comment name='ClassicModeHeadingText131'/>
+
 	</Francais>
 
 
@@ -737,6 +747,9 @@ https://sudden-dev.com/pubbles#terms
 		<string name='ResultBackToMenuButtonText'>Volver al men&#250;</string>
 		<string name='NewHighScoreText'>Nuevo highscore</string>
 		<string name='ShareButtonText'>PUBBLES! 3..2..1..Pop las burbujas! Juega el nuevo y emocionante juego de arcade y compite con tus amigos. Desc&#225;rgalo hoy!</string>
+
+		<comment name='#LevelSelect130'/>
+		<string name='ClassicModeHeadingText'>Modo Cl&#225;sico</string>
 
 	</Espanol>
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SelectLevel : MonoBehaviour
+public class ClassicLevel : MonoBehaviour
 {
     public Text usernameText;
     public Text userScoreText;

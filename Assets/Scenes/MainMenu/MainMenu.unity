@@ -1320,7 +1320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 287267586, guid: 58c83a7daaeb59d479616ef9d0ea5868, type: 3}
       propertyPath: sceneName
-      value: SelectLevel
+      value: ClassicLevel
       objectReference: {fileID: 0}
     - target: {fileID: 114796627469530504, guid: 58c83a7daaeb59d479616ef9d0ea5868,
         type: 3}

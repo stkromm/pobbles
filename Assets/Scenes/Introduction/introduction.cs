@@ -27,7 +27,7 @@ public class introduction : MonoBehaviour
         //if intro bool false, skip this scene
         if (!settingsObject.GetIntroBool())
         {
-            SceneManager.LoadScene("GamemodeArcade");
+            SceneManager.LoadScene("ClassicMode");
         }
 
 
@@ -35,7 +35,7 @@ public class introduction : MonoBehaviour
         {
             //set the introBool according to the current toggle state
             settingsObject.SetIntroBool(introBoolToggle.isOn);
-            SceneManager.LoadScene("GamemodeArcade");
+            SceneManager.LoadScene("ClassicMode");
         });
     }
         //old implementation. maybe needed for level select

@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu/MainMenu.unity
     guid: 473d6084e9d1edd41adc82e5b673e504
   - enabled: 1
-    path: Assets/Scenes/SelectLevel/SelectLevel.unity
-    guid: f98c594f7cace4f79ab5da9a75b3b35f
-  - enabled: 1
-    path: Assets/Scenes/GamemodeArcade/GamemodeArcade.unity
+    path: Assets/Scenes/ClassicMode/ClassicMode.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode/ArcadeMode.unity
+    guid: cfc44316734f4084c970a1fc7bfeb008
   - enabled: 1
     path: Assets/Scenes/Highscore/HighscoreScreen.unity
     guid: 873e0a5fa91fa49cdaaead2c416793c0
@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Achievements/Achievements.unity
     guid: 0cee0130fa52b544ab76fe3e682fa109
+  - enabled: 1
+    path: Assets/Scenes/ClassicLevel/ClassicLevel.unity
+    guid: bc4c1e079c8290948ba57722e3bc5a2e
+  - enabled: 1
+    path: Assets/Scenes/ArcadeLevel/ArcadeLevel.unity
+    guid: 528898b93fc63f54abbae3cc9145af6f
   m_configObjects: {}

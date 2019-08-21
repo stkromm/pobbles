@@ -39,7 +39,7 @@ public class StartGame : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("GamemodeArcade");
+            SceneManager.LoadScene("ClassicMode");
         }
     }
 }
