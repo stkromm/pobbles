@@ -13,6 +13,7 @@ public class GameCenterOverlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+#if UNITY_IOS
         Debug.Log("Script on disabled object called.");
         socialSigninButton.onClick.AddListener(delegate
         {
@@ -29,6 +30,7 @@ public class GameCenterOverlay : MonoBehaviour
         {
             gameCenterOverlay.SetActive(false);
         });
+#endif
     }
 
     void LinkToIOSSettings()

@@ -60,22 +60,12 @@ public class UpdateScores : MonoBehaviour {
         });
     }
 
-	private void SaveScore(string name, int score)
+    private void SaveScore(string name, int score)
     {
-        scoreObject.RegisterNewScoreInLeaderboard(name, score);
-        if (SocialSignin.IsAuthenticated()) {
-            SaveScoreIfAuthenticated(name, score);
-        }
-        else
+        SocialSignin.TrySignIn(success =>
         {
-            SocialSignin.TrySignIn(success =>
-            {
-                if (success)
-                {
-                    SaveScoreIfAuthenticated(name, score);
-                }
-            });
-        }
+                SaveScoreIfAuthenticated(name, score);
+        });
     }
 
     private void SaveScoreIfAuthenticated(string name, int score)
