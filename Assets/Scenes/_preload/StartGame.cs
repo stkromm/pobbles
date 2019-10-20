@@ -13,17 +13,6 @@ public class StartGame : MonoBehaviour
         Debug.Log("Setup dependencies");
         settingsObject = GetComponent<Settings>();
         Debug.Log("Authentication");
-#if UNITY_ANDROID
-        Debug.Log("Setting up PlayGamePlatform");
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-            .RequestServerAuthCode(false)
-            .Build();
-        Debug.Log("Config: " + config.ToString());
-        PlayGamesPlatform.InitializeInstance(config);
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
-        Debug.Log("PlayGamePlatform Activated");
-#endif
         SocialSignin.TrySignIn(OnAuthResult);
         Debug.Log("Finished game start");
     }

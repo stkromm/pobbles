@@ -171,64 +171,47 @@ public class Leaderboard : MonoBehaviour
         resetOnlineList();
         var board = GetAllTimeLeaderboard();
 
-        board.LoadScores(success =>
+        Social.localUser.Authenticate((succes) =>
         {
-            if (success){
-                Debug.Log("Loading scores for scope: "+board.userScope.ToString());
-                var scores = board.scores;
-                if (scores.Length > 0)
+
+            board.LoadScores(success =>
+            {
+                if (success)
                 {
-                    Debug.Log("Loaded scores: " + scores.Length);
-                    var maxIndex = Mathf.Min((int)5, (int)scores.Length);
-                    var userIds = new string[maxIndex];
-                    for (int i = 0; i < maxIndex; i++)
+                    Debug.Log("Loading scores for scope: " + board.userScope.ToString());
+                    var scores = board.scores;
+                    if (scores.Length > 0)
                     {
-                        int index = i;
-                        IScore score = scores[i];
-                        Debug.Log("Score: " + score.value);
-                        onlineScoreList.Insert(i, (int)score.value);
-
-                        userIds[i] = score.userID;
-
-
-                        /*
-                        Debug.Log("UserID: " + score.userID);
-                        Debug.Log("Load name for ID: " + score.userID);
-                        string[] userId = new string[1];
-                        userId[0] = score.userID;
-                        string username = "Unnamed";
-                        Debug.Log("Try to get username");
-                        Social.Active.LoadUsers(userId, users =>
+                        Debug.Log("Loaded scores: " + scores.Length);
+                        var maxIndex = Mathf.Min((int)5, (int)scores.Length);
+                        var userIds = new string[maxIndex];
+                        for (int i = 0; i < maxIndex; i++)
                         {
-                            Debug.Log("userID: " + userId + " usersCount: " + users.Length);
-                            username = users[0].userName;
-                            Debug.Log("Username: " + username);
-                            onlinePlayerList.Insert(index, username);
-                        });*/
-                    }
+                            int index = i;
+                            IScore score = scores[i];
+                            Debug.Log("Score: " + score.value);
+                            onlineScoreList.Insert(i, (int)score.value);
+                            userIds[i] = score.userID;
+                        }
                     // Load usernames;
                     Debug.Log("uidArray: " + userIds);
-                    Debug.Log("Loading usernames...");
-                    Social.Active.LoadUsers(userIds, users =>
-                    {
-                        for (int i = 0; i < userIds.Length; i++){
-                            IUserProfile user = users[i];
-                            Debug.Log("Loaded username: " + user.userName + " for ID: " + user.id);
-                            onlinePlayerList.Insert(i, user.userName);
-                        }
-                    });
+                        Debug.Log("Loading usernames...");
+                        Social.Active.LoadUsers(userIds, users =>
+                        {
+                            for (int i = 0; i < userIds.Length; i++)
+                            {
+                                IUserProfile user = users[i];
+                                Debug.Log("Loaded username: " + user.userName + " for ID: " + user.id);
+                                onlinePlayerList.Insert(i, user.userName);
+                            }
+                        });
+                    }
                 }
-            }
+            });
             if (!isLocal){
                 ClickedGlobal();
             }
         });
-
-        Social.Active.LoadScores("leaderboard_classic_all_time", scores =>
-        {
-
-        });
-
     }
 
     private void resetOnlineList(){
