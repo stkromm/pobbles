@@ -6,11 +6,16 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 #endif
 
-public class SocialSignin 
+public class SocialSignin
 {
     public static bool IsAuthenticated()
     {
+
+#if UNITY_ANDROID
+        return PlayGamesPlatform.Instance.IsAuthenticated();
+#else
         return Social.localUser.authenticated;
+#endif
     }
 
     public static void TrySignIn(System.Action<bool> callback)
@@ -20,7 +25,6 @@ public class SocialSignin
         Debug.Log("Setting up PlayGamePlatform");
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
             .RequestServerAuthCode(false)
-            .RequestIdToken()
             .Build();
         Debug.Log("Config: " + config.ToString());
         PlayGamesPlatform.InitializeInstance(config);

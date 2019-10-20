@@ -76,7 +76,6 @@ public class Leaderboard : MonoBehaviour
         personalButton.image.color = Color.grey;
         ClickedPersonal();
         LoadHighscores();
-        Social.ShowLeaderboardUI();
     }
 
     private void SetComparsionEntry(bool local, string name, string score)
@@ -116,7 +115,11 @@ public class Leaderboard : MonoBehaviour
     private ILeaderboard GetAllTimeLeaderboard()
     {
         ILeaderboard board = Social.Active.CreateLeaderboard();
+#if UNITY_ANDROID
+        board.id = "CgkIzIrx5K0SEAIQAQ";
+#else
         board.id = "classic_alltime";
+#endif
         board.userScope = UserScope.Global;
         return board;
     }
@@ -221,7 +224,7 @@ public class Leaderboard : MonoBehaviour
             }
         });
 
-        Social.Active.LoadScores("classic_alltime", scores =>
+        Social.Active.LoadScores("leaderboard_classic_all_time", scores =>
         {
 
         });

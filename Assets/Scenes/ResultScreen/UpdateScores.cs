@@ -58,12 +58,6 @@ public class UpdateScores : MonoBehaviour {
             SaveScore(playerNameInput.text, overallScore);
             startGameObject.PlayGame();
         });
-        saveScoreButton.onClick.AddListener(delegate
-        {
-            SaveScore(playerNameInput.text, overallScore);
-        });
-
-
     }
 
 	private void SaveScore(string name, int score)
@@ -86,7 +80,7 @@ public class UpdateScores : MonoBehaviour {
 
     private void SaveScoreIfAuthenticated(string name, int score)
     {
-        Social.Active.ReportScore(score, "classic_alltime", (bool success) =>
+        Social.ReportScore(score, "CgkIzIrx5K0SEAIQAQ", (bool success) =>
         {
             if (success)
             {

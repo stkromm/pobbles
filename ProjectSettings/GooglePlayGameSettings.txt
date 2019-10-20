@@ -1,9 +1,9 @@
 lastUpgrade=00964
 proj.pluginVersion=0.9.64
-proj.AppId=749596843227
+proj.AppId=630766454092
 and.BundleId=com.suddendev.pobbles
 proj.classDir=Assets
 proj.ConstantsClassName=GPGSIds
-and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--+app_id+--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e749596843227%3c%2fstring%3e%0d%0a++%3c%21--+package_name+--%3e%0d%0a++%3cstring+name%3d%22package_name%22+translatable%3d%22false%22%3ecom.suddendev.pobbles%3c%2fstring%3e%0d%0a++%3c%21--+leaderboard+classic_alltime+--%3e%0d%0a++%3cstring+name%3d%22leaderboard_classic_alltime%22+translatable%3d%22false%22%3eCgkI27nQu-gVEAIQAQ%3c%2fstring%3e%0d%0a%3c%2fresources%3e%0d%0a
-and.ClientId=
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--+app_id+--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e630766454092%3c%2fstring%3e%0d%0a++%3c%21--+package_name+--%3e%0d%0a++%3cstring+name%3d%22package_name%22+translatable%3d%22false%22%3ecom.suddendev.pobbles%3c%2fstring%3e%0d%0a++%3c%21--+leaderboard+Classic+All+Time+--%3e%0d%0a++%3cstring+name%3d%22leaderboard_classic_all_time%22+translatable%3d%22false%22%3eCgkIzIrx5K0SEAIQAQ%3c%2fstring%3e%0d%0a%3c%2fresources%3e
+and.ClientId=630766454092-ggjrvfvcheve2kkklm2hg3g2fo1cqcn7.apps.googleusercontent.com
 android.SetupDone=true
